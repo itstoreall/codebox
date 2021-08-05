@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/codebox/static/css/main.27eb2dbe.chunk.css",
+    "main.js": "/codebox/static/js/main.4332a5ba.chunk.js",
+    "main.js.map": "/codebox/static/js/main.4332a5ba.chunk.js.map",
+    "runtime-main.js": "/codebox/static/js/runtime-main.a31857d4.js",
+    "runtime-main.js.map": "/codebox/static/js/runtime-main.a31857d4.js.map",
+    "static/css/2.bc922b9c.chunk.css": "/codebox/static/css/2.bc922b9c.chunk.css",
+    "static/js/2.f2a217a0.chunk.js": "/codebox/static/js/2.f2a217a0.chunk.js",
+    "static/js/2.f2a217a0.chunk.js.map": "/codebox/static/js/2.f2a217a0.chunk.js.map",
+    "static/js/3.6f37d3e7.chunk.js": "/codebox/static/js/3.6f37d3e7.chunk.js",
+    "static/js/3.6f37d3e7.chunk.js.map": "/codebox/static/js/3.6f37d3e7.chunk.js.map",
+    "index.html": "/codebox/index.html",
+    "static/css/2.bc922b9c.chunk.css.map": "/codebox/static/css/2.bc922b9c.chunk.css.map",
+    "static/css/main.27eb2dbe.chunk.css.map": "/codebox/static/css/main.27eb2dbe.chunk.css.map",
+    "static/js/2.f2a217a0.chunk.js.LICENSE.txt": "/codebox/static/js/2.f2a217a0.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/codebox/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a31857d4.js",
+    "static/css/2.bc922b9c.chunk.css",
+    "static/js/2.f2a217a0.chunk.js",
+    "static/css/main.27eb2dbe.chunk.css",
+    "static/js/main.4332a5ba.chunk.js"
+  ]
+}
