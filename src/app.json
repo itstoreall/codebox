@@ -1,0 +1,32 @@
+{
+  "categories": [
+    {
+      "title": "HTML/CSS",
+      "link": {
+        "href": "/",
+        "anchor": "Flex"
+      }
+    },
+    {
+      "title": "Functions",
+      "link": {
+        "href": "/",
+        "anchor": "Potential link"
+      }
+    },
+    {
+      "title": "Something else",
+      "link": {
+        "href": "/",
+        "anchor": "Potential link"
+      }
+    },
+    {
+      "title": "Something else (two)",
+      "link": {
+        "href": "/",
+        "anchor": "Potential link"
+      }
+    }
+  ]
+}
