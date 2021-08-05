@@ -1,0 +1,18 @@
+@import '../../styles/refs.scss';
+
+.Container {
+  // background-color: pink;
+
+  @media screen and (min-width: $mobilePlus) {
+    margin: 0 auto;
+    width: $mobilePlus;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
+}

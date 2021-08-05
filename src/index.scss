@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import './styles/refs.scss';
 
 html {
   box-sizing: border-box;
@@ -31,10 +32,9 @@ a {
 a {
   display: inline-block;
   text-decoration: none;
-  color: rgb(91, 120, 173);
+  color: $linkColor;
 }
 
 a:hover {
   text-decoration: underline;
-  color: rgb(56, 98, 177);
 }

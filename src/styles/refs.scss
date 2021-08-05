@@ -1,0 +1,20 @@
+// Viewport (Not to change) -------- *
+$mobile: 375px;
+$mobilePlus: 414px;
+$tablet: 768px;
+$desktop: 1200px;
+
+$mobileMax: 374px;
+$mobilePlusMax: 413px;
+$tabletMax: 767px;
+$desktopMax: 1199px; // ---------- *
+
+// Colors
+$primaryBlackColor: #282c34;
+$primaryBlackColor75: #282c34bf;
+$primaryBlackColor50: #282c3480;
+$primaryBlackColor25: #282c3440;
+$linkColor: #5b78ad;
+// $linkHoverColor: #4fb8a1;
+
+$cubicBezier: cubic-bezier(0.4, 0, 0.2, 1);

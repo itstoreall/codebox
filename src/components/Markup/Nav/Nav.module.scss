@@ -1,0 +1,30 @@
+@import '../../../styles/refs.scss';
+
+.nav {
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 1px solid $primaryBlackColor25;
+
+  .navLink {
+    color: $primaryBlackColor50;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 250ms $cubicBezier;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $primaryBlackColor;
+    }
+  }
+
+  .activeNavLink {
+    @extend .navLink;
+    color: $primaryBlackColor;
+  }
+}

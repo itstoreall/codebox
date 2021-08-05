@@ -1,31 +1,35 @@
 {
-  "categories": [
+  "views": [
     {
-      "title": "Layout",
+      "title": "Home",
+      "path": "/",
       "link": {
         "href": "/",
-        "anchor": "Flex"
+        "anchor": "Home link"
+      }
+    },
+    {
+      "title": "Layout",
+      "path": "/layout",
+      "link": {
+        "href": "/layout",
+        "anchor": "Flex link"
       }
     },
     {
       "title": "Functions",
+      "path": "/functions",
       "link": {
-        "href": "/",
-        "anchor": "Potential link"
+        "href": "/function",
+        "anchor": "Function link"
       }
     },
     {
-      "title": "CSS",
+      "title": "Functions2",
+      "path": "/functions2",
       "link": {
-        "href": "/",
-        "anchor": "Potential link"
-      }
-    },
-    {
-      "title": "Something else (two)",
-      "link": {
-        "href": "/",
-        "anchor": "Potential link"
+        "href": "/function2",
+        "anchor": "Function link2"
       }
     }
   ]

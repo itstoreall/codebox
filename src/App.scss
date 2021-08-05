@@ -1,3 +1,5 @@
+@import './styles/refs.scss';
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -7,36 +9,36 @@
   }
 }
 
-// Header
-.App-header {
-  display: flex;
-  justify-content: center;
-  padding: 5px 0;
-  background-color: #282c34;
+// // Header
+// .App-header {
+//   display: flex;
+//   justify-content: center;
+//   padding: 5px 0;
+//   background-color: #282c34;
 
-  .App-logo_wrap {
-    display: flex;
-    align-items: center;
+//   .App-logo_wrap {
+//     display: flex;
+//     align-items: center;
 
-    .App-logo {
-      height: 20px;
-      pointer-events: none;
-    }
+//     .App-logo {
+//       height: 20px;
+//       pointer-events: none;
+//     }
 
-    @media (prefers-reduced-motion: no-preference) {
-      .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-      }
-    }
+//     @media (prefers-reduced-motion: no-preference) {
+//       .App-logo {
+//         animation: App-logo-spin infinite 20s linear;
+//       }
+//     }
 
-    .App-logo_title {
-      font-family: 'Montserrat';
-      font-size: 18px;
-      font-weight: 600;
-      color: white;
-    }
-  }
-}
+//     .App-logo_title {
+//       font-family: 'Montserrat';
+//       font-size: 18px;
+//       font-weight: 600;
+//       color: white;
+//     }
+//   }
+// }
 
 // Main
 .main {
@@ -46,11 +48,11 @@
     padding: 40px 20px;
     // background-color: skyblue;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       padding: 40px 40px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
       padding: 50px 50px;
     }
 
@@ -60,17 +62,17 @@
       width: 100%;
       // background-color: pink;
 
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: $tablet) {
         width: 215px;
 
-        @media screen and (max-width: 1199px) {
+        @media screen and (max-width: $desktopMax) {
           &:not(:nth-child(3n)) {
             margin-right: 21px;
           }
         }
       }
 
-      @media screen and (min-width: 1200px) {
+      @media screen and (min-width: $desktop) {
         width: 260px;
 
         &:not(:nth-child(4n)) {
