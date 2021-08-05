@@ -3,7 +3,7 @@ import Container from './Container';
 import appContent from './app.json';
 import './App.scss';
 
-const { log } = console;
+// const { log } = console;
 
 function App() {
   return (

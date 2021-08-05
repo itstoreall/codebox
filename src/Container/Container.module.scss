@@ -1,6 +1,4 @@
 .Container {
-  padding: 30px 20px;
-
   @media screen and (min-width: 414px) {
     margin: 0 auto;
     width: 414px;
@@ -10,7 +8,7 @@
     width: 768px;
   }
 
-  @media screen and (min-width: 1280px) {
-    width: 1280px;
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
   }
 }

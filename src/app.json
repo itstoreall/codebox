@@ -1,7 +1,7 @@
 {
   "categories": [
     {
-      "title": "HTML/CSS",
+      "title": "Layout",
       "link": {
         "href": "/",
         "anchor": "Flex"
@@ -15,7 +15,7 @@
       }
     },
     {
-      "title": "Something else",
+      "title": "CSS",
       "link": {
         "href": "/",
         "anchor": "Potential link"

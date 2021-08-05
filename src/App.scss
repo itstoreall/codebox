@@ -19,7 +19,7 @@
     align-items: center;
 
     .App-logo {
-      height: 3vmin;
+      height: 20px;
       pointer-events: none;
     }
 
@@ -43,18 +43,39 @@
   .categoryWrap {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    padding: 40px 20px;
+    // background-color: skyblue;
 
+    @media screen and (min-width: 768px) {
+      padding: 40px 40px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding: 50px 50px;
+    }
+
+    // Category (section)
     .category {
-      margin-bottom: 30px;
+      margin-bottom: 40px;
       width: 100%;
+      // background-color: pink;
 
       @media screen and (min-width: 768px) {
-        width: 32%;
+        width: 215px;
+
+        @media screen and (max-width: 1199px) {
+          &:not(:nth-child(3n)) {
+            margin-right: 21px;
+          }
+        }
       }
 
-      @media screen and (min-width: 1280px) {
-        width: 24%;
+      @media screen and (min-width: 1200px) {
+        width: 260px;
+
+        &:not(:nth-child(4n)) {
+          margin-right: 20px;
+        }
       }
     }
 
