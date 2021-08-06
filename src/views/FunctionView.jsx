@@ -1,3 +1,12 @@
+import Article from '../components/Layout/Article';
+import { useStyles } from './viewsStyles';
+
 export default function FunctionView() {
-  return <h1>Functions</h1>;
+  const s = useStyles();
+
+  return (
+    <Article>
+      <h1 className={s.viewTitle}>Functions</h1>
+    </Article>
+  );
 }

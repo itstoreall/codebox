@@ -3,34 +3,58 @@
     {
       "title": "Home",
       "path": "/",
-      "link": {
-        "href": "/",
-        "anchor": "Home link"
-      }
+      "links": [
+        {
+          "href": "/",
+          "anchor": "Home link"
+        },
+        {
+          "href": "/2",
+          "anchor": "Home link2"
+        }
+      ]
     },
     {
-      "title": "Layout",
-      "path": "/layout",
-      "link": {
-        "href": "/layout",
-        "anchor": "Flex link"
-      }
+      "title": "Markup",
+      "path": "/markup",
+      "links": [
+        {
+          "href": "/markup",
+          "anchor": "Flex link"
+        },
+        {
+          "href": "/markup",
+          "anchor": "Flex link2"
+        }
+      ]
     },
     {
       "title": "Functions",
       "path": "/functions",
-      "link": {
-        "href": "/function",
-        "anchor": "Function link"
-      }
+      "links": [
+        {
+          "href": "/function",
+          "anchor": "Function link"
+        },
+        {
+          "href": "/function",
+          "anchor": "Function link2"
+        }
+      ]
     },
     {
-      "title": "Functions2",
-      "path": "/functions2",
-      "link": {
-        "href": "/function2",
-        "anchor": "Function link2"
-      }
+      "title": "Hooks",
+      "path": "/hooks",
+      "links": [
+        {
+          "href": "/hooks",
+          "anchor": "Hooks"
+        },
+        {
+          "href": "/hooks",
+          "anchor": "Hooks2"
+        }
+      ]
     }
   ]
 }
