@@ -12,8 +12,12 @@ const refs = {
 
   // Colors
   primaryBlackColor: '#282c34',
+  primaryBlackColor75: '#282c34bf',
+  primaryBlackColor50: '#282c3480',
+  primaryBlackColor25: '#282c3440',
+
   linkColor: '#5b78ad',
-  // linkHoverColor: '#4fb8a1',
+  activelinkColor: '#6ecab6',
 
   // Transition
   cubicBezier: 'cubic-bezier(0.4, 0, 0.2, 1)',

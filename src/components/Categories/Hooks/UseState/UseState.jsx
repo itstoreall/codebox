@@ -1,6 +1,6 @@
 import CategorySection from '../../../Layout/Sections/CategorySection';
 
-const Flex = () => {
+const UseState = () => {
   return (
     <CategorySection>
       <p>Flex</p>
@@ -8,4 +8,4 @@ const Flex = () => {
   );
 };
 
-export default Flex;
+export default UseState;

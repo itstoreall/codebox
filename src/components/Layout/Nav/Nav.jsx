@@ -4,6 +4,8 @@ import Container from '../../Container';
 import Context from '../../../Context';
 import s from './Nav.module.scss';
 
+// const { log } = console;
+
 export default function Nav() {
   const { views } = useContext(Context);
 

@@ -6,11 +6,7 @@
       "links": [
         {
           "href": "/",
-          "anchor": "Home link"
-        },
-        {
-          "href": "/2",
-          "anchor": "Home link2"
+          "anchor": "Home"
         }
       ]
     },
@@ -19,12 +15,8 @@
       "path": "/markup",
       "links": [
         {
-          "href": "/markup",
-          "anchor": "Flex link"
-        },
-        {
-          "href": "/markup",
-          "anchor": "Flex link2"
+          "href": "/markup/flex",
+          "anchor": "Flex"
         }
       ]
     },
@@ -33,12 +25,8 @@
       "path": "/functions",
       "links": [
         {
-          "href": "/function",
-          "anchor": "Function link"
-        },
-        {
-          "href": "/function",
-          "anchor": "Function link2"
+          "href": "/functions/closures",
+          "anchor": "Closures"
         }
       ]
     },
@@ -47,12 +35,8 @@
       "path": "/hooks",
       "links": [
         {
-          "href": "/hooks",
-          "anchor": "Hooks"
-        },
-        {
-          "href": "/hooks",
-          "anchor": "Hooks2"
+          "href": "/hooks/usestate",
+          "anchor": "useState"
         }
       ]
     }
