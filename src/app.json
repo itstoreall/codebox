@@ -27,6 +27,10 @@
         {
           "href": "/functions/closures",
           "anchor": "Closures"
+        },
+        {
+          "href": "/functions/dnd",
+          "anchor": "DnD"
         }
       ]
     },

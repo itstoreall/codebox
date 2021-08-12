@@ -3,6 +3,7 @@ import { Switch, Route, NavLink } from 'react-router-dom';
 import { v4 as uukey } from 'uuid';
 import Article from '../components/Layout/Article';
 import Closures from '../components/Categories/Functions/Closures';
+import DnD from '../components/Categories/Functions/DnD';
 import { useStyles } from './viewsStyles';
 import Context from '../Context';
 
@@ -17,6 +18,9 @@ export default function FunctionView() {
       <h1 className={s.viewTitle}>Functions</h1>
       <Switch>
         <Route path="/functions/closures" component={Closures} />
+      </Switch>
+      <Switch>
+        <Route path="/functions/dnd" component={DnD} />
       </Switch>
 
       <ul className={s.cateogryLinkList}>

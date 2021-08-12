@@ -20,6 +20,10 @@ export const useStyles = createUseStyles({
   categoryLink: {
     display: 'block',
     fontSize: 14,
+
+    '&:not(:last-child)': {
+      marginBottom: 5,
+    },
   },
 
   activeCategoryLink: {
