@@ -1,6 +1,6 @@
-import Header from './components/Layout/Header';
-import Nav from './components/Layout/Nav';
-import Main from './components/Layout/Main';
+import Header from './components/Markup/Header';
+import Nav from './components/Markup/Nav';
+import Main from './components/Markup/Main';
 import appContent from './app.json';
 import Context from './Context';
 import './App.scss';

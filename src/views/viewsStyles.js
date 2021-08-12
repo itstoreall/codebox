@@ -4,6 +4,7 @@ import refs from '../styles/refs';
 export const useStyles = createUseStyles({
   viewTitle: {
     marginBottom: 40,
+    fontSize: 24,
     color: refs.primeryBlackColor,
   },
 

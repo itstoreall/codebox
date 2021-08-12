@@ -6,17 +6,30 @@
       "links": [
         {
           "href": "/",
-          "anchor": "Home"
+          "anchor": "Home",
+          "source": ""
         }
       ]
     },
     {
-      "title": "Markup",
-      "path": "/markup",
+      "title": "Layout",
+      "path": "/layout",
       "links": [
         {
-          "href": "/markup/flex",
-          "anchor": "Flex"
+          "href": "/layout/flex",
+          "anchor": "Flex",
+          "source": ""
+        }
+      ]
+    },
+    {
+      "title": "Components",
+      "path": "/components",
+      "links": [
+        {
+          "href": "/components/dnd",
+          "anchor": "DnD",
+          "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/DnD"
         }
       ]
     },
@@ -26,11 +39,8 @@
       "links": [
         {
           "href": "/functions/closures",
-          "anchor": "Closures"
-        },
-        {
-          "href": "/functions/dnd",
-          "anchor": "DnD"
+          "anchor": "Closures",
+          "source": ""
         }
       ]
     },
@@ -40,7 +50,8 @@
       "links": [
         {
           "href": "/hooks/usestate",
-          "anchor": "useState"
+          "anchor": "useState",
+          "source": ""
         }
       ]
     }

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import CategorySection from '../../../Layout/Sections/CategorySection';
+import CategorySection from '../../../Markup/Sections/CategorySection';
 
 const { log } = console;
 

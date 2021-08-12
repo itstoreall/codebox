@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import Article from '../components/Layout/Article';
-import CategoryCard from '../components/Layout/CategoryCards';
+import Article from '../components/Markup/Article';
+import CategoryCard from '../components/Markup/CategoryCards';
 import Context from '../Context';
 import { useStyles } from './viewsStyles';
 

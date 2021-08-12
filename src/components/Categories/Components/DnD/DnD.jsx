@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import CategorySection from '../../../Layout/Sections/CategorySection';
+import CategorySection from '../../../Markup/Sections/CategorySection';
 import s from './DnD.module.scss';
 
 const DnD = () => {

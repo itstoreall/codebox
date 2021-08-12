@@ -2,28 +2,28 @@ import { Fragment, useContext } from 'react';
 import { Switch, Route, NavLink } from 'react-router-dom';
 import { v4 as uukey } from 'uuid';
 import Article from '../components/Markup/Article';
-import UseState from '../components/Categories/Hooks/UseState';
+import Flex from '../components/Categories/Layout/Flex/';
 import { useStyles } from './viewsStyles';
 import Context from '../Context';
 
 // const { log } = console;
 
-export default function HookView() {
+export default function LayoutView() {
   const s = useStyles();
   const { views } = useContext(Context);
 
   return (
     <Article>
-      <h1 className={s.viewTitle}>Hooks</h1>
+      <h1 className={s.viewTitle}>Layout</h1>
 
       <Switch>
-        <Route path="/hooks/usestate" component={UseState} />
+        <Route path="/markup/flex" component={Flex} />
       </Switch>
 
       <ul className={s.cateogryLinkList}>
         {views.map(view => (
           <Fragment key={uukey()}>
-            {view.title === 'Hooks' && (
+            {view.title === 'Markup' && (
               <li className={s.cateogryLinkItem}>
                 {view.links.map(link => (
                   <NavLink

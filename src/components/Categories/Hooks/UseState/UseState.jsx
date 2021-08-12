@@ -1,9 +1,9 @@
-import CategorySection from '../../../Layout/Sections/CategorySection';
+import CategorySection from '../../../Markup/Sections/CategorySection';
 
 const UseState = () => {
   return (
     <CategorySection>
-      <p>Flex</p>
+      <p>UseState - component</p>
     </CategorySection>
   );
 };

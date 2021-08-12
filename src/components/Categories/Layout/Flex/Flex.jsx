@@ -1,4 +1,4 @@
-import CategorySection from '../../../Layout/Sections/CategorySection';
+import CategorySection from '../../../Markup/Sections/CategorySection';
 
 const Flex = () => {
   return (
