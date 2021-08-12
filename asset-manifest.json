@@ -1,26 +1,28 @@
 {
   "files": {
-    "main.css": "/codebox/static/css/main.fdee2d05.chunk.css",
-    "main.js": "/codebox/static/js/main.aa8baa81.chunk.js",
-    "main.js.map": "/codebox/static/js/main.aa8baa81.chunk.js.map",
-    "runtime-main.js": "/codebox/static/js/runtime-main.2ff50bff.js",
-    "runtime-main.js.map": "/codebox/static/js/runtime-main.2ff50bff.js.map",
+    "main.css": "/codebox/static/css/main.37c24062.chunk.css",
+    "main.js": "/codebox/static/js/main.ed3ffe82.chunk.js",
+    "main.js.map": "/codebox/static/js/main.ed3ffe82.chunk.js.map",
+    "runtime-main.js": "/codebox/static/js/runtime-main.7b918373.js",
+    "runtime-main.js.map": "/codebox/static/js/runtime-main.7b918373.js.map",
     "static/css/2.bc922b9c.chunk.css": "/codebox/static/css/2.bc922b9c.chunk.css",
-    "static/js/2.ef84fc41.chunk.js": "/codebox/static/js/2.ef84fc41.chunk.js",
-    "static/js/2.ef84fc41.chunk.js.map": "/codebox/static/js/2.ef84fc41.chunk.js.map",
-    "static/js/3.8effb710.chunk.js": "/codebox/static/js/3.8effb710.chunk.js",
-    "static/js/3.8effb710.chunk.js.map": "/codebox/static/js/3.8effb710.chunk.js.map",
+    "static/js/2.662a864d.chunk.js": "/codebox/static/js/2.662a864d.chunk.js",
+    "static/js/2.662a864d.chunk.js.map": "/codebox/static/js/2.662a864d.chunk.js.map",
+    "static/js/3.86be11af.chunk.js": "/codebox/static/js/3.86be11af.chunk.js",
+    "static/js/3.86be11af.chunk.js.map": "/codebox/static/js/3.86be11af.chunk.js.map",
     "index.html": "/codebox/index.html",
     "static/css/2.bc922b9c.chunk.css.map": "/codebox/static/css/2.bc922b9c.chunk.css.map",
-    "static/css/main.fdee2d05.chunk.css.map": "/codebox/static/css/main.fdee2d05.chunk.css.map",
-    "static/js/2.ef84fc41.chunk.js.LICENSE.txt": "/codebox/static/js/2.ef84fc41.chunk.js.LICENSE.txt",
+    "static/css/main.37c24062.chunk.css.map": "/codebox/static/css/main.37c24062.chunk.css.map",
+    "static/js/2.662a864d.chunk.js.LICENSE.txt": "/codebox/static/js/2.662a864d.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/codebox/static/media/ProximaNova-Regular.ea03f826.otf",
+    "static/media/DnD.module.scss": "/codebox/static/media/defaultIcon.e8d45731.svg",
     "static/media/logo.6ce24c58.svg": "/codebox/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2ff50bff.js",
+    "static/js/runtime-main.7b918373.js",
     "static/css/2.bc922b9c.chunk.css",
-    "static/js/2.ef84fc41.chunk.js",
-    "static/css/main.fdee2d05.chunk.css",
-    "static/js/main.aa8baa81.chunk.js"
+    "static/js/2.662a864d.chunk.js",
+    "static/css/main.37c24062.chunk.css",
+    "static/js/main.ed3ffe82.chunk.js"
   ]
 }
