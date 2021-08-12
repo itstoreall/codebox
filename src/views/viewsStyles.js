@@ -3,7 +3,7 @@ import refs from '../styles/refs';
 
 export const useStyles = createUseStyles({
   viewTitle: {
-    marginBottom: 40,
+    marginBottom: 35,
     fontSize: 24,
     color: refs.primeryBlackColor,
   },

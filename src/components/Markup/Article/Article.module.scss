@@ -1,14 +1,14 @@
 @import '../../../styles/refs.scss';
 
 .Article {
-  padding: 40px 20px;
+  padding: 30px 20px 30px;
   // background-color: skyblue;
 
   @media screen and (min-width: $tablet) {
-    padding: 40px 40px;
+    padding: 30px 40px 50px;
   }
 
   @media screen and (min-width: $desktop) {
-    padding: 50px 50px;
+    padding: 30px 50px 50px;
   }
 }

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import CategorySection from '../../../Markup/Sections/CategorySection';
 import s from './DnD.module.scss';
 
+// const { log } = console;
+
 const DnD = () => {
   const [value, setValue] = useState('');
   const [drag, setDrag] = useState(false);
@@ -9,47 +11,59 @@ const DnD = () => {
   const [cancelBtn, setCancelBtn] = useState('Select file to upload');
   const [timer, setTimer] = useState(null);
 
-  // Drag Over
+  // Drag over
   const handleDragOver = e => {
     e.preventDefault();
     setDrag(true);
   };
 
-  // Drag Leave
+  // Drag leave
   const handleDragLeave = e => {
     e.preventDefault();
     setDrag(false);
   };
 
   // Upload image
-  const handleImageUrl = e => {
+  const handleUploadImg = e => {
+    const file = e.currentTarget.files[0];
+
+    const reader = new FileReader();
+    reader.readAsDataURL(e.currentTarget.files[0]);
+
+    reader.onload = function (e) {
+      const image = new Image();
+      image.src = reader.result; // Base64;
+
+      image.onload = () => {
+        const width = image.naturalWidth;
+        const height = image.naturalHeight;
+
+        validateImg(image.src, file.type, width, height);
+      };
+    };
+  };
+
+  // Validate image
+  const validateImg = (url, type, width, height) => {
     setDrag(false);
 
-    const image = e.currentTarget.files[0];
-
-    let imageReader = new FileReader();
-
-    if (image?.type === 'image/png' || image?.type === 'image/jpeg') {
-      getImageUrl(image, imageReader);
-    } else if (!e.currentTarget.value) {
-      return;
+    if (type === 'image/png' || type === 'image/jpeg') {
+      if (height <= 100 || width <= 100) {
+        handleUploadingStatus();
+        changeImgUrl(url);
+      } else {
+        alert('Image should be: png, jpeg and size max 100x100 px');
+      }
     } else {
-      alert('Image should be in png, jpeg file format only!');
+      alert('Image should be: png, jpeg and size max 100x100 px');
     }
   };
 
-  // Get Url
-  const getImageUrl = (image, imageReader) => {
-    handleUploadingStatus();
-
+  // Change image url
+  const changeImgUrl = url => {
     setTimer(
       setTimeout(() => {
-        imageReader.onload = () => {
-          setValue(imageReader.result);
-        };
-
-        image && imageReader.readAsDataURL(image);
-
+        setValue(url);
         handleDownloadedStatus();
       }, 2000),
     );
@@ -89,13 +103,13 @@ const DnD = () => {
         <div className={s.dnd__header}>
           <h1 className={s.dnd__title}>Company Logo</h1>
           <p className={s.dnd__p}>
-            Logo should be square, 100px, png or jpeg file format.
+            Logo should be square, max 100px, png or jpeg file format.
           </p>
         </div>
 
         <div className={s.dropArea}>
-          <div className={s.dropAreaActive}></div>
-          {/* {drag && <div className={s.dropAreaActive}></div>} */}
+          {/* <div className={s.dropAreaActive}></div> */}
+          {drag && <div className={s.dropAreaActive}></div>}
           <div className={s.dropArea__info}>
             {status !== 'uploading' && (
               <div className={s.dropArea__thumb}>
@@ -147,7 +161,7 @@ const DnD = () => {
               data-btn-content={cancelBtn}
               type="file"
               accept="image/png, image/jpeg"
-              onChange={handleImageUrl}
+              onChange={handleUploadImg}
               onDragOver={e => handleDragOver(e)}
               onDragLeave={e => handleDragLeave(e)}
             />
@@ -168,47 +182,3 @@ const DnD = () => {
 };
 
 export default DnD;
-
-/*
-// Upload image
-  const handleImageUrl = e => {
-    setDrag(false);
-
-    // const image = e.currentTarget.files[0];
-
-    // ---
-
-    const reader = new FileReader();
-    reader.readAsDataURL(e.currentTarget.files[0]);
-
-    reader.onload = function (e) {
-      const image = new Image();
-
-      // Base64;
-      image.src = reader.result;
-      log(image.src);
-
-      // size
-      image.onload = () => {
-        const width = image.naturalWidth;
-        const height = image.naturalHeight;
-
-        log(width, height);
-
-        // if (height > 100 || width > 100) {
-        //   alert('Height and Width must not exceed 100px.');
-        //   return false;
-        // }
-        // alert('Uploaded image has valid Height and Width.');
-        // return true;
-
-        if (image?.type === 'image/png' || image?.type === 'image/jpeg') {
-          getImageUrl(image.src, reader);
-        } else if (!e.currentTarget.value) {
-          return;
-        } else {
-          alert('Image should be in png, jpeg file format only!');
-        }
-      };
-    };
-*/
