@@ -9,11 +9,12 @@ export const useStyles = createUseStyles({
   },
 
   // LinkList
-  cateogryLinkList: {
+  cateogryNavList: {
     margin: 0,
     padding: 20,
     listStyle: 'none',
-    border: `1px solid ${refs.primaryBlackColor25}`,
+    backgroundColor: refs.BG__Light,
+    border: `1px solid ${refs.primaryBorderColor}`,
     borderRadius: 4,
   },
 

@@ -20,7 +20,7 @@ export default function HookView() {
         <Route path="/hooks/usestate" component={UseState} />
       </Switch>
 
-      <ul className={s.cateogryLinkList}>
+      <ul className={s.cateogryNavList}>
         {views.map(view => (
           <Fragment key={uukey()}>
             {view.title === 'Hooks' && (

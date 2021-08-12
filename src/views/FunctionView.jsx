@@ -19,7 +19,7 @@ export default function FunctionsView() {
         <Route path="/functions/closures" component={Closures} />
       </Switch>
 
-      <ul className={s.cateogryLinkList}>
+      <ul className={s.cateogryNavList}>
         {views.map(view => (
           <Fragment key={uukey()}>
             {view.title === 'Functions' && (

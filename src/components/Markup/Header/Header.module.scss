@@ -16,24 +16,24 @@
   padding: 10px 0;
   background-color: #282c34;
 
-  .HeaderLogoWrap {
+  &__logoLink {
     display: flex;
     align-items: center;
+  }
 
-    .HeaderLogo {
-      height: 20px;
-      pointer-events: none;
+  &__logoImg {
+    height: 20px;
+    pointer-events: none;
 
-      @media (prefers-reduced-motion: no-preference) {
-        animation: HeaderLogoSpin infinite 20s linear;
-      }
+    @media (prefers-reduced-motion: no-preference) {
+      animation: HeaderLogoSpin infinite 20s linear;
     }
+  }
 
-    .HeaderLogoName {
-      font-family: 'Montserrat';
-      font-size: 18px;
-      font-weight: 600;
-      color: white;
-    }
+  &__logoName {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
   }
 }

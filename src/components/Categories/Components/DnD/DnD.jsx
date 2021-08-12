@@ -88,11 +88,14 @@ const DnD = () => {
       <div className={s.dnd}>
         <div className={s.dnd__header}>
           <h1 className={s.dnd__title}>Company Logo</h1>
-          <p>Logo should be square, 100px, png or jpeg file format.</p>
+          <p className={s.dnd__p}>
+            Logo should be square, 100px, png or jpeg file format.
+          </p>
         </div>
 
         <div className={s.dropArea}>
-          {drag && <div className={s.dropAreaActive}></div>}
+          <div className={s.dropAreaActive}></div>
+          {/* {drag && <div className={s.dropAreaActive}></div>} */}
           <div className={s.dropArea__info}>
             {status !== 'uploading' && (
               <div className={s.dropArea__thumb}>

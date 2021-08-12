@@ -19,7 +19,7 @@ export default function ComponentView() {
         <Route path="/components/dnd" component={DnD} />
       </Switch>
 
-      <ul className={s.cateogryLinkList}>
+      <ul className={s.cateogryNavList}>
         {views.map(view => (
           <Fragment key={uukey()}>
             {view.title === 'Components' && (

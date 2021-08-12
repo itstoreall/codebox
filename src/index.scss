@@ -1,18 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 @import './styles/refs.scss';
 
+@font-face {
+  font-family: 'ProximaNova-Regular';
+  src: local('ProximaNova-Regular'),
+    url('./fonts/ProximaNove/ProximaNova-Regular.otf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'ProximaNova-Bold';
+  src: local('ProximaNova-Bold'),
+    url('./fonts/ProximaNove/ProximaNova-Bold.otf') format('truetype');
+  font-weight: 700;
+}
+
 html {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.4;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  // font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  //   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  //   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -27,17 +38,26 @@ h2,
 h3,
 h4,
 p,
+span,
 a {
   margin: 0;
   padding: 0;
+  // font-size: 14px;
+  font-weight: normal;
+  font-family: 'ProximaNova-Regular';
+  margin: 0;
+  padding: 0;
+  color: $primaryTextColor;
+}
+
+h1 {
+  font-family: 'ProximaNova-Bold';
+  font-size: 20px;
+  color: $primaryBlackColor;
 }
 
 a {
   display: inline-block;
   text-decoration: none;
   color: $linkColor;
-}
-
-a:hover {
-  text-decoration: underline;
 }

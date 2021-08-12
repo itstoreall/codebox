@@ -1,4 +1,3 @@
-import { useContext } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Container from '../../Container';
 import HomeView from '../../../views/HomeView';
@@ -6,14 +5,10 @@ import LayoutView from '../../../views/LayoutView';
 import ComponentView from '../../../views/ComponentView';
 import FunctionView from '../../../views/FunctionView';
 import HookView from '../../../views/HookView';
-import Context from '../../../Context';
 
-const { log } = console;
+// const { log } = console;
 
 const Main = () => {
-  const { views } = useContext(Context);
-  log('views', views);
-
   return (
     <main className="main">
       <Container>

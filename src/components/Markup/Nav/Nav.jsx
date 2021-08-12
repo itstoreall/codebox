@@ -1,5 +1,6 @@
-import { useContext } from 'react';
+import { Fragment, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import { v4 as uukey } from 'uuid';
 import Container from '../../Container';
 import Context from '../../../Context';
 import s from './Nav.module.scss';
@@ -12,17 +13,24 @@ export default function Nav() {
   return (
     <Container>
       <nav className={s.nav}>
-        {views.map(({ title, path }) => (
-          <NavLink
-            key={title}
-            exact
-            to={path}
-            className={s.navLink}
-            activeClassName={s.activeNavLink}
-          >
-            {title}
-          </NavLink>
-        ))}
+        <ul className={s.nav__list}>
+          {views.map(({ title, path }) => (
+            <Fragment key={path}>
+              {path !== '/' && (
+                <li key={uukey} className={s.nav__item}>
+                  <NavLink
+                    exact
+                    to={path}
+                    className={s.nav__link}
+                    activeClassName={s.nav__activeLink}
+                  >
+                    {title}
+                  </NavLink>
+                </li>
+              )}
+            </Fragment>
+          ))}
+        </ul>
       </nav>
     </Container>
   );

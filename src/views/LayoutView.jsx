@@ -20,7 +20,7 @@ export default function LayoutView() {
         <Route path="/markup/flex" component={Flex} />
       </Switch>
 
-      <ul className={s.cateogryLinkList}>
+      <ul className={s.cateogryNavList}>
         {views.map(view => (
           <Fragment key={uukey()}>
             {view.title === 'Markup' && (
