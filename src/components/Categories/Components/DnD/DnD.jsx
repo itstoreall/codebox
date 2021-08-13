@@ -25,38 +25,42 @@ const DnD = () => {
 
   // Upload image
   const handleUploadImg = e => {
-    const file = e.currentTarget.files[0];
+    setDrag(false);
+    handleUploadingStatus();
 
+    const file = e.currentTarget.files[0];
     const reader = new FileReader();
     reader.readAsDataURL(e.currentTarget.files[0]);
 
-    reader.onload = function (e) {
+    reader.onload = function () {
       const image = new Image();
       image.src = reader.result; // Base64;
 
-      image.onload = () => {
-        const width = image.naturalWidth;
-        const height = image.naturalHeight;
+      handleUploadingStatus();
 
-        validateImg(image.src, file.type, width, height);
-      };
-    };
-  };
+      if (file.type === 'image/png' || file.type === 'image/jpeg') {
+        image.onload = () => {
+          const width = image.naturalWidth;
+          const height = image.naturalHeight;
 
-  // Validate image
-  const validateImg = (url, type, width, height) => {
-    setDrag(false);
-
-    if (type === 'image/png' || type === 'image/jpeg') {
-      if (height <= 100 || width <= 100) {
-        handleUploadingStatus();
-        changeImgUrl(url);
+          if (width <= 100 || height <= 100) {
+            changeImgUrl(image.src);
+          } else {
+            alert(
+              `\nOops! \n\nThe uploaded image size is (${width} x ${height} px) \nBut it should only be max 100 x 100 px`,
+            );
+            handleCancelUploadingStatus();
+          }
+        };
       } else {
-        alert('Image should be: png, jpeg and size max 100x100 px');
+        alert(
+          `\nOops! \n\nThe uploaded image type is "${
+            file.type.split('/')[1]
+          }" \nBut it should only be png or jpeg`,
+        );
+        handleCancelUploadingStatus();
       }
-    } else {
-      alert('Image should be: png, jpeg and size max 100x100 px');
-    }
+    };
   };
 
   // Change image url
@@ -64,7 +68,7 @@ const DnD = () => {
     setTimer(
       setTimeout(() => {
         setValue(url);
-        handleDownloadedStatus();
+        handleUploadedStatus();
       }, 2000),
     );
   };
@@ -82,8 +86,8 @@ const DnD = () => {
   };
 
   // Downloaded Status
-  const handleDownloadedStatus = () => {
-    setStatus('downloaded');
+  const handleUploadedStatus = () => {
+    setStatus('uploaded');
     setCancelBtn('Select file to replace');
   };
 
@@ -93,7 +97,7 @@ const DnD = () => {
       setStatus('initial');
       setCancelBtn('Select file to upload');
     } else if (value !== '' || status === 'uploading') {
-      handleDownloadedStatus();
+      handleUploadedStatus();
     }
   };
 
@@ -113,7 +117,7 @@ const DnD = () => {
           <div className={s.dropArea__info}>
             {status !== 'uploading' && (
               <div className={s.dropArea__thumb}>
-                {status === 'downloaded' && (
+                {status === 'uploaded' && (
                   <img
                     className={s.dropArea__image}
                     src={value}
@@ -147,7 +151,7 @@ const DnD = () => {
             {status === 'uploading' && (
               <span className={s.dropArea__conditionsText}>Uploading</span>
             )}
-            {status === 'downloaded' && (
+            {status === 'uploaded' && (
               <span className={s.dropArea__conditionsText}>
                 Drag &amp; drop here to replace
               </span>

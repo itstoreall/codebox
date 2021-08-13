@@ -3,6 +3,7 @@ import { Switch, Route, NavLink } from 'react-router-dom';
 import { v4 as uukey } from 'uuid';
 import Article from '../components/Markup/Article';
 import DnD from '../components/Categories/Components/DnD';
+import Free from '../components/Categories/Components/Free';
 import { useStyles } from './viewsStyles';
 import Context from '../Context';
 
@@ -17,6 +18,9 @@ export default function ComponentView() {
       <h1 className={s.viewTitle}>Components</h1>
       <Switch>
         <Route path="/components/dnd" component={DnD} />
+      </Switch>
+      <Switch>
+        <Route path="/components/free" component={Free} />
       </Switch>
 
       <ul className={s.cateogryNavList}>

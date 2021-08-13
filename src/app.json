@@ -30,6 +30,11 @@
           "href": "/components/dnd",
           "anchor": "DnD",
           "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/DnD"
+        },
+        {
+          "href": "/components/free",
+          "anchor": "Free",
+          "source": ""
         }
       ]
     },
