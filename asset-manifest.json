@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/codebox/static/css/main.c854199a.chunk.css",
+    "main.css": "/codebox/static/css/main.a39de43f.chunk.css",
     "main.js": "/codebox/static/js/main.959b674c.chunk.js",
     "main.js.map": "/codebox/static/js/main.959b674c.chunk.js.map",
     "runtime-main.js": "/codebox/static/js/runtime-main.44f5a9ab.js",
@@ -12,9 +12,8 @@
     "static/js/3.2de709e6.chunk.js.map": "/codebox/static/js/3.2de709e6.chunk.js.map",
     "index.html": "/codebox/index.html",
     "static/css/2.bc922b9c.chunk.css.map": "/codebox/static/css/2.bc922b9c.chunk.css.map",
-    "static/css/main.c854199a.chunk.css.map": "/codebox/static/css/main.c854199a.chunk.css.map",
+    "static/css/main.a39de43f.chunk.css.map": "/codebox/static/css/main.a39de43f.chunk.css.map",
     "static/js/2.ba77386c.chunk.js.LICENSE.txt": "/codebox/static/js/2.ba77386c.chunk.js.LICENSE.txt",
-    "static/media/index.scss": "/codebox/static/media/ProximaNova-Regular.ea03f826.otf",
     "static/media/DnD.module.scss": "/codebox/static/media/defaultIcon.e8d45731.svg",
     "static/media/logo.6ce24c58.svg": "/codebox/static/media/logo.6ce24c58.svg"
   },
@@ -22,7 +21,7 @@
     "static/js/runtime-main.44f5a9ab.js",
     "static/css/2.bc922b9c.chunk.css",
     "static/js/2.ba77386c.chunk.js",
-    "static/css/main.c854199a.chunk.css",
+    "static/css/main.a39de43f.chunk.css",
     "static/js/main.959b674c.chunk.js"
   ]
 }
