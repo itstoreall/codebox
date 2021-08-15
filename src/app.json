@@ -1,32 +1,64 @@
 {
-  "categories": [
+  "views": [
+    {
+      "title": "Home",
+      "path": "/",
+      "links": [
+        {
+          "href": "/",
+          "anchor": "Home",
+          "source": ""
+        }
+      ]
+    },
     {
       "title": "Layout",
-      "link": {
-        "href": "/",
-        "anchor": "Flex"
-      }
+      "path": "/layout",
+      "links": [
+        {
+          "href": "/layout/flex",
+          "anchor": "Flex",
+          "source": ""
+        }
+      ]
+    },
+    {
+      "title": "Components",
+      "path": "/components",
+      "links": [
+        {
+          "href": "/components/dnd",
+          "anchor": "DnD",
+          "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/DnD"
+        },
+        {
+          "href": "/components/free",
+          "anchor": "Free",
+          "source": ""
+        }
+      ]
     },
     {
       "title": "Functions",
-      "link": {
-        "href": "/",
-        "anchor": "Potential link"
-      }
+      "path": "/functions",
+      "links": [
+        {
+          "href": "/functions/closures",
+          "anchor": "Closures",
+          "source": ""
+        }
+      ]
     },
     {
-      "title": "CSS",
-      "link": {
-        "href": "/",
-        "anchor": "Potential link"
-      }
-    },
-    {
-      "title": "Something else (two)",
-      "link": {
-        "href": "/",
-        "anchor": "Potential link"
-      }
+      "title": "Hooks",
+      "path": "/hooks",
+      "links": [
+        {
+          "href": "/hooks/usestate",
+          "anchor": "useState",
+          "source": ""
+        }
+      ]
     }
   ]
 }

@@ -1,36 +1,21 @@
-import logo from './logo.svg';
-import Container from './Container';
+import Header from './components/Markup/Header';
+import Nav from './components/Markup/Nav';
+import Main from './components/Markup/Main';
 import appContent from './app.json';
+import Context from './Context';
 import './App.scss';
 
 // const { log } = console;
 
-function App() {
+export default function App() {
+  const { views } = appContent;
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className="App-logo_wrap">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-logo_title">codebox</h1>
-        </div>
-      </header>
-
-      <main className="main">
-        <Container>
-          <article className="categoryWrap">
-            {appContent.categories.map(category => (
-              <section key={category.title} className="category">
-                <h2 className="categoryTitle">{category.title}</h2>
-                <a className="categoryLink" href={category.link.href}>
-                  {category.link.anchor}
-                </a>
-              </section>
-            ))}
-          </article>
-        </Container>
-      </main>
-    </div>
+    <Context.Provider value={{ views }}>
+      <div className="App">
+        <Header />
+        <Nav />
+        <Main />
+      </div>
+    </Context.Provider>
   );
 }
-
-export default App;
