@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import { v4 as uukey } from 'uuid';
 import s from './CategoryCards.module.scss';
 
 const CategoryItem = ({ view }) => {
@@ -8,7 +7,7 @@ const CategoryItem = ({ view }) => {
       <h2 className={s.CategoryItem__title}>{view.title}</h2>
       <>
         {view.links.map(link => (
-          <a key={uukey} className={s.CategoryItem__link} href={link.href}>
+          <a key={link.href} className={s.CategoryItem__link} href={link.href}>
             {link.anchor}
           </a>
         ))}

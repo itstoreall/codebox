@@ -7,7 +7,7 @@ const CategoryCards = ({ views }) => (
   <section className={s.CategoryCards}>
     <ul className={[s.list, s.CategoryList].join(' ')}>
       {views.map(view => (
-        <CategoryItem key={uukey} view={view} />
+        <CategoryItem key={uukey()} view={view} />
       ))}
     </ul>
   </section>

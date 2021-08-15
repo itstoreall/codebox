@@ -30,7 +30,7 @@ export default function ComponentView() {
               <li className={s.cateogryLinkItem}>
                 {view.links.map(link => (
                   <NavLink
-                    key={uukey()}
+                    key={link.href}
                     exact
                     to={link.href}
                     className={s.categoryLink}
