@@ -1,0 +1,18 @@
+@import '../../../styles/refs.scss';
+
+.navbar__backdrop {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 40px);
+  // background-color: transparent;
+  background-color: $BG__GreyBlue;
+
+  .navbar {
+    // position: absolute;
+    // right: 0;
+    padding: 80px 0 0 0;
+    margin: 0 auto;
+    min-height: calc(100vh - 40px);
+    width: 230px;
+  }
+}

@@ -11,9 +11,10 @@
 
 // Header
 .Header {
+  position: relative;
   display: flex;
   justify-content: center;
-  padding: 10px 0;
+  height: 40px;
   background-color: #282c34;
 
   &__logoLink {
@@ -35,5 +36,26 @@
     font-size: 18px;
     font-weight: 600;
     color: white;
+  }
+
+  &__menuBtn {
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 100%;
+    cursor: pointer;
+
+    & > svg {
+      width: 15px;
+      height: 15px;
+      fill: white;
+    }
+
+    &:hover > svg {
+      fill: pink;
+    }
   }
 }
