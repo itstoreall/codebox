@@ -2,13 +2,13 @@
 
 .Nav {
   @media screen and (min-width: $tablet) {
-    padding: 13px 20px;
     text-align: center;
     border-bottom: 1px solid $primaryBorderColor;
   }
 
   &__list {
     margin: 0;
+    padding: 0;
     list-style: none;
 
     @media screen and (min-width: $tablet) {
@@ -21,8 +21,18 @@
   &__item {
     @media screen and (max-width: $tabletMax) {
       &:not(:last-child) {
-        margin-bottom: 30px;
+        margin-bottom: 40px;
       }
+    }
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      align-items: center;
+      height: 50px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      height: 40px;
     }
 
     &:not(:last-child) {
@@ -39,6 +49,10 @@
     text-transform: uppercase;
     color: $primaryWhiteColor;
     transition: all 250ms $cubicBezier;
+
+    @media screen and (min-width: $mobile) {
+      font-size: 20px;
+    }
 
     @media screen and (min-width: $tablet) {
       color: $primaryTextColor;
