@@ -27,6 +27,7 @@ const refs = {
 
   // Bg
   BG__Light: '#f9fbfd',
+  BG__GreyBlue: '#425368da',
 
   // Borders
   primaryBorderColor: '#e8f1fb',

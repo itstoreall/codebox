@@ -21,6 +21,16 @@
       margin-bottom: 40px;
       width: 100%;
 
+      @media screen and (min-width: $mobile) {
+        width: 48%;
+
+        @media screen and (max-width: $mobilePlusMax) {
+          &:not(:nth-child(2n)) {
+            margin-right: 10px;
+          }
+        }
+      }
+
       @media screen and (min-width: $tablet) {
         width: 215px;
 

@@ -1,47 +1,70 @@
 @import '../../../styles/refs.scss';
 
-.nav {
-  padding: 0 20px;
-  text-align: center;
-  border-bottom: 1px solid $primaryBorderColor;
+.Nav {
+  @media screen and (min-width: $tablet) {
+    text-align: center;
+    border-bottom: 1px solid $primaryBorderColor;
+  }
 
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    margin: 0;
     padding: 0;
     list-style: none;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__item {
-    padding-top: 2px;
+    @media screen and (max-width: $tabletMax) {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      align-items: center;
+      height: 50px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      height: 40px;
+    }
 
     &:not(:last-child) {
-      margin-right: 20px;
+      margin-right: 30px;
     }
   }
 
   // a
   &__link {
     display: block;
-    color: $primaryTextColor;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
     text-transform: uppercase;
+    color: $primaryWhiteColor;
     transition: all 250ms $cubicBezier;
 
-    &:not(:last-child) {
-      margin-right: 30px;
+    @media screen and (min-width: $mobile) {
+      font-size: 20px;
     }
 
-    &:hover {
-      text-decoration: none;
-      text-decoration: underline;
+    @media screen and (min-width: $tablet) {
+      color: $primaryTextColor;
+    }
+
+    @media screen and (min-width: $tablet) {
+      font-size: 12px;
+
+      &:hover {
+        text-decoration: none;
+        text-decoration: underline;
+      }
     }
   }
-
-  // .activeNavLink {
-  //   @extend .navLink;
-  // }
 }
