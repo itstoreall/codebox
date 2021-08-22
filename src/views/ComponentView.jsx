@@ -1,6 +1,5 @@
 import { Fragment, useContext } from 'react';
 import { Switch, Route, NavLink } from 'react-router-dom';
-import { v4 as uukey } from 'uuid';
 import Article from '../components/Markup/Article';
 import DnD from '../components/Categories/Components/DnD';
 import Free from '../components/Categories/Components/Free';
@@ -25,12 +24,12 @@ export default function ComponentView() {
 
       <ul className={s.cateogryNavList}>
         {views.map(view => (
-          <Fragment key={uukey()}>
+          <Fragment key={view.v_id}>
             {view.title === 'Components' && (
               <li className={s.cateogryLinkItem}>
                 {view.links.map(link => (
                   <NavLink
-                    key={uukey()}
+                    key={link.l_id}
                     exact
                     to={link.href}
                     className={s.categoryLink}

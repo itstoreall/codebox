@@ -1,10 +1,12 @@
 {
   "views": [
     {
+      "v_id": "v1",
       "title": "Home",
       "path": "/",
       "links": [
         {
+          "l_id": "v1-l1",
           "href": "/",
           "anchor": "Home",
           "source": ""
@@ -12,26 +14,31 @@
       ]
     },
     {
+      "v_id": "v2",
       "title": "Layout",
       "path": "/layout",
       "links": [
         {
-          "href": "/layout/flex",
-          "anchor": "Flex",
+          "l_id": "v2-l1",
+          "href": "/layout/styled-components",
+          "anchor": "Styled Components",
           "source": ""
         }
       ]
     },
     {
+      "v_id": "v3",
       "title": "Components",
       "path": "/components",
       "links": [
         {
+          "l_id": "v3-l1",
           "href": "/components/dnd",
           "anchor": "DnD",
           "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/DnD"
         },
         {
+          "l_id": "v3-l2",
           "href": "/components/free",
           "anchor": "Free",
           "source": ""
@@ -39,10 +46,12 @@
       ]
     },
     {
+      "v_id": "v4",
       "title": "Functions",
       "path": "/functions",
       "links": [
         {
+          "l_id": "v4-l1",
           "href": "/functions/closures",
           "anchor": "Closures",
           "source": ""
@@ -50,10 +59,12 @@
       ]
     },
     {
+      "v_id": "v5",
       "title": "Hooks",
       "path": "/hooks",
       "links": [
         {
+          "l_id": "v5-l1",
           "href": "/hooks/usestate",
           "anchor": "useState",
           "source": ""

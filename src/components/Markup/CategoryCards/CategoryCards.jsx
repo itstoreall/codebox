@@ -1,5 +1,5 @@
+import { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { v4 as uukey } from 'uuid';
 import CategoryItem from './CategoryItem';
 import s from './CategoryCards.module.scss';
 
@@ -7,7 +7,9 @@ const CategoryCards = ({ views }) => (
   <section className={s.CategoryCards}>
     <ul className={[s.list, s.CategoryList].join(' ')}>
       {views.map(view => (
-        <CategoryItem key={uukey} view={view} />
+        <Fragment key={view.v_id}>
+          {view.path !== '/' && <CategoryItem view={view} />}
+        </Fragment>
       ))}
     </ul>
   </section>

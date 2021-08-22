@@ -1,7 +1,7 @@
 import CategorySection from '../../../Markup/Sections/CategorySection';
 import s from './Free.module.scss';
 
-const { log } = console;
+// const { log } = console;
 
 const Free = () => {
   return (

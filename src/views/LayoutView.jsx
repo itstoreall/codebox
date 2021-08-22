@@ -1,8 +1,7 @@
 import { Fragment, useContext } from 'react';
 import { Switch, Route, NavLink } from 'react-router-dom';
-import { v4 as uukey } from 'uuid';
 import Article from '../components/Markup/Article';
-import Flex from '../components/Categories/Layout/Flex/';
+import StyledComponents from '../components/Categories/Layout/StyledComponents';
 import { useStyles } from './viewsStyles';
 import Context from '../Context';
 
@@ -17,17 +16,17 @@ export default function LayoutView() {
       <h1 className={s.viewTitle}>Layout</h1>
 
       <Switch>
-        <Route path="/markup/flex" component={Flex} />
+        <Route path="/layout/styled-components" component={StyledComponents} />
       </Switch>
 
       <ul className={s.cateogryNavList}>
         {views.map(view => (
-          <Fragment key={uukey()}>
-            {view.title === 'Markup' && (
+          <Fragment key={view.v_id}>
+            {view.title === 'Layout' && (
               <li className={s.cateogryLinkItem}>
                 {view.links.map(link => (
                   <NavLink
-                    key={uukey()}
+                    key={link.l_id}
                     exact
                     to={link.href}
                     className={s.categoryLink}

@@ -1,6 +1,5 @@
 import { Fragment, useContext } from 'react';
 import { Switch, Route, NavLink } from 'react-router-dom';
-import { v4 as uukey } from 'uuid';
 import Article from '../components/Markup/Article';
 import Closures from '../components/Categories/Functions/Closures';
 import { useStyles } from './viewsStyles';
@@ -21,12 +20,12 @@ export default function FunctionsView() {
 
       <ul className={s.cateogryNavList}>
         {views.map(view => (
-          <Fragment key={uukey()}>
+          <Fragment key={view.v_id}>
             {view.title === 'Functions' && (
               <li className={s.cateogryLinkItem}>
                 {view.links.map(link => (
                   <NavLink
-                    key={uukey()}
+                    key={link.l_id}
                     exact
                     to={link.href}
                     className={s.categoryLink}
