@@ -1,19 +1,41 @@
-import { Fragment } from 'react';
+// import { Fragment } from 'react';
+import { NavLink } from 'react-router-dom';
+import constants from '../../../constants';
 import PropTypes from 'prop-types';
-import CategoryItem from './CategoryItem';
+// import CategoryItem from './CategoryItem';
 import s from './CategoryCards.module.scss';
 
-const CategoryCards = ({ views }) => (
-  <section className={s.CategoryCards}>
-    <ul className={[s.list, s.CategoryList].join(' ')}>
-      {views.map(view => (
-        <Fragment key={view.v_id}>
-          {view.path !== '/' && <CategoryItem view={view} />}
-        </Fragment>
-      ))}
-    </ul>
-  </section>
-);
+const CategoryCards = ({ views }) => {
+  const { layout, components, functions, hooks } = constants.path;
+  console.log('viewa ----->', views);
+
+  return (
+    <section className={s.CategoryCards}>
+      <ul className={s.CategoryCards__container}>
+        <li className={s.CategoryCards__item}>
+          <NavLink className={s.CategoryCards__btn} to={layout}>
+            Layout
+          </NavLink>
+        </li>
+        <div className={s.CategoryCards__item}>
+          <NavLink className={s.CategoryCards__btn} to={components}>
+            Components
+          </NavLink>
+        </div>
+        <div className={s.CategoryCards__item}>
+          <NavLink className={s.CategoryCards__btn} to={functions}>
+            Functions
+          </NavLink>
+        </div>
+        <div className={s.CategoryCards__item}>
+          <NavLink className={s.CategoryCards__btn} to={hooks}>
+            Hooks
+          </NavLink>
+        </div>
+      </ul>
+    </section>
+  );
+};
 
 CategoryCards.propTypes = {
   views: PropTypes.arrayOf(PropTypes.object).isRequired,

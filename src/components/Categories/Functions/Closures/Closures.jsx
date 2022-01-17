@@ -52,7 +52,7 @@ const Closures = () => {
     <CategorySection>
       <ul>
         <li>
-          <span className="increment">{`Increnemtor - ${result}`}</span>
+          <span className="increment">{`Incrementor - ${result}`}</span>
         </li>
         <li>
           <span className="domains">{`Domain - ${domain}`}</span>

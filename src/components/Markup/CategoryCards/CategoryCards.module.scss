@@ -9,81 +9,39 @@
 
 // -----------------------
 
-// section
 .CategoryCards {
-  // ul
-  .CategoryList {
-    display: flex;
-    flex-wrap: wrap;
+  &__container {
+    display: grid;
+    gap: 10px;
+    grid-auto-rows: minmax(250px, auto);
+    padding: 10px;
+    width: 100%;
+    min-height: 100px;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    list-style: none;
 
-    // li
-    .CategoryItem {
-      margin-bottom: 40px;
-      width: 100%;
-
-      @media screen and (min-width: $mobile) {
-        width: 48%;
-
-        @media screen and (max-width: $mobilePlusMax) {
-          &:not(:nth-child(2n)) {
-            margin-right: 10px;
-          }
-        }
-      }
-
-      @media screen and (min-width: $tablet) {
-        width: 215px;
-
-        @media screen and (max-width: $desktopMax) {
-          &:not(:nth-child(3n)) {
-            margin-right: 21px;
-          }
-        }
-      }
-
-      @media screen and (min-width: $desktop) {
-        width: 260px;
-
-        &:not(:nth-child(4n)) {
-          margin-right: 20px;
-        }
-      }
-
-      &__title {
-        margin-bottom: 10px;
-        font-size: 18px;
-        font-weight: 700;
-        color: $primaryBlackColor;
-      }
-
-      &__link {
-        font-size: 16px;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-
-      // // h2
-      // .categoryTitle {
-      //   margin-bottom: 10px;
-      //   font-size: 16px;
-      //   font-weight: 600;
-      // }
-
-      // // a
-      // .categoryLink {
-      //   display: block;
-      //   margin-bottom: 5px;
-      //   font-size: 14px;
-      // }
-
-      // .activeCategoryLink {
-      //   display: block;
-      //   margin-bottom: 5px;
-      //   font-size: 24px;
-      //   color: red;
-      // }
+    @media screen and (min-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      // grid-template-rows: repeat(2, 200px);
     }
+  }
+
+  &__item {
+    display: inherit;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: #fafafa;
+    }
+  }
+
+  &__btn {
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: $primaryTextColor;
   }
 }

@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import constants from '../../../constants';
 import { NavLink } from 'react-router-dom';
 import logo from './logo.svg';
 import sprite from '../../../svg/sprite.svg';
@@ -7,10 +8,11 @@ import Context from '../../../Context';
 
 export default function Header() {
   const { tabletMax, showNavbar, toggleNavbar } = useContext(Context);
+  const { home } = constants.path;
 
   return (
     <header className={s.Header}>
-      <NavLink className={s.Header__logoLink} to="/">
+      <NavLink className={s.Header__logoLink} to={home}>
         <img src={logo} className={s.Header__logoImg} alt="logo" />
         <h1 className={s.Header__logoName}>codebox</h1>
         {tabletMax && (

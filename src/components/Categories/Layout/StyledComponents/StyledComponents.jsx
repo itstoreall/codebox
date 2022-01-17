@@ -8,6 +8,8 @@ import {
   Btn,
 } from './StyledComponents.styles';
 
+// const { log } = console;
+
 const StyledComponents = () => {
   const [account, setAccount] = useState(0);
   const [vip, setVip] = useState(0);
