@@ -8,8 +8,8 @@ export const useStyles = createUseStyles({
     color: refs.primeryBlackColor,
   },
 
-  // LinkList
-  cateogryNavList: {
+  // NavPanel
+  navPanel: {
     margin: 0,
     padding: 20,
     listStyle: 'none',

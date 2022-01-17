@@ -1,7 +1,7 @@
 import { Fragment, useContext } from 'react';
-import { Switch, Route, NavLink } from 'react-router-dom';
+import NavPanelRoutes from '../Routes/NavPanelRoutes';
+import { NavLink } from 'react-router-dom';
 import Article from '../components/Markup/Article';
-import UseState from '../components/Categories/Hooks/UseState';
 import { useStyles } from './viewsStyles';
 import Context from '../Context';
 
@@ -15,11 +15,9 @@ export default function HookView() {
     <Article>
       <h1 className={s.viewTitle}>Hooks</h1>
 
-      <Switch>
-        <Route path="/hooks/usestate" component={UseState} />
-      </Switch>
+      {NavPanelRoutes()}
 
-      <ul className={s.cateogryNavList}>
+      <ul className={s.navPanel}>
         {views.map(view => (
           <Fragment key={view.v_id}>
             {view.title === 'Hooks' && (
