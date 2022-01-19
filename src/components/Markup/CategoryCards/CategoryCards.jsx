@@ -7,7 +7,6 @@ import s from './CategoryCards.module.scss';
 
 const CategoryCards = ({ views }) => {
   const { layout, components, functions, hooks } = constants.path;
-  console.log('viewa ----->', views);
 
   return (
     <section className={s.CategoryCards}>

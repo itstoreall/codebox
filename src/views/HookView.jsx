@@ -1,43 +1,17 @@
-import { Fragment, useContext } from 'react';
-import NavPanelRoutes from '../Routes/NavPanelRoutes';
-import { NavLink } from 'react-router-dom';
+import NavPanelRoutes from '../Routes/NavPanel/NavPanelRoutes';
+import NavPanelLinks from '../Routes/NavPanel/NavPanelLinks';
 import Article from '../components/Markup/Article';
 import { useStyles } from './viewsStyles';
-import Context from '../Context';
-
-// const { log } = console;
 
 export default function HookView() {
+  const viewTitle = 'Hooks';
   const s = useStyles();
-  const { views } = useContext(Context);
 
   return (
     <Article>
       <h1 className={s.viewTitle}>Hooks</h1>
-
-      {NavPanelRoutes()}
-
-      <ul className={s.navPanel}>
-        {views.map(view => (
-          <Fragment key={view.v_id}>
-            {view.title === 'Hooks' && (
-              <li className={s.cateogryLinkItem}>
-                {view.links.map(link => (
-                  <NavLink
-                    key={link.l_id}
-                    exact
-                    to={link.href}
-                    className={s.categoryLink}
-                    activeClassName={s.activeCategoryLink}
-                  >
-                    {link.anchor}
-                  </NavLink>
-                ))}
-              </li>
-            )}
-          </Fragment>
-        ))}
-      </ul>
+      <NavPanelRoutes viewTitle={viewTitle} />
+      <NavPanelLinks viewTitle={viewTitle} />
     </Article>
   );
 }

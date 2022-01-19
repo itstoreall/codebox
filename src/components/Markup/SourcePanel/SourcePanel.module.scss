@@ -1,0 +1,32 @@
+@import '../../../styles/refs.scss';
+
+.SourcePanel {
+  &__wrap {
+    padding: 0;
+    padding-top: 40px;
+    margin: 0;
+    margin-bottom: 20px;
+    list-style: none;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    fill: $primaryTextColor;
+    color: $primaryTextColor;
+
+    &:hover {
+      fill: $activelinkColor;
+      cursor: pointer;
+
+      & > span {
+        color: $activelinkColor;
+      }
+    }
+  }
+  &__svgSource {
+    margin-right: 10px;
+  }
+  &__linkAnchor {
+    padding-top: 4px;
+  }
+}

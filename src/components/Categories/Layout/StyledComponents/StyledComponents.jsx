@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import CategorySection from '../../../Markup/Sections/CategorySection';
+import SourcePanel from '../../../Markup/SourcePanel';
 import {
   Wrapper,
   BlockBasic,
@@ -8,9 +9,8 @@ import {
   Btn,
 } from './StyledComponents.styles';
 
-// const { log } = console;
-
 const StyledComponents = () => {
+  const featureTitle = 'Styled Components';
   const [account, setAccount] = useState(0);
   const [vip, setVip] = useState(0);
 
@@ -31,6 +31,8 @@ const StyledComponents = () => {
       </Wrapper>
       <Btn onClick={() => toggle(1, 0)}>Referal</Btn>
       <Btn onClick={() => toggle(1, 1)}>Vip</Btn>
+
+      <SourcePanel viewTitle={'Layout'} featureTitle={featureTitle} />
     </CategorySection>
   );
 };
