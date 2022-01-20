@@ -2,7 +2,6 @@ import { useState } from 'react';
 import CategorySection from '../../../Markup/Sections/CategorySection';
 import Content from './Content';
 import SourcePanel from '../../../Markup/SourcePanel';
-import s from './Feature.module.scss';
 import {
   Wrapper,
   BlockBasic,

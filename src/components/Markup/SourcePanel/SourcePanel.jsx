@@ -27,6 +27,7 @@ const SourcePanel = ({ viewTitle, featureTitle }) => {
               link.source &&
               link.anchor === featureTitle && (
                 <a
+                  key={link.l_id}
                   className={s.SourcePanel__link}
                   href={link.source}
                   target="_blanck"
