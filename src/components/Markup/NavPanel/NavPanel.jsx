@@ -1,9 +1,9 @@
 import { Fragment, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useStyles } from './NavPanelStyles';
-import Context from '../../Context';
+import Context from '../../../Context';
 
-const NavPanelLinks = ({ viewTitle }) => {
+const NavPanel = ({ viewTitle }) => {
   const s = useStyles();
   const { views } = useContext(Context);
 
@@ -32,4 +32,4 @@ const NavPanelLinks = ({ viewTitle }) => {
   );
 };
 
-export default NavPanelLinks;
+export default NavPanel;

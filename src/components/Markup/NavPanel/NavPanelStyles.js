@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss';
-import refs from '../../styles/refs';
+import refs from '../../../styles/refs';
 
 export const useStyles = createUseStyles({
   navPanel: {
@@ -17,6 +17,10 @@ export const useStyles = createUseStyles({
 
     '&:not(:last-child)': {
       marginBottom: 5,
+    },
+
+    '&:hover': {
+      color: refs.activelinkColor,
     },
   },
 

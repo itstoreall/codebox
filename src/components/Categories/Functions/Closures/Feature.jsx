@@ -1,8 +1,8 @@
 import CategorySection from '../../../Markup/Sections/CategorySection';
+import Content from './Content';
+import SourcePanel from '../../../Markup/SourcePanel';
 
-// const { log } = console;
-
-const Closures = () => {
+const Feature = ({ viewTitle, featureTitle }) => {
   // Increment
   let result = 0;
 
@@ -50,23 +50,23 @@ const Closures = () => {
 
   return (
     <CategorySection>
-      <ul>
-        <li>
-          <span className="increment">{`Incrementor - ${result}`}</span>
-        </li>
-        <li>
-          <span className="domains">{`Domain - ${domain}`}</span>
-        </li>
-        <li>
-          <span className="domains">{`Bind - ${person}`}</span>
-        </li>
-      </ul>
+      <Content featureTitle={featureTitle}>
+        <ul>
+          <li>
+            <span className="increment">{`Incrementor - ${result}`}</span>
+          </li>
+          <li>
+            <span className="domains">{`Domain - ${domain}`}</span>
+          </li>
+          <li>
+            <span className="domains">{`Bind - ${person}`}</span>
+          </li>
+        </ul>
+      </Content>
+
+      <SourcePanel viewTitle={viewTitle} featureTitle={featureTitle} />
     </CategorySection>
   );
 };
 
-export default Closures;
-
-/*
-
-*/
+export default Feature;

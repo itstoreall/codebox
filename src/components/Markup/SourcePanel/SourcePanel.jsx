@@ -5,7 +5,17 @@ import sprite from '../../../svg/sprite.svg';
 
 const SourcePanel = ({ viewTitle, featureTitle }) => {
   const { views } = useContext(Context);
-  console.log('viewTitle', viewTitle, '-', featureTitle);
+
+  // console.log(
+  //   'views',
+  //   views[1].links[0].source,
+  //   Boolean(views[1].links[0].source),
+  // );
+  // console.log(
+  //   'views',
+  //   views[4].links[0].source,
+  //   Boolean(views[4].links[0].source),
+  // );
 
   return (
     <div className={s.SourcePanel__wrap}>
@@ -14,8 +24,8 @@ const SourcePanel = ({ viewTitle, featureTitle }) => {
           title === viewTitle &&
           links.map(
             link =>
+              link.source &&
               link.anchor === featureTitle && (
-                // <span className={s.SourcePanel__linkWrap}>
                 <a
                   className={s.SourcePanel__link}
                   href={link.source}
@@ -32,7 +42,6 @@ const SourcePanel = ({ viewTitle, featureTitle }) => {
                     className={s.SourcePanel__linkAnchor}
                   >{`${link.anchor} source`}</span>
                 </a>
-                // </span>
               ),
           )
         );

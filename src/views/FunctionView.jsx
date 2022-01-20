@@ -1,5 +1,5 @@
-import NavPanelRoutes from '../Routes/NavPanel/NavPanelRoutes';
-import NavPanelLinks from '../Routes/NavPanel/NavPanelLinks';
+import { NavPanelRoutes } from '../Routes/Routes';
+import NavPanel from '../components/Markup/NavPanel';
 import Article from '../components/Markup/Article';
 import { useStyles } from './viewsStyles';
 
@@ -11,7 +11,7 @@ export default function FunctionsView() {
     <Article>
       <h1 className={s.viewTitle}>{viewTitle}</h1>
       <NavPanelRoutes viewTitle={viewTitle} />
-      <NavPanelLinks viewTitle={viewTitle} />
+      <NavPanel viewTitle={viewTitle} />
     </Article>
   );
 }

@@ -34,14 +34,14 @@
         {
           "l_id": "v3-l1",
           "href": "/components/dnd",
-          "anchor": "DnD",
+          "anchor": "Drag and Drop",
           "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/DnD"
         },
         {
           "l_id": "v3-l2",
-          "href": "/components/free",
-          "anchor": "Free",
-          "source": ""
+          "href": "/components/pagination",
+          "anchor": "Pagination",
+          "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/Pagination"
         }
       ]
     },
@@ -54,7 +54,7 @@
           "l_id": "v4-l1",
           "href": "/functions/closures",
           "anchor": "Closures",
-          "source": ""
+          "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Functions/Closures"
         }
       ]
     },

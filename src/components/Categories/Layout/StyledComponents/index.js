@@ -1,1 +1,1 @@
-export { default } from './StyledComponents';
+export { default } from './Feature';
