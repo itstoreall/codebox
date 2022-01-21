@@ -23,7 +23,7 @@ const refs = {
 
   // Links
   linkColor: '#5b78ad',
-  activelinkColor: '#6ecab6',
+  activeLinkColor: '#6ecab6',
 
   // Bg
   BG__Light: '#f9fbfd',

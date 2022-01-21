@@ -15,11 +15,11 @@
     color: $primaryTextColor;
 
     &:hover {
-      fill: $activelinkColor;
+      fill: $activeLinkColor;
       cursor: pointer;
 
       & > span {
-        color: $activelinkColor;
+        color: $activeLinkColor;
       }
     }
   }

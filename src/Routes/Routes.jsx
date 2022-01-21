@@ -5,7 +5,7 @@ import StyledComponents from '../components/Categories/Layout/StyledComponents';
 import DnD from '../components/Categories/Components/DragAndDrop';
 import Pagination from '../components/Categories/Components/Pagination';
 import Closures from '../components/Categories/Functions/Closures';
-import UseState from '../components/Categories/Hooks/UseState';
+import UseContext from '../components/Categories/Hooks/UseContext';
 import s from './Routes.module.scss';
 
 const HomeView = lazy(() =>
@@ -90,8 +90,14 @@ export const NavPanelRoutes = ({ viewTitle }) => {
           )}
         />
         <Route
-          path="/hooks/usestate"
-          render={props => <UseState {...props} viewTitle={viewTitle} />}
+          path="/hooks/usecontext"
+          render={props => (
+            <UseContext
+              {...props}
+              viewTitle={viewTitle}
+              featureTitle={'useContext'}
+            />
+          )}
         />
       </Switch>
     </>

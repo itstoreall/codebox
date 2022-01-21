@@ -16,16 +16,16 @@ export const useStyles = createUseStyles({
     fontSize: 14,
 
     '&:not(:last-child)': {
-      marginBottom: 5,
+      marginBottom: 7,
     },
 
     '&:hover': {
-      color: refs.activelinkColor,
+      color: refs.activeLinkColor,
     },
   },
 
   activeCategoryLink: {
-    color: refs.activelinkColor,
+    color: refs.activeLinkColor,
     cursor: 'default',
 
     '&:hover': {
