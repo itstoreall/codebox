@@ -4,6 +4,7 @@ import constants from '../constants';
 import StyledComponents from '../components/Categories/Layout/StyledComponents';
 import DnD from '../components/Categories/Components/DragAndDrop';
 import Pagination from '../components/Categories/Components/Pagination';
+import ReusedModal from '../components/Categories/Components/ReusedModal';
 import Closures from '../components/Categories/Functions/Closures';
 import UseContext from '../components/Categories/Hooks/UseContext';
 import s from './Routes.module.scss';
@@ -76,6 +77,16 @@ export const NavPanelRoutes = ({ viewTitle }) => {
               {...props}
               viewTitle={viewTitle}
               featureTitle={'Pagination'}
+            />
+          )}
+        />
+        <Route
+          path="/components/reused-modal"
+          render={props => (
+            <ReusedModal
+              {...props}
+              viewTitle={viewTitle}
+              featureTitle={'Reused Modal'}
             />
           )}
         />
