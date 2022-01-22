@@ -42,6 +42,12 @@
           "href": "/components/pagination",
           "anchor": "Pagination",
           "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/Pagination"
+        },
+        {
+          "l_id": "v3-l3",
+          "href": "/components/reused-modal",
+          "anchor": "Reused Modal",
+          "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/ReusedModal"
         }
       ]
     },

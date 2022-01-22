@@ -7,7 +7,7 @@ const Feature = ({ viewTitle, featureTitle }) => {
   return (
     <CategorySection>
       <Content featureTitle={featureTitle}>
-        <App featureTitle={featureTitle} />
+        <App />
       </Content>
       <SourcePanel viewTitle={viewTitle} featureTitle={featureTitle} />
     </CategorySection>

@@ -1,14 +1,14 @@
 import CategorySection from '../../../Markup/Sections/CategorySection';
 import Content from './Content';
+import App from './App';
 import SourcePanel from '../../../Markup/SourcePanel';
 
 const Feature = ({ viewTitle, featureTitle }) => {
   return (
     <CategorySection>
       <Content featureTitle={featureTitle}>
-        <p>{`The ${featureTitle} content will be here...`}</p>
+        <App featureTitle={featureTitle} />
       </Content>
-
       <SourcePanel viewTitle={viewTitle} featureTitle={featureTitle} />
     </CategorySection>
   );
