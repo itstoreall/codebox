@@ -8,7 +8,7 @@ const BlockOne = () => {
   useEffect(() => setContextValue(uuid()), []);
 
   return (
-    <div>{`BlockOne sent: ${contextValue && contextValue.slice(0, -28)}`}</div>
+    <div>{`BlockOne sent - ${contextValue && contextValue.slice(0, -28)}`}</div>
   );
 };
 

@@ -5,7 +5,7 @@ const BlockTwo = () => {
   const { contextValue } = useContext(FeatureContext);
 
   return (
-    <div>{`BlockTwo got: ${contextValue && contextValue.slice(0, -28)}`}</div>
+    <div>{`BlockTwo got - ${contextValue && contextValue.slice(0, -28)}`}</div>
   );
 };
 
