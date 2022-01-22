@@ -11,8 +11,8 @@
   &__link {
     display: inline-flex;
     align-items: center;
-    fill: $primaryTextColor;
-    color: $primaryTextColor;
+    fill: $linkColor;
+    color: $linkColor;
 
     &:hover {
       fill: $activeLinkColor;

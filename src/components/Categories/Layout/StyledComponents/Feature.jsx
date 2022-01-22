@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { withRouter } from 'react-router-dom';
 import CategorySection from '../../../Markup/Sections/CategorySection';
 import Content from './Content';
 import SourcePanel from '../../../Markup/SourcePanel';
@@ -10,9 +11,11 @@ import {
   Btn,
 } from './StyledComponents.styles';
 
-const Feature = ({ viewTitle, featureTitle }) => {
+const Feature = ({ viewTitle, featureTitle, location }) => {
   const [account, setAccount] = useState(0);
   const [vip, setVip] = useState(0);
+
+  // console.log('StyledComponents location --->', location);
 
   const toggle = (acc, vip) => {
     setAccount(acc);
@@ -39,4 +42,4 @@ const Feature = ({ viewTitle, featureTitle }) => {
   );
 };
 
-export default Feature;
+export default withRouter(Feature);

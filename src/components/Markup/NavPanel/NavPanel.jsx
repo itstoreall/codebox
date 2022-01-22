@@ -1,11 +1,13 @@
 import { Fragment, useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import { useStyles } from './NavPanelStyles';
 import Context from '../../../Context';
 
-const NavPanel = ({ viewTitle }) => {
+const NavPanel = ({ viewTitle, location }) => {
   const s = useStyles();
   const { views } = useContext(Context);
+
+  // console.log('NavPanel location --->', location);
 
   return (
     <ul className={s.navPanel}>
@@ -17,7 +19,7 @@ const NavPanel = ({ viewTitle }) => {
                 <NavLink
                   key={link.l_id}
                   exact
-                  to={link.href}
+                  to={{ pathname: link.href, state: { from: location } }}
                   className={s.categoryLink}
                   activeClassName={s.activeCategoryLink}
                 >
@@ -32,4 +34,4 @@ const NavPanel = ({ viewTitle }) => {
   );
 };
 
-export default NavPanel;
+export default withRouter(NavPanel);
