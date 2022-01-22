@@ -6,17 +6,6 @@ import sprite from '../../../svg/sprite.svg';
 const SourcePanel = ({ viewTitle, featureTitle }) => {
   const { views } = useContext(Context);
 
-  // console.log(
-  //   'views',
-  //   views[1].links[0].source,
-  //   Boolean(views[1].links[0].source),
-  // );
-  // console.log(
-  //   'views',
-  //   views[4].links[0].source,
-  //   Boolean(views[4].links[0].source),
-  // );
-
   return (
     <div className={s.SourcePanel__wrap}>
       {views.map(({ title, links }) => {
@@ -34,8 +23,8 @@ const SourcePanel = ({ viewTitle, featureTitle }) => {
                 >
                   <svg
                     className={s.SourcePanel__svgSource}
-                    width="25"
-                    height="25"
+                    width="20"
+                    height="20"
                   >
                     <use href={sprite + '#github'}></use>
                   </svg>

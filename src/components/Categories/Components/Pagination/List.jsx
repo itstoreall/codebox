@@ -7,8 +7,8 @@ const List = ({ data, currentRows }) => {
         <ul className={s.list}>
           {currentRows.map(el => (
             <li className={s.list__item} key={el}>
-              <spam className={s.list__itemText}>Number of user: </spam>
-              <spam className={s.list__itemElement}>{el}</spam>
+              <span className={s.list__itemText}>Number of user: </span>
+              <span className={s.list__itemElement}>{el}</span>
             </li>
           ))}
         </ul>
