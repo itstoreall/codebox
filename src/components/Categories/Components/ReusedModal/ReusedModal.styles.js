@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import '../../../../styles/refs';
 
 export const Backdrop = styled.div`
   position: fixed;
@@ -11,6 +12,7 @@ export const Backdrop = styled.div`
   width: 100%;
   height: 100vh;
   background: rgba(60, 63, 67, 0.6);
+  cursor: pointer;
   // z-index: 9;
 
   @media screen and (min-width: 451px) {
@@ -22,6 +24,7 @@ export const Modal = styled.div`
   position: relative;
   min-width: 240px;
   hin-height: 240px;
+  cursor: auto;
 `;
 
 export const CloseBtn = styled.button`
@@ -42,9 +45,14 @@ export const CloseBtn = styled.button`
 export const OpenModalBtn = styled.button`
   padding: 10px 25px;
   border-radius: 4px;
+  color: #fff;
 
   &:not(:last-child) {
     margin-right: 10px;
+  }
+
+  &:first-child {
+    margin-bottom: 10px;
   }
 
   &:hover {
