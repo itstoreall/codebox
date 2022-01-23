@@ -4,13 +4,13 @@ import refs from '../../../styles/refs';
 export const useStyles = createUseStyles(() => {
   return {
     historyButtonWrap: {
-      paddingLeft: 20,
-      height: 40,
-      display: 'flex',
-      alignItems: 'center',
+      display: 'none',
 
-      '@media screen and (min-width: 768px)': {
-        paddingLeft: 15,
+      [`@media screen and (min-width: ${refs.tablet}px)`]: {
+        padding: '10px 0 10px 15px',
+        display: 'flex',
+        alignItems: 'center',
+        borderBottom: `1px solid ${refs.primaryBorderColor}`,
       },
     },
 
