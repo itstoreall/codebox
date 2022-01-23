@@ -1,38 +1,31 @@
 @import '../../../styles/refs.scss';
 
 .Nav {
-  @media screen and (min-width: $tablet) {
-    text-align: center;
-    border-bottom: 1px solid $primaryBorderColor;
+  @media screen and (min-width: $desktop) {
+    // background-color: pink;
   }
 
   &__list {
     margin: 0;
     padding: 0;
     list-style: none;
+    height: 100%;
 
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $desktop) {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
     }
   }
 
   &__item {
-    @media screen and (max-width: $tabletMax) {
+    @media screen and (max-width: $desktopMax) {
       &:not(:last-child) {
         margin-bottom: 40px;
       }
     }
 
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $desktop) {
       display: flex;
       align-items: center;
-      height: 50px;
-    }
-
-    @media screen and (min-width: $tablet) {
-      height: 40px;
     }
 
     &:not(:last-child) {
@@ -54,16 +47,13 @@
       font-size: 20px;
     }
 
-    @media screen and (min-width: $tablet) {
-      color: $primaryTextColor;
-    }
-
-    @media screen and (min-width: $tablet) {
-      font-size: 12px;
+    @media screen and (min-width: $desktop) {
+      font-size: 11px;
+      color: #ccc;
 
       &:hover {
         text-decoration: none;
-        text-decoration: underline;
+        color: $primaryWhiteColor;
       }
     }
   }

@@ -9,11 +9,10 @@
   }
 }
 
-// Header
 .Header {
   position: relative;
   display: flex;
-  justify-content: center;
+  align-items: center;
   height: 50px;
   background-color: #282c34;
 
@@ -22,7 +21,7 @@
   }
 
   &__logoLink {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     -webkit-tap-highlight-color: transparent;
   }
@@ -65,11 +64,6 @@
       width: 18px;
       height: 18px;
       fill: white;
-
-      @media screen and (min-width: $tablet) {
-        width: 15px;
-        height: 15px;
-      }
     }
   }
 }
