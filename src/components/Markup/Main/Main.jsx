@@ -5,12 +5,7 @@ import Container from '../../Container';
 const Main = () => {
   return (
     <main className="main">
-      <Container>
-        {/* <button tyoe="button" onClick={() => props.history.push('/')}>
-          Go back
-        </button> */}
-        {Routes()}
-      </Container>
+      <Container>{Routes()}</Container>
     </main>
   );
 };

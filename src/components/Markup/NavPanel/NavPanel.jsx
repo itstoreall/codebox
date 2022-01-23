@@ -7,14 +7,12 @@ const NavPanel = ({ viewTitle, location }) => {
   const s = useStyles();
   const { views } = useContext(Context);
 
-  // console.log('NavPanel location --->', location);
-
   return (
-    <ul className={s.navPanel}>
+    <ul className={s.navPanelList}>
       {views.map(view => (
         <Fragment key={view.v_id}>
           {view.title === viewTitle && (
-            <li className={s.cateogryLinkItem}>
+            <li className={s.navPanelItem}>
               {view.links.map(link => (
                 <NavLink
                   key={link.l_id}

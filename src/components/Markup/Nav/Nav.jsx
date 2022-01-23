@@ -4,12 +4,8 @@ import { v4 as uukey } from 'uuid';
 import Context from '../../../Context';
 import s from './Nav.module.scss';
 
-// const { log } = console;
-
 const Nav = ({ location }) => {
-  const { views, setShowNavbar } = useContext(Context);
-
-  // console.log('Nav location.state.from: --->', location?.state?.from);
+  const { views, setShowNavModal } = useContext(Context);
 
   return (
     <nav className={s.Nav}>
@@ -21,10 +17,9 @@ const Nav = ({ location }) => {
                 <NavLink
                   exact
                   to={{ pathname: path, state: { from: location } }}
-                  // to={path}
                   className={s.Nav__link}
                   activeClassName={s.Nav__activeLink}
-                  onClick={() => setShowNavbar()}
+                  onClick={() => setShowNavModal()}
                 >
                   {title}
                 </NavLink>

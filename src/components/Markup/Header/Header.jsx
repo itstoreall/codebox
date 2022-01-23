@@ -1,38 +1,25 @@
 import { useContext } from 'react';
 import constants from '../../../constants';
+import { HeaderContainer } from '../../Container/CustomContainers';
+import Logo from './Logo';
 import { NavLink } from 'react-router-dom';
-import logo from './logo.svg';
-import sprite from '../../../svg/sprite.svg';
 import s from './Header.module.scss';
+import Nav from '../Nav';
+import OpenMenuBtn from './OpenMenuBtn';
 import Context from '../../../Context';
 
 export default function Header() {
-  const { tabletMax, showNavbar, toggleNavbar } = useContext(Context);
+  const { media } = useContext(Context);
   const { home } = constants.path;
 
   return (
     <header className={s.Header}>
-      <NavLink className={s.Header__logoLink} to={home}>
-        <img src={logo} className={s.Header__logoImg} alt="logo" />
-        <h1 className={s.Header__logoName}>codebox</h1>
-        {tabletMax && (
-          <button
-            className={s.Header__menuBtn}
-            type="button"
-            onClick={toggleNavbar}
-          >
-            {showNavbar ? (
-              <svg className={s.Header__menuBtnSvg}>
-                <use href={sprite + '#menu-close'}></use>
-              </svg>
-            ) : (
-              <svg className={s.Header__menuBtnSvg}>
-                <use href={sprite + '#menu-dots'}></use>
-              </svg>
-            )}
-          </button>
-        )}
-      </NavLink>
+      <HeaderContainer>
+        <NavLink className={s.Header__logoLink} to={home}>
+          <Logo />
+        </NavLink>
+        {media.tabletMax || media.desktopMax ? <OpenMenuBtn /> : <Nav />}
+      </HeaderContainer>
     </header>
   );
 }
