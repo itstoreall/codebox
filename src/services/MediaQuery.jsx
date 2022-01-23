@@ -1,14 +1,14 @@
 import { useMediaQuery } from '@material-ui/core';
 
+const handleMaxWidth = width => {
+  return `(max-width:${width}px) `;
+};
+
+const handleMinWidth = width => {
+  return `(min-width:${width}px) `;
+};
+
 const MediaQuery = refs => {
-  const handleMaxWidth = width => {
-    return `(max-width:${width}px) `;
-  };
-
-  const handleMinWidth = width => {
-    return `(min-width:${width}px) `;
-  };
-
   return {
     viewport: { width: window.innerWidth, height: window.innerHeight },
     mobile: useMediaQuery(handleMinWidth(refs.mobile)),

@@ -7,10 +7,9 @@ export const useStyles = createUseStyles(() => {
       display: 'none',
 
       [`@media screen and (min-width: ${refs.tablet}px)`]: {
-        padding: '10px 0 10px 15px',
+        // padding: '10px 0 10px 15px',
         display: 'flex',
         alignItems: 'center',
-        // borderBottom: `1px solid ${refs.primaryBorderColor}`,
       },
     },
 
