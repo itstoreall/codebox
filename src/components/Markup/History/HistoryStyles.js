@@ -10,21 +10,22 @@ export const useStyles = createUseStyles(() => {
         padding: '10px 0 10px 15px',
         display: 'flex',
         alignItems: 'center',
-        borderBottom: `1px solid ${refs.primaryBorderColor}`,
+        // borderBottom: `1px solid ${refs.primaryBorderColor}`,
       },
     },
 
     homeButton: {
       cursor: 'pointer',
-      fill: refs.linkColor,
+      // fill: refs.linkColor,
+      fill: refs.primaryBlackColor25,
 
       '&:hover svg': {
-        fill: refs.activeLinkColor,
+        fill: refs.primaryBlackColor50,
       },
     },
 
     homeIcon: {
-      fill: refs.activeLinkColor,
+      fill: refs.primaryBlackColor25,
     },
 
     fromButton: {
@@ -32,11 +33,11 @@ export const useStyles = createUseStyles(() => {
       cursor: 'pointer',
 
       '& span': {
-        color: refs.linkColor,
+        color: refs.primaryBlackColor25,
       },
 
       '&:hover span': {
-        color: refs.activeLinkColor,
+        color: refs.primaryBlackColor50,
       },
     },
 
@@ -56,7 +57,7 @@ export const useStyles = createUseStyles(() => {
     },
 
     currentPathname: {
-      color: refs.activeLinkColor,
+      color: refs.primaryBlackColor25,
       fontSize: 14,
 
       '-webkit-touch-callout': 'none',

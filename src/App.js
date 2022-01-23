@@ -1,51 +1,52 @@
 import { useState, useEffect } from 'react';
-import { useMediaQuery } from '@material-ui/core';
 import refs from './styles/refs';
+import MediaQuery from './services/MediaQuery';
 import Header from './components/Markup/Header';
-import Container from './components/Container';
-import Navbar from './components/Markup/Navbar';
-import Nav from './components/Markup/Nav';
+import NavModal from './components/Markup/NavModal';
 import Main from './components/Markup/Main';
 import appContent from './app.json';
 import Context from './Context';
 import './App.scss';
 
-// const { log } = console;
-
 export default function App() {
-  const [showNavbar, setShowNavbar] = useState(false);
+  const media = MediaQuery(refs);
+  const [showNavModal, setShowNavModal] = useState(false);
+  const [currentState, setCurrentState] = useState({
+    viewport: media.viewport,
+  });
 
   // Nav
   useEffect(() => {
     const body = document.querySelector('body');
-    body.style.overflow = showNavbar ? 'hidden' : 'auto';
-  }, [showNavbar]);
+    body.style.overflow = showNavModal ? 'hidden' : 'auto';
+  }, [showNavModal]);
 
-  // ------- useMediaQuery -------
-  const handleMaxWidth = width => {
-    return `(max-width:${width}px) `;
-  };
-  const handleMinWidth = width => {
-    return `(min-width:${width}px) `;
-  };
-  const tablet = useMediaQuery(handleMinWidth(refs.tablet));
-  const tabletMax = useMediaQuery(handleMaxWidth(refs.tabletMax));
-  // const desktop = useMediaQuery(handleMinWidth(refs.desktop));
-  // ----- End useMediaQuery -----
+  // State
+  useEffect(
+    () => setCurrentState({ currentState, viewport: media.viewport }),
+    [],
+  );
 
-  const toggleNavbar = () => {
-    setShowNavbar(!showNavbar);
+  console.log('currentState --->', currentState.viewport);
+
+  const toggleNavMenu = () => {
+    setShowNavModal(!showNavModal);
   };
 
   const { views } = appContent;
   return (
     <Context.Provider
-      value={{ views, tabletMax, showNavbar, setShowNavbar, toggleNavbar }}
+      value={{
+        views,
+        media,
+        showNavModal,
+        setShowNavModal,
+        toggleNavMenu,
+      }}
     >
       <div className="App">
         <Header />
-        {showNavbar && <Navbar />}
-        <Container>{tablet && <Nav />}</Container>
+        {showNavModal && <NavModal />}
         <Main />
       </div>
     </Context.Provider>
