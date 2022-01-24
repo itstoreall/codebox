@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { keyframes } from 'styled-components';
 import '../../../../styles/refs';
 
 export const Backdrop = styled.div`
@@ -27,17 +28,29 @@ export const Modal = styled.div`
   cursor: auto;
 `;
 
+const rotateCloseBtn = keyframes`
+ 0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+`;
+
 export const CloseBtn = styled.button`
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 25px;
+  top: 24px;
   right: 24px;
   height: 24px;
   width: 24px;
+  line-heught: 1.2;
+  fill: #fff;
 
   &:hover {
+    animation: ${rotateCloseBtn} 600ms forwards;
     cursor: pointer;
   }
 `;
