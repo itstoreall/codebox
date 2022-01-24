@@ -4,18 +4,20 @@ import refs from '../../../styles/refs';
 export const useStyles = createUseStyles(() => {
   return {
     historyButtonWrap: {
-      display: 'none',
+      display: 'flex',
+      alignItems: 'center',
+      // display: 'none',
+      width: 'calc(100% - 50px)',
 
-      [`@media screen and (min-width: ${refs.tablet}px)`]: {
-        // padding: '10px 0 10px 15px',
-        display: 'flex',
-        alignItems: 'center',
-      },
+      // [`@media screen and (min-width: ${refs.tablet}px)`]: {
+      // padding: '10px 0 10px 15px',
+      // display: 'flex',
+      // alignItems: 'center',
+      // },
     },
 
     homeButton: {
       cursor: 'pointer',
-      // fill: refs.linkColor,
       fill: refs.primaryBlackColor25,
 
       '&:hover svg': {
@@ -58,6 +60,10 @@ export const useStyles = createUseStyles(() => {
     currentPathname: {
       color: refs.primaryBlackColor25,
       fontSize: 14,
+
+      whiteSpace: 'nowrap',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis',
 
       '-webkit-touch-callout': 'none',
       '-webkit-user-select': 'none',
