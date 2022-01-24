@@ -1,7 +1,14 @@
+@import '../../../styles/refs.scss';
+
 .infoPanel {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 0 0 20px;
   height: 40px;
+
+  // @media screen and (max-width: $tabletMax) {
+  //   background-color: skyblue;
+  // }
 }
