@@ -17,6 +17,12 @@ const refs = {
   primaryBlackColor75: '#282c34bf',
   primaryBlackColor50: '#282c3480',
   primaryBlackColor25: '#282c3440',
+  $primaryWhiteColor: '#ffffff',
+  $primaryWhiteColor75: '#ffffffbf',
+  $primaryWhiteColor50: '#ffffff80',
+  $primaryWhiteColor35: '#ffffff59',
+  $primaryWhiteColor25: '#ffffff40',
+  $primaryWhiteColor15: '#ffffff26',
 
   // Text
   primaryTextColor: '#6b85a3',
