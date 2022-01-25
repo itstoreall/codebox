@@ -17,11 +17,11 @@
     cursor: pointer;
 
     & svg {
-      fill: $primaryBlackColor25;
+      fill: $primaryBlackColor50;
     }
 
     &:hover svg {
-      fill: $primaryBlackColor50;
+      fill: $primaryBlackColor75;
     }
   }
 

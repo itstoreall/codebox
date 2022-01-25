@@ -1,16 +1,20 @@
-import CategorySection from '../../../Markup/Sections/CategorySection';
-import Content from './Content';
+import s from './Feature.module.scss';
+import TemplateApp from '../../../Markup/FeatureTemplate';
 import App from './App';
-import SourcePanel from '../../../Markup/SourcePanel';
 
 const Feature = ({ viewTitle, featureTitle }) => {
+  const description = `You can use one reused modal for several features in a project.`;
+
   return (
-    <CategorySection>
-      <Content featureTitle={featureTitle}>
+    <TemplateApp
+      viewTitle={viewTitle}
+      featureTitle={featureTitle}
+      description={description}
+    >
+      <div className={s.Feature}>
         <App />
-      </Content>
-      <SourcePanel viewTitle={viewTitle} featureTitle={featureTitle} />
-    </CategorySection>
+      </div>
+    </TemplateApp>
   );
 };
 

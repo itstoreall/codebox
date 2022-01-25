@@ -1,0 +1,41 @@
+@import '../../../../styles//refs.scss';
+
+.App {
+  border: 1px solid $primaryBorderColor;
+  border-radius: 4px;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &__header {
+    padding: 20px;
+    color: $primaryBlackColor75;
+    background-color: $BG__Light;
+    border-bottom: 1px solid $primaryBorderColor;
+  }
+
+  &__title {
+    margin-bottom: 7px;
+    font-size: 18px;
+  }
+
+  &__description,
+  span {
+    font-size: 14px;
+  }
+
+  &__content {
+    width: 100%;
+    min-height: 400px;
+
+    // background-color: $activeLinkColor;
+
+    @media screen and (max-width: $tabletMax) {
+      min-height: 300px;
+    }
+  }
+}

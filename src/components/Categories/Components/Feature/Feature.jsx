@@ -1,17 +1,21 @@
-import CategorySection from '../../../Markup/Sections/CategorySection';
-import Content from './Content';
-import App from './App';
-import SourcePanel from '../../../Markup/SourcePanel';
+import { withRouter } from 'react-router-dom';
+import App from '../../../Markup/FeatureTemplate';
+import s from './Feature.module.scss';
 
-const Feature = ({ viewTitle, featureTitle }) => {
+const Feature = ({ viewTitle, featureTitle, location }) => {
+  const description = `Write a description of the ${featureTitle} here...`;
+
   return (
-    <CategorySection>
-      <Content featureTitle={featureTitle}>
-        <App featureTitle={featureTitle} />
-      </Content>
-      <SourcePanel viewTitle={viewTitle} featureTitle={featureTitle} />
-    </CategorySection>
+    <App
+      viewTitle={viewTitle}
+      featureTitle={featureTitle}
+      description={description}
+    >
+      <div className={s.Feature}>
+        <p className={s.Feature__text}>[Write your code here]</p>
+      </div>
+    </App>
   );
 };
 
-export default Feature;
+export default withRouter(Feature);

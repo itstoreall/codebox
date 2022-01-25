@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import CategorySection from '../../../Markup/Sections/CategorySection';
-import Content from './Content';
-import SourcePanel from '../../../Markup/SourcePanel';
+import App from '../../../Markup/FeatureTemplate';
 import s from './Feature.module.scss';
 
 const Feature = ({ viewTitle, featureTitle }) => {
+  const description = `The image should be square, max 100px, png or jpeg file format.`;
   const [value, setValue] = useState('');
   const [drag, setDrag] = useState(false);
   const [status, setStatus] = useState('initial');
@@ -101,90 +100,83 @@ const Feature = ({ viewTitle, featureTitle }) => {
     }
   };
   return (
-    <CategorySection>
-      <Content featureTitle={featureTitle}>
-        <div className={s.dnd}>
-          <div className={s.dnd__header}>
-            <h1 className={s.dnd__appTitle}>Company Logo</h1>
-            <p className={s.dnd__p}>
-              Logo should be square, max 100px, png or jpeg file format.
-            </p>
-          </div>
-
-          <div className={s.dropArea}>
-            {/* <div className={s.dropAreaActive}></div> */}
-            {drag && <div className={s.dropAreaActive}></div>}
-            <div className={s.dropArea__info}>
-              {status !== 'uploading' && (
-                <div className={s.dropArea__thumb}>
-                  {status === 'uploaded' && (
-                    <img
-                      className={s.dropArea__image}
-                      src={value}
-                      alt="company logo"
-                    />
-                  )}
-                </div>
-              )}
-
-              {status === 'uploading' && (
-                <div className={s.preloader}>
-                  <div className={s.preloader__inner}>
-                    <div className={s.preloader__thumb}></div>
-                  </div>
-                  <div>
-                    <div className={s.preloader__barLeft}>
-                      <div className={s.preloader__progress}></div>
-                    </div>
-                    <div className={s.preloader__barRight}>
-                      <div className={s.preloader__progress}></div>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {status === 'initial' && (
-                <span className={s.dropArea__conditionsText}>
-                  Drag &amp; drop here
-                </span>
-              )}
-              {status === 'uploading' && (
-                <span className={s.dropArea__conditionsText}>Uploading</span>
-              )}
-              {status === 'uploaded' && (
-                <span className={s.dropArea__conditionsText}>
-                  Drag &amp; drop here to replace
-                </span>
-              )}
-              <span>- or -</span>
-            </div>
-
+    <App
+      viewTitle={viewTitle}
+      featureTitle={featureTitle}
+      description={description}
+    >
+      <div className={s.dnd}>
+        <div className={s.dropArea}>
+          {/* <div className={s.dropAreaActive}></div> */}
+          {drag && <div className={s.dropAreaActive}></div>}
+          <div className={s.dropArea__info}>
             {status !== 'uploading' && (
-              <input
-                className={s.dropArea__input}
-                data-btn-content={cancelBtn}
-                type="file"
-                accept="image/png, image/jpeg"
-                onChange={handleUploadImg}
-                onDragOver={e => handleDragOver(e)}
-                onDragLeave={e => handleDragLeave(e)}
-              />
+              <div className={s.dropArea__thumb}>
+                {status === 'uploaded' && (
+                  <img
+                    className={s.dropArea__image}
+                    src={value}
+                    alt="company logo"
+                  />
+                )}
+              </div>
             )}
 
             {status === 'uploading' && (
-              <span
-                className={s.dropArea__btnCancel}
-                onClick={handleCancelUploading}
-              >
-                Cancel
+              <div className={s.preloader}>
+                <div className={s.preloader__inner}>
+                  <div className={s.preloader__thumb}></div>
+                </div>
+                <div>
+                  <div className={s.preloader__barLeft}>
+                    <div className={s.preloader__progress}></div>
+                  </div>
+                  <div className={s.preloader__barRight}>
+                    <div className={s.preloader__progress}></div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {status === 'initial' && (
+              <span className={s.dropArea__conditionsText}>
+                Drag &amp; drop here
               </span>
             )}
+            {status === 'uploading' && (
+              <span className={s.dropArea__conditionsText}>Uploading</span>
+            )}
+            {status === 'uploaded' && (
+              <span className={s.dropArea__conditionsText}>
+                Drag &amp; drop here to replace
+              </span>
+            )}
+            <span>- or -</span>
           </div>
-        </div>
-      </Content>
 
-      <SourcePanel viewTitle={viewTitle} featureTitle={featureTitle} />
-    </CategorySection>
+          {status !== 'uploading' && (
+            <input
+              className={s.dropArea__input}
+              data-btn-content={cancelBtn}
+              type="file"
+              accept="image/png, image/jpeg"
+              onChange={handleUploadImg}
+              onDragOver={e => handleDragOver(e)}
+              onDragLeave={e => handleDragLeave(e)}
+            />
+          )}
+
+          {status === 'uploading' && (
+            <span
+              className={s.dropArea__btnCancel}
+              onClick={handleCancelUploading}
+            >
+              Cancel
+            </span>
+          )}
+        </div>
+      </div>
+    </App>
   );
 };
 

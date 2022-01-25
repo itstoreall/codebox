@@ -33,9 +33,9 @@
       "links": [
         {
           "l_id": "v3-l1",
-          "href": "/components/dnd",
+          "href": "/components/dragndrop",
           "anchor": "Drag and Drop",
-          "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/DnD"
+          "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/DragAndDrop"
         },
         {
           "l_id": "v3-l2",
@@ -48,6 +48,12 @@
           "href": "/components/reused-modal",
           "anchor": "Reused Modal",
           "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/ReusedModal"
+        },
+        {
+          "l_id": "v3-l4",
+          "href": "/components/feature",
+          "anchor": "Feature",
+          "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/Feature"
         }
       ]
     },

@@ -2,15 +2,13 @@
 
 .SourcePanel {
   &__wrap {
-    padding: 0;
-    padding-top: 40px;
-    margin: 0;
-    margin-bottom: 20px;
     list-style: none;
   }
   &__link {
-    display: inline-flex;
+    display: block;
+    display: flex;
     align-items: center;
+    font-size: 14px;
     fill: $linkColor;
     color: $linkColor;
 
@@ -24,7 +22,7 @@
     }
   }
   &__svgSource {
-    margin-right: 10px;
+    margin-right: 7px;
   }
   &__linkAnchor {
     padding-top: 0px;
