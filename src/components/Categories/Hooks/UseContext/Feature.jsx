@@ -1,27 +1,29 @@
 import { useState } from 'react';
+import s from './Feature.module.scss';
 import FeatureContext from './FeatureContext';
-import CategorySection from '../../../Markup/Sections/CategorySection';
-import Content from './Content';
+import App from '../../../Markup/FeatureTemplate';
 import BlockOne from './BlockOne';
 import BlockTwo from './BlockTwo';
-import SourcePanel from '../../../Markup/SourcePanel';
 
 const Feature = ({ viewTitle, featureTitle }) => {
+  const description = `An example of using the useContext react hook.`;
   const [contextValue, setContextValue] = useState(null);
 
   return (
-    <CategorySection>
-      <Content featureTitle={featureTitle}>
+    <App
+      viewTitle={viewTitle}
+      featureTitle={featureTitle}
+      description={description}
+    >
+      <div className={s.Feature}>
         <FeatureContext.Provider value={{ contextValue, setContextValue }}>
-          <div>
+          <div className={s.Feature__blockWrap}>
             <BlockOne />
             <BlockTwo />
           </div>
         </FeatureContext.Provider>
-      </Content>
-
-      <SourcePanel viewTitle={viewTitle} featureTitle={featureTitle} />
-    </CategorySection>
+      </div>
+    </App>
   );
 };
 
