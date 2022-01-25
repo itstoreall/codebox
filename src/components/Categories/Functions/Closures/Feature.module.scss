@@ -1,13 +1,6 @@
 @import '../../../../styles/refs.scss';
 
 // Default styles (don't change)
-.feature {
-  &__title {
-    margin-bottom: 10px;
-    color: $primaryBlackColor50;
-    font-size: 14px;
-  }
-  &__content {
-    color: $primaryTextColor;
-  }
+.Feature {
+  padding: 20px;
 }

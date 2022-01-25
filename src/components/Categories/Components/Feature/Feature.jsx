@@ -1,6 +1,6 @@
 import { withRouter } from 'react-router-dom';
-import App from '../../../Markup/FeatureTemplate';
 import s from './Feature.module.scss';
+import App from '../../../Markup/FeatureTemplate';
 
 const Feature = ({ viewTitle, featureTitle, location }) => {
   const description = `Write a description of the ${featureTitle} here...`;

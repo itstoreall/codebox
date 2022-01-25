@@ -1,8 +1,8 @@
-import CategorySection from '../../../Markup/Sections/CategorySection';
-import Content from './Content';
-import SourcePanel from '../../../Markup/SourcePanel';
+import s from './Feature.module.scss';
+import App from '../../../Markup/FeatureTemplate';
 
 const Feature = ({ viewTitle, featureTitle }) => {
+  const description = `Different ways of using closures in functions.`;
   // Increment
   let result = 0;
 
@@ -49,8 +49,12 @@ const Feature = ({ viewTitle, featureTitle }) => {
   bind(person1, newPerson)();
 
   return (
-    <CategorySection>
-      <Content featureTitle={featureTitle}>
+    <App
+      viewTitle={viewTitle}
+      featureTitle={featureTitle}
+      description={description}
+    >
+      <div className={s.Feature}>
         <ul>
           <li>
             <span className="increment">{`Incrementor - ${result}`}</span>
@@ -62,10 +66,8 @@ const Feature = ({ viewTitle, featureTitle }) => {
             <span className="domains">{`Bind - ${person}`}</span>
           </li>
         </ul>
-      </Content>
-
-      <SourcePanel viewTitle={viewTitle} featureTitle={featureTitle} />
-    </CategorySection>
+      </div>
+    </App>
   );
 };
 

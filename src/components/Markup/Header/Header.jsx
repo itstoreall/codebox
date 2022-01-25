@@ -18,7 +18,7 @@ export default function Header() {
         <NavLink className={s.Header__logoLink} to={home}>
           <Logo />
         </NavLink>
-        {media.tabletMax || media.desktopMax ? <OpenMenuBtn /> : <Nav />}
+        {media.tabletMax ? <OpenMenuBtn /> : <Nav />}
       </HeaderContainer>
     </header>
   );

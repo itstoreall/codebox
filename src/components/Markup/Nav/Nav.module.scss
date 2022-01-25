@@ -11,19 +11,19 @@
     list-style: none;
     height: 100%;
 
-    @media screen and (min-width: $desktop) {
+    @media screen and (min-width: $tablet) {
       display: flex;
     }
   }
 
   &__item {
-    @media screen and (max-width: $desktopMax) {
+    @media screen and (max-width: $tabletMax) {
       &:not(:last-child) {
         margin-bottom: 40px;
       }
     }
 
-    @media screen and (min-width: $desktop) {
+    @media screen and (min-width: $tablet) {
       display: flex;
       align-items: center;
     }
@@ -47,7 +47,7 @@
       font-size: 20px;
     }
 
-    @media screen and (min-width: $desktop) {
+    @media screen and (min-width: $tablet) {
       font-size: 11px;
       color: #ccc;
 

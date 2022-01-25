@@ -8,7 +8,7 @@ const NavModal = () => {
 
   return (
     <>
-      {media.desktopMax && (
+      {media.tabletMax && (
         <div className={s.navbar__backdrop}>
           <div className={s.navbar}>
             <Nav />
