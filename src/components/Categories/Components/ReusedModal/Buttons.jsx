@@ -6,7 +6,7 @@ const Buttons = () => {
   const { toggleModal } = useContext(ReuseModalContext);
 
   return (
-    <>
+    <div>
       <OpenModalBtn
         type="button"
         style={{ backgroundColor: 'pink' }}
@@ -28,7 +28,7 @@ const Buttons = () => {
       >
         Yellowgreen
       </OpenModalBtn>
-    </>
+    </div>
   );
 };
 

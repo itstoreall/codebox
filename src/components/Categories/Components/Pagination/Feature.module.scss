@@ -1,60 +1,55 @@
 @import '../../../../styles/refs.scss';
 
-// Default styles (don't change)
-.feature {
-  &__title {
-    margin-bottom: 10px;
-    color: $primaryBlackColor50;
-    font-size: 14px;
-  }
-  &__content {
-    color: $primaryTextColor;
-  }
-}
-
-.list {
-  padding: 0;
-  margin: 0;
-  min-height: 235px;
-  list-style: none;
-
-  &__item {
-    margin-bottom: 5px;
-  }
-
-  &__itemText {
-    color: $primaryBlackColor50;
-  }
-
-  &__itemElement {
-    color: $primaryTextColor;
-  }
-}
-
-.navPanel {
+.Feature {
+  padding: 40px 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding-top: 30px;
 
-  &__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    background-color: $linkColor;
-    border-radius: 50%;
-    cursor: pointer;
+  .list {
+    padding: 0;
+    margin: 0;
+    min-height: 235px;
+    list-style: none;
 
-    &:hover {
-      background-color: $activeLinkColor;
+    &__item {
+      margin-bottom: 5px;
+    }
+
+    &__itemText {
+      color: $primaryBlackColor50;
+    }
+
+    &__itemElement {
+      color: $primaryTextColor;
     }
   }
 
-  &__counter {
-    width: 80px;
-    text-align: center;
-    font-size: 12px;
-    // color: $primaryBlackColor75;
+  .navPanel {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+
+    &__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      background-color: $linkColor;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $activeLinkColor;
+      }
+    }
+
+    &__counter {
+      width: 80px;
+      text-align: center;
+      font-size: 12px;
+      // color: $primaryBlackColor75;
+    }
   }
 }

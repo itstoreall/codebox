@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
-import CategorySection from '../../../Markup/Sections/CategorySection';
-import Content from './Content';
+import App from '../../../Markup/FeatureTemplate';
+import s from './Feature.module.scss';
 import List from './List';
 import NavPanel from './NavPanel';
-import SourcePanel from '../../../Markup/SourcePanel';
 import data from './data.json';
 
 const Feature = ({ viewTitle, featureTitle }) => {
+  const description = `This pagination allows you to divide the list into pages of ten items.`;
   const [paginatedList, setPaginatedList] = useState([]);
   const [currentList, setCurrentList] = useState(1);
   const [perList] = useState(10);
@@ -26,8 +26,12 @@ const Feature = ({ viewTitle, featureTitle }) => {
   };
 
   return (
-    <CategorySection>
-      <Content featureTitle={featureTitle}>
+    <App
+      viewTitle={viewTitle}
+      featureTitle={featureTitle}
+      description={description}
+    >
+      <div className={s.Feature}>
         <List data={data} currentRows={currentRows} />
 
         <NavPanel
@@ -35,10 +39,8 @@ const Feature = ({ viewTitle, featureTitle }) => {
           currentList={currentList}
           paginate={paginate}
         />
-      </Content>
-
-      <SourcePanel viewTitle={viewTitle} featureTitle={featureTitle} />
-    </CategorySection>
+      </div>
+    </App>
   );
 };
 

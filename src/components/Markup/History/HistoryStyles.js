@@ -3,30 +3,25 @@ import refs from '../../../styles/refs';
 
 export const useStyles = createUseStyles(() => {
   return {
-    historyButtonWrap: {
+    History: {
       display: 'flex',
       alignItems: 'center',
-      // display: 'none',
       width: 'calc(100% - 50px)',
-
-      // [`@media screen and (min-width: ${refs.tablet}px)`]: {
-      // padding: '10px 0 10px 15px',
-      // display: 'flex',
-      // alignItems: 'center',
-      // },
+      // color: refs.primaryBlackColor50,
+      // fontSize: 14,
     },
 
     homeButton: {
       cursor: 'pointer',
-      fill: refs.primaryBlackColor25,
+      fill: refs.primaryBlackColor50,
 
       '&:hover svg': {
-        fill: refs.primaryBlackColor50,
+        fill: refs.primaryBlackColor75,
       },
     },
 
     homeIcon: {
-      fill: refs.primaryBlackColor25,
+      fill: refs.primaryBlackColor50,
     },
 
     fromButton: {
@@ -34,12 +29,24 @@ export const useStyles = createUseStyles(() => {
       cursor: 'pointer',
 
       '& span': {
-        color: refs.primaryBlackColor25,
+        color: refs.primaryBlackColor50,
       },
 
       '&:hover span': {
-        color: refs.primaryBlackColor50,
+        color: refs.primaryBlackColor75,
       },
+    },
+
+    codebox: {
+      fontSize: 14,
+      color: refs.primaryBlackColor50,
+
+      '-webkit-touch-callout': 'none',
+      '-webkit-user-select': 'none',
+      '-khtml-user-select': 'none',
+      '-moz-user-select': 'none',
+      '-ms-user-select': 'none',
+      'user-select': 'none',
     },
 
     arrowIcon: {
@@ -58,7 +65,7 @@ export const useStyles = createUseStyles(() => {
     },
 
     currentPathname: {
-      color: refs.primaryBlackColor25,
+      color: refs.primaryBlackColor50,
       fontSize: 14,
 
       whiteSpace: 'nowrap',

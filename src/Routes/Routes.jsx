@@ -2,9 +2,10 @@ import React, { Suspense, lazy } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import constants from '../constants';
 import StyledComponents from '../components/Categories/Layout/StyledComponents';
-import DnD from '../components/Categories/Components/DragAndDrop';
+import DragAndDrop from '../components/Categories/Components/DragAndDrop';
 import Pagination from '../components/Categories/Components/Pagination';
 import ReusedModal from '../components/Categories/Components/ReusedModal';
+import Feature from '../components/Categories/Components/Feature';
 import Closures from '../components/Categories/Functions/Closures';
 import UseContext from '../components/Categories/Hooks/UseContext';
 import s from './Routes.module.scss';
@@ -61,9 +62,9 @@ export const NavPanelRoutes = ({ viewTitle }) => {
           )}
         />
         <Route
-          path="/components/dnd"
+          path="/components/dragndrop"
           render={props => (
-            <DnD
+            <DragAndDrop
               {...props}
               viewTitle={viewTitle}
               featureTitle={'Drag and Drop'}
@@ -87,6 +88,16 @@ export const NavPanelRoutes = ({ viewTitle }) => {
               {...props}
               viewTitle={viewTitle}
               featureTitle={'Reused Modal'}
+            />
+          )}
+        />
+        <Route
+          path="/components/feature"
+          render={props => (
+            <Feature
+              {...props}
+              viewTitle={viewTitle}
+              featureTitle={'Feature'}
             />
           )}
         />

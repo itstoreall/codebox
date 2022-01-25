@@ -23,8 +23,8 @@ const SourcePanel = ({ viewTitle, featureTitle }) => {
                 >
                   <svg
                     className={s.SourcePanel__svgSource}
-                    width="20"
-                    height="20"
+                    width="17"
+                    height="17"
                   >
                     <use href={sprite + '#github'}></use>
                   </svg>

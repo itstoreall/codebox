@@ -55,24 +55,6 @@ export const CloseBtn = styled.button`
   }
 `;
 
-export const OpenModalBtn = styled.button`
-  padding: 10px 25px;
-  border-radius: 4px;
-  color: #fff;
-
-  &:not(:last-child) {
-    margin-right: 10px;
-  }
-
-  &:first-child {
-    margin-bottom: 10px;
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
-`;
-
 export const ModalContent = styled.div`
   display: flex;
   justify-content: center;
@@ -80,4 +62,19 @@ export const ModalContent = styled.div`
   height: 250px;
   background-color: ${({ backgroundColor }) => backgroundColor};
   border-radius: 6px;
+`;
+
+export const OpenModalBtn = styled.button`
+  padding: 10px 25px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  color: #fff;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
 `;

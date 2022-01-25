@@ -7,7 +7,7 @@ import { ArrowIcon } from './Icons';
 import { HomeButton, FromButton } from './Buttons';
 
 const History = ({ history, location }) => {
-  // console.log('HistoryButton history location --->', history, location);
+  console.log('History location --->', location);
 
   const s = useStyles();
   // const { views } = useContext(Context);
@@ -34,10 +34,15 @@ const History = ({ history, location }) => {
   };
 
   return (
-    <div className={s.historyButtonWrap}>
+    <div className={s.History}>
       <HomeButton />
-      {location.pathname !== '/' && <ArrowIcon />}
-      <FromButton props={{ stateFrom, fromPathname, createPathname }} />
+      {/* {location.pathname !== '/' && <ArrowIcon />} */}
+      <ArrowIcon />
+      {location.pathname !== '/' ? (
+        <FromButton props={{ stateFrom, fromPathname, createPathname }} />
+      ) : (
+        <span className={s.codebox}>{'codebox'}</span>
+      )}
       {fromPathname && <ArrowIcon />}
       {createPathname(currentPathname)}
     </div>
