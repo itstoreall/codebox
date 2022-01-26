@@ -1,6 +1,6 @@
 import s from './InfoPanel.module.scss';
 import History from '../History';
-import Information from '../../Information';
+import Information from '../../Markup/Information';
 
 const InfoPanel = () => {
   return (

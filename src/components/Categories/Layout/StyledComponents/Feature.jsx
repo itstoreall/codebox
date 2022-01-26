@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { withRouter } from 'react-router-dom';
-import CategorySection from '../../../Markup/Sections/CategorySection';
-import Content from './Content';
-import SourcePanel from '../../../Markup/SourcePanel';
+import s from './Feature.module.scss';
+import App from '../../../Markup/FeatureTemplate';
 import {
   Wrapper,
   BlockBasic,
@@ -12,6 +11,7 @@ import {
 } from './StyledComponents.styles';
 
 const Feature = ({ viewTitle, featureTitle, location }) => {
+  const description = `Here is an example of using the Styled Components library.`;
   const [account, setAccount] = useState(0);
   const [vip, setVip] = useState(0);
 
@@ -23,8 +23,12 @@ const Feature = ({ viewTitle, featureTitle, location }) => {
   };
 
   return (
-    <CategorySection>
-      <Content featureTitle={featureTitle}>
+    <App
+      viewTitle={viewTitle}
+      featureTitle={featureTitle}
+      description={description}
+    >
+      <div className={s.Feature}>
         <Wrapper>
           <BlockBasic>Basic</BlockBasic>
           {!account ? null : account && vip ? (
@@ -35,10 +39,8 @@ const Feature = ({ viewTitle, featureTitle, location }) => {
         </Wrapper>
         <Btn onClick={() => toggle(1, 0)}>Referal</Btn>
         <Btn onClick={() => toggle(1, 1)}>Vip</Btn>
-      </Content>
-
-      <SourcePanel viewTitle={viewTitle} featureTitle={featureTitle} />
-    </CategorySection>
+      </div>
+    </App>
   );
 };
 

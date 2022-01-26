@@ -1,4 +1,4 @@
-import { NavPanelRoutes } from '../Routes/Routes';
+import FeatureRoutes from '../Routes/FeatureRoutes';
 import { withRouter } from 'react-router-dom';
 import InfoPanel from '../components/Markup/InfoPanel';
 import { useStyles } from './viewsStyles';
@@ -14,7 +14,7 @@ const FunctionsView = () => {
       <InfoPanel />
       <Article>
         <h1 className={s.viewTitle}>{viewTitle}</h1>
-        <NavPanelRoutes viewTitle={viewTitle} />
+        <FeatureRoutes viewTitle={viewTitle} />
         <NavPanel viewTitle={viewTitle} />
       </Article>
     </>

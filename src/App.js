@@ -4,7 +4,7 @@ import MediaQuery from './services/MediaQuery';
 import Header from './components/Markup/Header';
 import NavModal from './components/Markup/NavModal';
 import Main from './components/Markup/Main';
-import appContent from './app.json';
+import appContent from './db/data.json';
 import Context from './Context';
 import './App.scss';
 import { withRouter } from 'react-router-dom/cjs/react-router-dom.min';
@@ -14,8 +14,10 @@ export default withRouter(function App({ location }) {
   const [showNavModal, setShowNavModal] = useState(false);
   const [localState, setLocalState] = useState({
     viewport: media.viewport,
-    page: location.pathname,
+    location: location.pathname,
   });
+
+  const { views } = appContent;
 
   // Nav
   useEffect(() => {
@@ -28,17 +30,17 @@ export default withRouter(function App({ location }) {
     () =>
       setLocalState({
         ...localState,
-        page: location.pathname,
+        location: location.pathname,
         viewport: media.viewport,
       }),
     [location],
   );
 
+  // NavModal
   const toggleNavMenu = () => {
     setShowNavModal(!showNavModal);
   };
 
-  const { views } = appContent;
   return (
     <Context.Provider
       value={{

@@ -1,20 +1,20 @@
 import { useState, useContext, useEffect } from 'react';
-import Context from '../../Context';
+import { withRouter } from 'react-router-dom';
+import Context from '../../../Context';
 import s from './Information.module.scss';
 import InformationBtn from './InformationBtn';
 import InformationList from './InformationList';
-// import sprite from '../../svg/sprite.svg';
+import DataIterator from '../../../services/DataIterator';
 
-const Information = () => {
+const Information = ({ location }) => {
   const [showInformation, setShowInformation] = useState(false);
-  const { localState, setLocalState, views } = useContext(Context);
-
-  console.log('Information --->', localState);
-  console.log('views --->', views);
+  const [information, setInformation] = useState(null);
+  const { localState, views } = useContext(Context);
 
   useEffect(() => {
-    console.log('uE ->, ');
-  }, []);
+    // setInformation(DataIterator());
+    DataIterator(views, location);
+  }, [localState]);
 
   const toggleInformationModal = () => setShowInformation(!showInformation);
 
@@ -26,11 +26,11 @@ const Information = () => {
 
       {showInformation && (
         <div className={s.Information__listWrap}>
-          <InformationList localState={localState} />
+          <InformationList localState={localState} information={information} />
         </div>
       )}
     </div>
   );
 };
 
-export default Information;
+export default withRouter(Information);

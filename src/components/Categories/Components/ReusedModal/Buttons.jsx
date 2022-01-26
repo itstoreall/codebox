@@ -9,21 +9,21 @@ const Buttons = () => {
     <div>
       <OpenModalBtn
         type="button"
-        style={{ backgroundColor: 'pink' }}
+        bgColor="pink"
         onClick={() => toggleModal('app-open-pink')}
       >
         Pink
       </OpenModalBtn>
       <OpenModalBtn
         type="button"
-        style={{ backgroundColor: 'skyblue' }}
+        bgColor="skyblue"
         onClick={() => toggleModal('app-open-skyblue')}
       >
         Skyblue
       </OpenModalBtn>
       <OpenModalBtn
         type="button"
-        style={{ backgroundColor: 'yellowgreen' }}
+        bgColor="yellowgreen"
         onClick={() => toggleModal('app-open-yellowgreen')}
       >
         Yellowgreen
