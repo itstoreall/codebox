@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { keyframes } from 'styled-components';
 import '../../../../styles/refs';
 
 export const Backdrop = styled.div`
@@ -28,15 +27,6 @@ export const Modal = styled.div`
   cursor: auto;
 `;
 
-const rotateCloseBtn = keyframes`
- 0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-`;
-
 export const CloseBtn = styled.button`
   position: absolute;
   display: flex;
@@ -48,11 +38,6 @@ export const CloseBtn = styled.button`
   width: 24px;
   line-heught: 1.2;
   fill: #fff;
-
-  &:hover {
-    animation: ${rotateCloseBtn} 600ms forwards;
-    cursor: pointer;
-  }
 `;
 
 export const ModalContent = styled.div`
@@ -64,17 +49,46 @@ export const ModalContent = styled.div`
   border-radius: 6px;
 `;
 
-export const OpenModalBtn = styled.button`
+export const OpenModalBtn = styled.button.attrs()`
   padding: 10px 25px;
   margin-bottom: 10px;
   border-radius: 4px;
   color: #fff;
+  background-color: ${props => props.bgColor};
+  opacity: 0.9; 
 
   &:not(:last-child) {
     margin-right: 10px;
   }
 
-  &:hover {
+  &:hover { 
     cursor: pointer;
+    opacity: 1; 
+  }
+
+  tabIndex={-1}
+
+  &:focus {
+    outline: 0;
   }
 `;
+
+// --- Rotating cross ---
+
+// import { keyframes } from 'styled-components';
+
+// const rotateCloseBtn = keyframes`
+//  0% {
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform: rotate(180deg);
+//   }
+// `;
+
+// &:hover {
+//   animation: ${rotateCloseBtn} 600ms forwards;
+//   cursor: pointer;
+// }
+
+// ---

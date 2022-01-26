@@ -1,11 +1,11 @@
-import { Routes } from '../../../Routes/Routes';
+import ViewsRoutes from '../../../Routes/ViewsRoutes';
 import { withRouter } from 'react-router-dom';
 import Container from '../../Container';
 
 const Main = () => {
   return (
     <main className="main">
-      <Container>{Routes()}</Container>
+      <Container>{ViewsRoutes()}</Container>
     </main>
   );
 };

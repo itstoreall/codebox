@@ -1,5 +1,5 @@
 import s from './Information.module.scss';
-import sprite from '../../svg/sprite.svg';
+import sprite from '../../../svg/sprite.svg';
 
 const InformationBtn = ({ toggleInformationModal }) => {
   return (
