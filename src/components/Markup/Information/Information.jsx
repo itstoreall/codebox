@@ -4,31 +4,31 @@ import Context from '../../../Context';
 import s from './Information.module.scss';
 import InformationBtn from './InformationBtn';
 import InformationList from './InformationList';
-import DataIterator from '../../../services/DataIterator';
+import useDataIterator from '../../../hooks/useDataIterator';
 
 const Information = ({ location }) => {
+  const informationData = useDataIterator(location);
   const [showInformation, setShowInformation] = useState(false);
   const [information, setInformation] = useState(null);
-  const { localState, views } = useContext(Context);
+  const { localState, setLocalState } = useContext(Context);
 
-  useEffect(() => {
-    // setInformation(DataIterator());
-    DataIterator(views, location);
-  }, [localState]);
+  useEffect(() => setInformation(informationData), [location.pathname]);
+
+  useEffect(
+    () => setLocalState({ ...localState, ...information }),
+    [information],
+  );
 
   const toggleInformationModal = () => setShowInformation(!showInformation);
 
   return (
     <div className={s.Information}>
       <InformationBtn
+        showInformation={showInformation}
         toggleInformationModal={toggleInformationModal}
       ></InformationBtn>
 
-      {showInformation && (
-        <div className={s.Information__listWrap}>
-          <InformationList localState={localState} information={information} />
-        </div>
-      )}
+      {showInformation && <InformationList information={information} />}
     </div>
   );
 };
