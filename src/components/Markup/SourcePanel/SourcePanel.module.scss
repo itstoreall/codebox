@@ -5,8 +5,7 @@
     list-style: none;
   }
   &__link {
-    display: block;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     font-size: 14px;
     fill: $linkColor;
