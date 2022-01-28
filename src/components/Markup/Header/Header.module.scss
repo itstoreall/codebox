@@ -18,6 +18,10 @@
   height: 50px;
   background-color: #282c34;
 
+  @media screen and (min-width: $tablet) {
+    padding-right: 25px;
+  }
+
   @media screen and (min-width: $desktop) {
     height: 40px;
   }
@@ -50,7 +54,7 @@
 
   &__menuBtn {
     position: absolute;
-    right: 0;
+    right: 2px;
     display: flex;
     justify-content: center;
     align-items: center;

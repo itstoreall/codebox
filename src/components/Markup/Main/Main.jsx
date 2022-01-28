@@ -1,6 +1,6 @@
 import ViewsRoutes from '../../../Routes/ViewsRoutes';
 import { withRouter } from 'react-router-dom';
-import Container from '../../Container';
+import Container from '../../Markup/Container';
 
 const Main = () => {
   return (

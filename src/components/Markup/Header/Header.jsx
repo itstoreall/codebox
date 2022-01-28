@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import constants from '../../../constants';
-import { HeaderContainer } from '../../Container/CustomContainers';
+import { HeaderContainer } from '../Container/CustomContainers';
 import Logo from './Logo';
 import { NavLink } from 'react-router-dom';
 import s from './Header.module.scss';
