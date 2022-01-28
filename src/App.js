@@ -5,6 +5,7 @@ import MediaQuery from './services/MediaQuery';
 import Header from './components/Markup/Header';
 import NavModal from './components/Markup/NavModal';
 import Main from './components/Markup/Main';
+import Footer from './components/Markup/Footer';
 import appContent from './db/data.json';
 import Context from './Context';
 import './App.scss';
@@ -40,6 +41,7 @@ export default withRouter(function App() {
         <Header />
         {showNavModal && <NavModal />}
         <Main />
+        <Footer />
       </div>
     </Context.Provider>
   );

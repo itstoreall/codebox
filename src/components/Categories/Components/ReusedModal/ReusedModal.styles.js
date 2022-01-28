@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import '../../../../styles/refs';
+import refs from '../../../../styles/refs';
 
 export const Backdrop = styled.div`
   position: fixed;
@@ -38,6 +38,7 @@ export const CloseBtn = styled.button`
   width: 24px;
   line-heught: 1.2;
   fill: #fff;
+  cursor: pointer;
 `;
 
 export const ModalContent = styled.div`
@@ -54,16 +55,15 @@ export const OpenModalBtn = styled.button.attrs()`
   margin-bottom: 10px;
   border-radius: 4px;
   color: #fff;
-  background-color: ${props => props.bgColor};
-  opacity: 0.9; 
+  background-color: ${refs.linkColor};
 
   &:not(:last-child) {
     margin-right: 10px;
   }
 
   &:hover { 
+    background-color: ${props => props.bgColor};
     cursor: pointer;
-    opacity: 1; 
   }
 
   tabIndex={-1}

@@ -1,0 +1,22 @@
+@import '../../../styles//refs.scss';
+
+.Footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  padding: 30px 40px;
+  width: 100%;
+  border-top: 1px solid $primaryBorderColor;
+  font-size: 14px;
+
+  // background-color: salmon;
+
+  &__cotyrightWrap {
+    text-align: center;
+  }
+  &__cotyright {
+    color: $primaryBlackColor35;
+  }
+}

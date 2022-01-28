@@ -1,4 +1,4 @@
-@import '../../styles/refs.scss';
+@import '../../../styles/refs.scss';
 
 .Container {
   // background-color: pink;
@@ -19,13 +19,29 @@
 
 .HeaderContainer {
   position: relative;
-  padding: 0 25px 0 10px;
-  height: 100%;
   display: flex;
   justify-content: space-between;
+  padding: 0 0 0 10px;
   width: 100%;
+  height: 100%;
 
   @media screen and (min-width: $desktop) {
     max-width: $desktopLarge;
+  }
+}
+
+.FooterContainer {
+  position: relative;
+  @media screen and (min-width: $mobilePlus) {
+    margin: 0 auto;
+    width: $mobilePlus;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
   }
 }

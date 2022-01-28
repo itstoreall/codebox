@@ -151,7 +151,7 @@ const Feature = ({ viewTitle, featureTitle }) => {
                 Drag &amp; drop here to replace
               </span>
             )}
-            <span>- or -</span>
+            <span className={s.dropArea__orConditionsText}>- or -</span>
           </div>
 
           {status !== 'uploading' && (

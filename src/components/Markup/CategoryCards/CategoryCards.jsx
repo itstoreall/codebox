@@ -10,7 +10,7 @@ const CategoryCards = ({ views }) => {
 
   return (
     <section className={s.CategoryCards}>
-      <ul className={s.CategoryCards__container}>
+      <ul className={s.CategoryCards__list}>
         <li className={s.CategoryCards__item}>
           <NavLink className={s.CategoryCards__btn} to={layout}>
             Layout

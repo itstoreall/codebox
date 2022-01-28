@@ -20,6 +20,7 @@
     width: 100%;
     height: 320px;
     border: 1px dashed transparent;
+    font-size: 14px;
 
     &Active {
       @extend .dropArea;
