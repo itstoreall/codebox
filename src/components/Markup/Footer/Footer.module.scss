@@ -1,5 +1,14 @@
 @import '../../../styles//refs.scss';
 
+@keyframes FooterLogoSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .Footer {
   position: absolute;
   bottom: 0;
@@ -14,7 +23,19 @@
   // background-color: salmon;
 
   &__cotyrightWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+  }
+  &__logoImg {
+    height: 24px;
+    pointer-events: none;
+    fill: $primaryBlackColor50;
+
+    @media (prefers-reduced-motion: no-preference) {
+      animation: FooterLogoSpin infinite 20s linear;
+    }
   }
   &__cotyright {
     color: $primaryBlackColor35;
