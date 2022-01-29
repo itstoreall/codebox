@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import Context from '../../../Context';
 import s from './Information.module.scss';
 import InformationBtn from './InformationBtn';
-import InformationLists from './InformationLists/InformationLists';
+import InformationLists from './InformationLists';
 import useDataIterator from '../../../hooks/useDataIterator';
 
 const Information = ({ location }) => {

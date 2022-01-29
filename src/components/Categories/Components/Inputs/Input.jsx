@@ -8,10 +8,6 @@ const Input = () => {
   const handleChange = value => {
     const isDot = value.slice(-1) === '.';
 
-    // !Number(value.slice(-1)) && console.log('000', value.slice(-1));
-
-    console.log('value, inputValue', value.slice(-1), inputValue);
-
     value.length <= 8 && Number.isInteger(+value) && !isDot
       ? setInputValue(value)
       : setInputValue(inputValue === null ? '' : inputValue);
