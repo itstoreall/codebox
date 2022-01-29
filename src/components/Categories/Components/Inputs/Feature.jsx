@@ -1,9 +1,10 @@
 import { withRouter } from 'react-router-dom';
 import s from './Feature.module.scss';
 import App from '../../../Markup/FeatureTemplate';
+import Input from './Input';
 
 const Feature = ({ viewTitle, featureTitle, location }) => {
-  const description = `[write a description of the ${featureTitle} here...]`;
+  const description = `Different settings for using the input tag`;
 
   return (
     <App
@@ -12,7 +13,7 @@ const Feature = ({ viewTitle, featureTitle, location }) => {
       description={description}
     >
       <div className={s.Feature}>
-        <p className={s.Feature__text}>[write your code here]</p>
+        <Input />
       </div>
     </App>
   );

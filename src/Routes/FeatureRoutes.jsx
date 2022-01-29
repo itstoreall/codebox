@@ -3,6 +3,7 @@ import StyledComponents from '../components/Categories/Layout/StyledComponents';
 import DragAndDrop from '../components/Categories/Components/DragAndDrop';
 import Pagination from '../components/Categories/Components/Pagination';
 import ReusedModal from '../components/Categories/Components/ReusedModal';
+import Inputs from '../components/Categories/Components/Inputs';
 import Feature from '../components/Categories/Components/Feature';
 import Closures from '../components/Categories/Functions/Closures';
 import UseContext from '../components/Categories/Hooks/UseContext';
@@ -49,6 +50,12 @@ const FeatureRoutes = ({ viewTitle }) => {
               viewTitle={viewTitle}
               featureTitle={'Reused Modal'}
             />
+          )}
+        />
+        <Route
+          path="/components/inputs"
+          render={props => (
+            <Inputs {...props} viewTitle={viewTitle} featureTitle={'Inputs'} />
           )}
         />
         <Route
