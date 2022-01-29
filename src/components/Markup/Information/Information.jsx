@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import Context from '../../../Context';
 import s from './Information.module.scss';
 import InformationBtn from './InformationBtn';
-import InformationList from './InformationList';
+import InformationLists from './InformationLists/InformationLists';
 import useDataIterator from '../../../hooks/useDataIterator';
 
 const Information = ({ location }) => {
@@ -28,7 +28,7 @@ const Information = ({ location }) => {
         toggleInformationModal={toggleInformationModal}
       ></InformationBtn>
 
-      {showInformation && <InformationList information={information} />}
+      {showInformation && <InformationLists information={information} />}
     </div>
   );
 };
