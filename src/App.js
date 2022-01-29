@@ -2,30 +2,31 @@ import { useState, useEffect, useMemo } from 'react';
 import { withRouter } from 'react-router-dom';
 import refs from './styles/refs';
 import MediaQuery from './services/MediaQuery';
+import db from './db/data.json';
+import useDataIterator from './hooks/useDataIterator';
 import Header from './components/Markup/Header';
 import NavModal from './components/Markup/NavModal';
 import Main from './components/Markup/Main';
 import Footer from './components/Markup/Footer';
-import appContent from './db/data.json';
 import Context from './Context';
+import { setBodyOverflow } from './utils/app';
 import './App.scss';
 
-export default withRouter(function App() {
+export default withRouter(function App({ location }) {
+  const { views } = db;
   const media = MediaQuery(refs);
   const [showNavModal, setShowNavModal] = useState(false);
   const [localState, setLocalState] = useState(null);
-  const { views } = appContent;
+  const informationData = useDataIterator(location, views);
 
-  useMemo(() => console.log('App - state:', localState), [localState]);
-
-  useEffect(() => {
-    const body = document.querySelector('body');
-    body.style.overflow = showNavModal ? 'hidden' : 'auto';
-  }, [showNavModal]);
+  useEffect(() => setBodyOverflow(showNavModal), [showNavModal]);
+  useEffect(() => setLocalState({ ...informationData }), []);
 
   const toggleNavMenu = () => setShowNavModal(!showNavModal);
 
-  const contextValues = {
+  useMemo(() => console.log('App - state:', localState), [localState]);
+
+  const providedContext = {
     localState,
     views,
     media,
@@ -36,7 +37,7 @@ export default withRouter(function App() {
   };
 
   return (
-    <Context.Provider value={contextValues}>
+    <Context.Provider value={providedContext}>
       <div className="App">
         <Header />
         {showNavModal && <NavModal />}

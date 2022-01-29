@@ -7,10 +7,10 @@ import InformationLists from './InformationLists';
 import useDataIterator from '../../../hooks/useDataIterator';
 
 const Information = ({ location }) => {
-  const informationData = useDataIterator(location);
   const [showInformation, setShowInformation] = useState(false);
   const [information, setInformation] = useState(null);
-  const { localState, setLocalState } = useContext(Context);
+  const { localState, setLocalState, views } = useContext(Context);
+  const informationData = useDataIterator(location, views);
 
   useEffect(() => setInformation(informationData), [location.pathname]);
 

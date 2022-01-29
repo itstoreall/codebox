@@ -5,39 +5,29 @@ const Input = () => {
   const [inputValue, setInputValue] = useState('');
   const [inputStatus, setInputStatus] = useState('input is empty');
 
-  const handleChange = value => {
-    const isDot = value.slice(-1) === '.';
+  const max = 8;
 
-    value.length <= 8 && Number.isInteger(+value) && !isDot
-      ? setInputValue(value)
-      : setInputValue(inputValue === null ? '' : inputValue);
-
-    value && !Number(value.slice(-1))
+  const statusHandler = value => {
+    value.length <= max && value.length > 0 && !Number(value.slice(-1))
       ? setInputStatus('numbers only')
-      : value.length > 0 && value.length < 8
+      : value.length > 0 && value.length < max
       ? setInputStatus('must be eight characters...')
-      : value.length === 8
+      : value.length === max && Number(value.slice(-1))
       ? setInputStatus('successful')
-      : value.length > 8
+      : value.length > max
       ? setInputStatus('it is done')
       : setInputStatus('enter something...');
   };
 
-  const statusHandler = () => (
-    <div className={s.Input__status} error>
-      <span
-        className={
-          inputStatus === 'numbers only'
-            ? s.Input__error
-            : inputStatus === 'successful'
-            ? s.Input__successful
-            : inputStatus === 'it is done' && s.Input__done
-        }
-      >
-        {inputStatus}
-      </span>
-    </div>
-  );
+  const inputHandler = value => {
+    const isDot = value.slice(-1) === '.';
+
+    value.length <= max && Number.isInteger(+value) && !isDot
+      ? setInputValue(value)
+      : setInputValue(inputValue === null ? '' : inputValue);
+
+    statusHandler(value);
+  };
 
   return (
     <>
@@ -51,11 +41,23 @@ const Input = () => {
         placeholder="0"
         value={inputValue}
         onChange={e => {
-          handleChange(e.target.value);
+          inputHandler(e.target.value);
         }}
       />
 
-      {statusHandler()}
+      <div className={s.Input__status} error>
+        <span
+          className={
+            inputStatus === 'numbers only'
+              ? s.Input__error
+              : inputStatus === 'successful'
+              ? s.Input__successful
+              : inputStatus === 'it is done' && s.Input__done
+          }
+        >
+          {inputStatus}
+        </span>
+      </div>
     </>
   );
 };
