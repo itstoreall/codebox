@@ -1,6 +1,7 @@
 import { Switch, Route } from 'react-router-dom';
 import StyledComponents from '../components/Categories/Layout/StyledComponents';
 import DragAndDrop from '../components/Categories/Components/DragAndDrop';
+import Dropdown from '../components/Categories/Components/Dropdown';
 import Pagination from '../components/Categories/Components/Pagination';
 import ReusedModal from '../components/Categories/Components/ReusedModal';
 import Inputs from '../components/Categories/Components/Inputs';
@@ -33,6 +34,32 @@ const FeatureRoutes = ({ viewTitle }) => {
           )}
         />
         <Route
+          path="/components/dropdown"
+          render={props => (
+            <Dropdown
+              {...props}
+              viewTitle={viewTitle}
+              featureTitle={'Dropdown'}
+            />
+          )}
+        />
+        <Route
+          path="/components/feature"
+          render={props => (
+            <Feature
+              {...props}
+              viewTitle={viewTitle}
+              featureTitle={'Feature'}
+            />
+          )}
+        />
+        <Route
+          path="/components/inputs"
+          render={props => (
+            <Inputs {...props} viewTitle={viewTitle} featureTitle={'Inputs'} />
+          )}
+        />
+        <Route
           path="/components/pagination"
           render={props => (
             <Pagination
@@ -49,22 +76,6 @@ const FeatureRoutes = ({ viewTitle }) => {
               {...props}
               viewTitle={viewTitle}
               featureTitle={'Reused Modal'}
-            />
-          )}
-        />
-        <Route
-          path="/components/inputs"
-          render={props => (
-            <Inputs {...props} viewTitle={viewTitle} featureTitle={'Inputs'} />
-          )}
-        />
-        <Route
-          path="/components/feature"
-          render={props => (
-            <Feature
-              {...props}
-              viewTitle={viewTitle}
-              featureTitle={'Feature'}
             />
           )}
         />
