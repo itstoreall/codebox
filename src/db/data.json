@@ -79,6 +79,12 @@
           "href": "/functions/closures",
           "anchor": "Closures",
           "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Functions/Closures"
+        },
+        {
+          "l_id": "v4-l2",
+          "href": "/functions/recursion",
+          "anchor": "Recursion",
+          "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Functions/Recursion"
         }
       ]
     },

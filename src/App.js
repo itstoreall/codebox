@@ -11,6 +11,7 @@ import Footer from './components/Markup/Footer';
 import Context from './Context';
 import { setBodyOverflow } from './utils/app';
 import './App.scss';
+import logs from './services/logs';
 
 export default withRouter(function App({ location }) {
   const { views } = db;
@@ -24,7 +25,7 @@ export default withRouter(function App({ location }) {
 
   const toggleNavMenu = () => setShowNavModal(!showNavModal);
 
-  useMemo(() => console.log('App - state:', localState), [localState]);
+  // useMemo(() => logs.appState(localState), [localState]);
 
   const providedContext = {
     localState,

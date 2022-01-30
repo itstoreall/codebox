@@ -7,6 +7,7 @@ import ReusedModal from '../components/Categories/Components/ReusedModal';
 import Inputs from '../components/Categories/Components/Inputs';
 import Feature from '../components/Categories/Components/Feature';
 import Closures from '../components/Categories/Functions/Closures';
+import Recursion from '../components/Categories/Functions/Recursion';
 import UseContext from '../components/Categories/Hooks/UseContext';
 
 const FeatureRoutes = ({ viewTitle }) => {
@@ -86,6 +87,16 @@ const FeatureRoutes = ({ viewTitle }) => {
               {...props}
               viewTitle={viewTitle}
               featureTitle={'Closures'}
+            />
+          )}
+        />
+        <Route
+          path="/functions/recursion"
+          render={props => (
+            <Recursion
+              {...props}
+              viewTitle={viewTitle}
+              featureTitle={'Recursion'}
             />
           )}
         />
