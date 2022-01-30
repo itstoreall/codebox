@@ -1,0 +1,10 @@
+@import '../../../../styles/refs.scss';
+
+.Feature {
+  min-height: 235px;
+  padding: 20px;
+
+  &__text {
+    color: $primaryBlackColor75;
+  }
+}
