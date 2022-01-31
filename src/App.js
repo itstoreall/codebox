@@ -25,7 +25,7 @@ export default withRouter(function App({ location }) {
 
   const toggleNavMenu = () => setShowNavModal(!showNavModal);
 
-  // useMemo(() => logs.appState(localState), [localState]);
+  useMemo(() => logs.appState(localState), [localState]);
 
   const providedContext = {
     localState,
