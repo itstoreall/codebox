@@ -21,7 +21,7 @@ const GeneralList = () => {
             <span className={s.Information__generalKey}>
               Features:{' '}
               <span className={s.Information__generalValue}>
-                {localState.quantity.features}
+                {localState.quantity.features - 1}
               </span>
             </span>
           </div>

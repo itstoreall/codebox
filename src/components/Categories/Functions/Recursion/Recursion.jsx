@@ -1,20 +1,27 @@
-import { useContext } from 'react';
-import Context from '../../../../Context';
+// import { useState, useContext } from 'react';
+import React from 'react';
+// import Context from '../../../../Context';
 
-const Recursion = () => {
+const Recursion = ({ views, tree, setTree }) => {
   console.log(0, 'Recursion');
+  // const [tree, setTree] = useState(null);
 
-  const { views } = useContext(Context);
+  // const { views } = useContext(Context);
 
   const viewStep = 1;
   let viewCount = 0;
   let featureIndex = 0;
   let arr = [];
 
+  // useEffect(() => {
+  //   setTree(arr);
+  // }, [arr]);
+
   const iterateFeatures = () => {
+    const featureStop = featureIndex >= views[viewCount].links.length;
     const feature = views[viewCount].links[featureIndex];
 
-    if (featureIndex >= views[viewCount].links.length) return;
+    if (featureStop) return;
 
     feature.href !== '/' && arr.push(feature);
 
@@ -23,28 +30,32 @@ const Recursion = () => {
     iterateFeatures();
   };
 
-  const example = () => {
-    console.log(1, 'example');
+  const iterateViews = () => {
+    console.log(1, 'iterateViews');
 
-    const run = viewCount < views.length;
-    const stop = viewCount >= views.length;
+    const viewRun = viewCount < views.length;
+    const viewStop = viewCount >= views.length;
 
     featureIndex = 0;
 
-    run && iterateFeatures();
+    viewRun && iterateFeatures();
 
-    if (stop) return console.log('arr ------------->', arr);
+    viewStop && tree.length === 0 && setTree(arr);
+
+    if (viewStop) return;
 
     viewCount += viewStep;
 
-    setTimeout(example, 2000);
+    setTimeout(iterateViews, 500);
   };
-  viewCount === 0 && example();
 
-  return <p>Open your console</p>;
+  tree.length === 0 && iterateViews();
+
+  console.log('tree', tree);
+  return <p>{`${tree.length}`}</p>;
 };
 
-export default Recursion;
+export default React.memo(Recursion);
 
 /*
 
