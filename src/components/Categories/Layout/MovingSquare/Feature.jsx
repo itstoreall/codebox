@@ -1,14 +1,10 @@
-import { useState, useContext } from 'react';
-import Context from '../../../../Context';
 import { withRouter } from 'react-router-dom';
 import s from './Feature.module.scss';
 import App from '../../../Markup/FeatureTemplate';
-import Recursion from './Recursion';
+import MovingSquare from './MovingSquare';
 
 const Feature = ({ viewTitle, featureTitle, location }) => {
-  const description = `Get all the features of this app using recursion`;
-  const [tree, setTree] = useState([]);
-  const { views } = useContext(Context);
+  const description = `Just a square and two buttons to move it`;
 
   return (
     <App
@@ -17,7 +13,7 @@ const Feature = ({ viewTitle, featureTitle, location }) => {
       description={description}
     >
       <div className={s.Feature}>
-        <Recursion views={views} tree={tree} setTree={setTree} />
+        <MovingSquare />
       </div>
     </App>
   );

@@ -12,7 +12,17 @@ export const useStyles = createUseStyles({
   },
 
   navPanelItem: {
-    display: 'inline-block',
+    display: 'flex',
+
+    '&:not(:last-child)': {
+      marginBottom: 10,
+    },
+
+    [`@media (min-width: ${refs.tablet}px)`]: {
+      '&:not(:last-child)': {
+        marginBottom: 7,
+      },
+    },
   },
 
   categoryLink: {

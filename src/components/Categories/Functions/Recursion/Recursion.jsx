@@ -1,6 +1,5 @@
-// import { useState, useContext } from 'react';
 import React from 'react';
-// import Context from '../../../../Context';
+import s from './Feature.module.scss';
 
 const Recursion = ({ views, tree, setTree }) => {
   console.log(0, 'Recursion');
@@ -52,7 +51,21 @@ const Recursion = ({ views, tree, setTree }) => {
   tree.length === 0 && iterateViews();
 
   console.log('tree', tree);
-  return <p>{`${tree.length}`}</p>;
+
+  return (
+    <div>
+      <h3 className={s.RecursionResultTitle}>Features:</h3>
+      <ul>
+        {tree.map(el => {
+          return (
+            <li className={s.RecursionResultItem} key={el.l_id}>
+              {el.anchor}
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
 };
 
 export default React.memo(Recursion);
