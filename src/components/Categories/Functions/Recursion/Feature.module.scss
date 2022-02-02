@@ -6,21 +6,16 @@
   align-items: center;
   justify-content: center;
   min-height: 200px;
-  padding: 20px;
+  padding: 40px;
 }
 
 // Recursion
-.block {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  background-color: pink;
+.RecursionResultTitle {
+  margin-bottom: 20px;
+  color: $primaryBlackColor75;
 }
 
-.button {
-  padding: 10px 20px;
-  color: $primaryWhiteColor;
-  background-color: $linkColor;
-  border-radius: 4px;
-  cursor: pointer;
+.RecursionResultItem {
+  margin-bottom: 5px;
+  color: $primaryTextColor;
 }

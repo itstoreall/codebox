@@ -7,25 +7,27 @@ const NavPanel = ({ viewTitle, location }) => {
   const s = useStyles();
   const { views } = useContext(Context);
 
+  const getLinks = view => {
+    return view.links.map(link => (
+      <li className={s.navPanelItem}>
+        <NavLink
+          key={link.l_id}
+          exact
+          to={{ pathname: link.href, state: { from: location } }}
+          className={s.categoryLink}
+          activeClassName={s.activeCategoryLink}
+        >
+          {link.anchor}
+        </NavLink>
+      </li>
+    ));
+  };
+
   return (
     <ul className={s.navPanelList}>
       {views.map(view => (
         <Fragment key={view.v_id}>
-          {view.title === viewTitle && (
-            <li className={s.navPanelItem}>
-              {view.links.map(link => (
-                <NavLink
-                  key={link.l_id}
-                  exact
-                  to={{ pathname: link.href, state: { from: location } }}
-                  className={s.categoryLink}
-                  activeClassName={s.activeCategoryLink}
-                >
-                  {link.anchor}
-                </NavLink>
-              ))}
-            </li>
-          )}
+          {view.title === viewTitle && getLinks(view)}
         </Fragment>
       ))}
     </ul>

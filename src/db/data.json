@@ -23,6 +23,12 @@
           "href": "/layout/styled-components",
           "anchor": "Styled Components",
           "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Layout/StyledComponents"
+        },
+        {
+          "l_id": "v2-l2",
+          "href": "/layout/moving-square",
+          "anchor": "Moving square",
+          "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Layout/MovingSquare"
         }
       ]
     },

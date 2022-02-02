@@ -1,5 +1,6 @@
 import { Switch, Route } from 'react-router-dom';
 import StyledComponents from '../components/Categories/Layout/StyledComponents';
+import MovingSquare from '../components/Categories/Layout/MovingSquare';
 import DragAndDrop from '../components/Categories/Components/DragAndDrop';
 import Dropdown from '../components/Categories/Components/Dropdown';
 import Pagination from '../components/Categories/Components/Pagination';
@@ -21,6 +22,16 @@ const FeatureRoutes = ({ viewTitle }) => {
               {...props}
               viewTitle={viewTitle}
               featureTitle={'Styled Components'}
+            />
+          )}
+        />
+        <Route
+          path="/layout/moving-square"
+          render={props => (
+            <MovingSquare
+              {...props}
+              viewTitle={viewTitle}
+              featureTitle={'Moving square'}
             />
           )}
         />
