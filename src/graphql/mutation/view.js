@@ -6,6 +6,7 @@ export const CREATE_VIEW = gql`
       id
       title
       path
+      timestamp
     }
   }
 `;
