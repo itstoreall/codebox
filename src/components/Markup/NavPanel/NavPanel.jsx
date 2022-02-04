@@ -9,7 +9,7 @@ const NavPanel = ({ viewTitle, location }) => {
 
   const getLinks = view => {
     return view.links.map(link => (
-      <li className={s.navPanelItem}>
+      <li key={link.href} className={s.navPanelItem}>
         <NavLink
           key={link.l_id}
           exact
@@ -26,7 +26,7 @@ const NavPanel = ({ viewTitle, location }) => {
   return (
     <ul className={s.navPanelList}>
       {views.map(view => (
-        <Fragment key={view.v_id}>
+        <Fragment key={view.title}>
           {view.title === viewTitle && getLinks(view)}
         </Fragment>
       ))}
