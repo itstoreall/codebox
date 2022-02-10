@@ -4,13 +4,6 @@ export const ALL_VIEWS = gql`
   fragment AllViews on View {
     title
     path
-    timestamp
-    links {
-      id
-      href
-      anchor
-      source
-    }
   }
 `;
 

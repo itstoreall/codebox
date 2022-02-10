@@ -1,14 +1,11 @@
-import { useContext } from 'react';
 import { withRouter } from 'react-router-dom';
 import InfoPanel from '../components/Markup/InfoPanel';
 import { useStyles } from './viewsStyles';
 import Article from '../components/Markup/Article';
-import CategoryCard from '../components/Markup/CategoryCards';
-import Context from '../Context';
+import AdminDashboard from '../components/Admin';
 
-const Home = () => {
-  const viewTitle = 'Categories';
-  const { views } = useContext(Context);
+const ComponentView = () => {
+  const viewTitle = 'Admin';
   const s = useStyles();
 
   return (
@@ -16,10 +13,10 @@ const Home = () => {
       <InfoPanel />
       <Article>
         <h1 className={s.viewTitle}>{viewTitle}</h1>
-        <CategoryCard key={views.title} views={views} />
       </Article>
+      <AdminDashboard />
     </>
   );
 };
 
-export default withRouter(Home);
+export default withRouter(ComponentView);

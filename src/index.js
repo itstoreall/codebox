@@ -8,7 +8,8 @@ import reportWebVitals from './reportWebVitals';
 import 'modern-normalize/modern-normalize.css';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:8822/graphql',
+  uri: 'http://localhost:8822/',
+  // uri: 'https://graphql-mongoose-server.herokuapp.com/',
   cache: new InMemoryCache(),
 });
 

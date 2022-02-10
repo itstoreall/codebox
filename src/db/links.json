@@ -1,0 +1,74 @@
+[
+  {
+    "l_id": "v1-l1",
+    "href": "/",
+    "anchor": "Home",
+    "source": ""
+  },
+  {
+    "l_id": "v2-l1",
+    "href": "/layout/styled-components",
+    "anchor": "Styled Components",
+    "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Layout/StyledComponents"
+  },
+  {
+    "l_id": "v2-l2",
+    "href": "/layout/moving-square",
+    "anchor": "Moving square",
+    "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Layout/MovingSquare"
+  },
+  {
+    "l_id": "v3-l1",
+    "href": "/components/dragndrop",
+    "anchor": "Drag and Drop",
+    "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/DragAndDrop"
+  },
+  {
+    "l_id": "v3-l2",
+    "href": "/components/dropdown",
+    "anchor": "Dropdown",
+    "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/Dropdown"
+  },
+  {
+    "l_id": "v3-l3",
+    "href": "/components/feature",
+    "anchor": "Feature",
+    "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/Feature"
+  },
+  {
+    "l_id": "v3-l4",
+    "href": "/components/inputs",
+    "anchor": "Inputs",
+    "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/Inputs"
+  },
+  {
+    "l_id": "v3-l5",
+    "href": "/components/pagination",
+    "anchor": "Pagination",
+    "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/Pagination"
+  },
+  {
+    "l_id": "v3-l6",
+    "href": "/components/reused-modal",
+    "anchor": "Reused Modal",
+    "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/ReusedModal"
+  },
+  {
+    "l_id": "v4-l1",
+    "href": "/functions/closures",
+    "anchor": "Closures",
+    "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Functions/Closures"
+  },
+  {
+    "l_id": "v4-l2",
+    "href": "/functions/recursion",
+    "anchor": "Recursion",
+    "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Functions/Recursion"
+  },
+  {
+    "l_id": "v5-l1",
+    "href": "/hooks/usecontext",
+    "anchor": "useContext",
+    "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Hooks/UseContext"
+  }
+]
