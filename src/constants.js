@@ -1,5 +1,6 @@
 const constants = {
   path: {
+    admin: '/admin',
     home: '/#',
     layout: '/layout',
     components: '/components',

@@ -1,6 +1,12 @@
 {
   "views": [
     {
+      "v_id": "v0",
+      "title": "Admin",
+      "path": "/admin",
+      "links": []
+    },
+    {
       "v_id": "v1",
       "title": "Home",
       "path": "/",

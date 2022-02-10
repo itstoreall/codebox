@@ -3,6 +3,9 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import s from './Routes.module.scss';
 import constants from '../constants';
 
+const AdminView = lazy(() =>
+  import('../views/AdminView' /*webpackChunkName: 'Admin'*/),
+);
 const HomeView = lazy(() =>
   import('../views/HomeView' /*webpackChunkName: 'Home'*/),
 );
@@ -23,12 +26,13 @@ const HookView = lazy(() =>
 // ); // *
 
 const ViewsRoutes = () => {
-  const { layout, components, functions, hooks } = constants.path;
+  const { admin, layout, components, functions, hooks } = constants.path;
 
   return (
     <Suspense fallback={<div className={s.loadingSuspense}>Loading...</div>}>
       <Switch>
         {/* <Route component={NotFoundView} /> */}
+        <Route path={admin} component={AdminView} />
         <Route exact path="/" component={HomeView} />
         <Route path={layout} component={LayoutView} />
         <Route path={components} component={ComponentView} />
