@@ -13,6 +13,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  z-index: 3;
 
   &__btn {
     display: flex;

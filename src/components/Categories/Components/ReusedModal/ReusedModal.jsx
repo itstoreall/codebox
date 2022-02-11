@@ -22,7 +22,7 @@ const ReusedModal = ({ children }) => {
         {modalContent !== 'swap-modal-btn' && (
           <CloseBtn onClick={() => toggleModal('close')}>
             <svg width="17" height="17">
-              <use href={sprite + '#menu-close'}></use>
+              <use href={sprite + '#icon-close'}></use>
             </svg>
           </CloseBtn>
         )}

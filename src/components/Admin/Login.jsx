@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
+import { PrimaryButton, PrimaryInput } from './uiElements';
 import { LOGIN } from '../../graphql/mutation/view';
 
 const Login = ({ setCodeboxToken }) => {
@@ -44,23 +45,25 @@ const Login = ({ setCodeboxToken }) => {
   return (
     <div>
       <h2>Login</h2>
-      <form>
-        <input
-          type="text"
+      <form onSubmit={e => login(e)}>
+        <PrimaryInput
+          className={'admin-login-username-input'}
+          placeholder={'Username'}
           value={loginUsername}
           onChange={e => setLoginUsername(e.target.value)}
         />
-        <input
-          type="text"
+        <PrimaryInput
+          className={'admin-login-password-input'}
+          placeholder={'password'}
           value={loginPassword}
           onChange={e => setLoginPassword(e.target.value)}
         />
 
         <span>{loginError}</span>
 
-        <button type="button" onClick={e => login(e)}>
+        <PrimaryButton className={'admin-login-btn'} type={'submit'}>
           Login
-        </button>
+        </PrimaryButton>
       </form>
     </div>
   );

@@ -15,7 +15,7 @@ const OpenMenuBtn = () => {
       >
         {showNavModal ? (
           <svg className={s.Header__menuBtnSvg}>
-            <use href={sprite + '#menu-close'}></use>
+            <use href={sprite + '#icon-close'}></use>
           </svg>
         ) : (
           <svg className={s.Header__menuBtnSvg}>

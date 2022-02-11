@@ -13,8 +13,8 @@ const ComponentView = () => {
       <InfoPanel />
       <Article>
         <h1 className={s.viewTitle}>{viewTitle}</h1>
+        <AdminDashboard />
       </Article>
-      <AdminDashboard />
     </>
   );
 };
