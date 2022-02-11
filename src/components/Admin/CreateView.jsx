@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
+import { PrimaryButton, PrimaryInput } from './uiElements';
 import { CREATE_VIEW } from '../../graphql/mutation/view';
 
 const CreateView = ({ refetch }) => {
@@ -7,11 +8,6 @@ const CreateView = ({ refetch }) => {
   const [gqlViewPath, setGqlViewPath] = useState('');
 
   const [newGqlView] = useMutation(CREATE_VIEW);
-
-  const getAll = e => {
-    e.preventDefault();
-    refetch();
-  };
 
   const addView = async e => {
     e.preventDefault();
@@ -39,23 +35,22 @@ const CreateView = ({ refetch }) => {
   return (
     <div>
       <h2>Create form</h2>
-      <form>
-        <input
-          type="text"
+      <form onSubmit={e => addView(e)}>
+        <PrimaryInput
+          className={'admin-create-view-title-input'}
+          placeholder={'Title'}
           value={gqlViewTitle}
           onChange={e => setGqlViewTitle(e.target.value)}
         />
-        <input
-          type="text"
+        <PrimaryInput
+          className={'admin-create-view-path-input'}
+          placeholder={'path'}
           value={gqlViewPath}
           onChange={e => setGqlViewPath(e.target.value)}
         />
-        <button type="button" onClick={e => addView(e)}>
-          Create view
-        </button>
-        <button type="button" onClick={e => getAll(e)}>
-          Get view
-        </button>
+        <PrimaryButton className={'admin-create-view-btn'} type={'sybmit'}>
+          Create
+        </PrimaryButton>
       </form>
     </div>
   );

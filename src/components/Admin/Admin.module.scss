@@ -1,0 +1,43 @@
+@import '../../styles/refs.scss';
+
+.AdminDashboard {
+  position: relative;
+  display: flex;
+  padding: 20px;
+  background-color: pink;
+}
+
+.Display {
+  width: 50%;
+  height: 65vh;
+  background-color: yellowgreen;
+  overflow: scroll;
+}
+
+.Controls {
+  width: 50%;
+  background-color: skyblue;
+}
+
+.ViewList__list {
+  background-color: tomato;
+  overflow: scroll;
+}
+
+.ViewList__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: teal;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.ViewList__title {
+  margin-right: 100px;
+  color: white;
+  background-color: red;
+}

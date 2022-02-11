@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
+import { PrimaryButton, PrimaryInput } from './uiElements';
 import { UPDATE_VIEW } from '../../graphql/mutation/view';
 
 const UpdateView = ({ refetch }) => {
@@ -34,25 +35,28 @@ const UpdateView = ({ refetch }) => {
   return (
     <div>
       <h2>Update form</h2>
-      <form>
-        <input
-          type="text"
+      <form onSubmit={e => updateView(e)}>
+        <PrimaryInput
+          className={'admin-update-view-id-btn'}
+          placeholder={'id'}
           value={updateViewId}
           onChange={e => setUpdateViewId(e.target.value)}
         />
-        <input
-          type="text"
+        <PrimaryInput
+          className={'admin-update-view-title-btn'}
+          placeholder={'Title'}
           value={updateGqlViewTitle}
           onChange={e => setUpdateGqlViewTitle(e.target.value)}
         />
-        <input
-          type="text"
+        <PrimaryInput
+          className={'admin-update-view-path-btn'}
+          placeholder={'path'}
           value={updateGqlViewPath}
           onChange={e => setUpdateGqlViewPath(e.target.value)}
         />
-        <button type="button" onClick={e => updateView(e)}>
-          Update view
-        </button>
+        <PrimaryButton className={'admin-update-view-btn'} type={'submit'}>
+          Update
+        </PrimaryButton>
       </form>
     </div>
   );

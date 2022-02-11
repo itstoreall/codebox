@@ -5,7 +5,7 @@ const InformationBtn = ({ showInformation, toggleInformationModal }) => {
   return showInformation ? (
     <button className={s.Information__btn} onClick={toggleInformationModal}>
       <svg width="14" height="14">
-        <use href={sprite + '#menu-close'}></use>
+        <use href={sprite + '#icon-close'}></use>
       </svg>
     </button>
   ) : (

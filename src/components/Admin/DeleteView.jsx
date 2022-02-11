@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
+import { PrimaryButton, PrimaryInput } from './uiElements';
 import { DELETE_VIEW } from '../../graphql/mutation/view';
 
 const DeleteView = ({ refetch }) => {
@@ -27,15 +28,16 @@ const DeleteView = ({ refetch }) => {
   return (
     <div>
       <h2>Delete form</h2>
-      <form>
-        <input
-          type="text"
+      <form onSubmit={e => deleteView(e)}>
+        <PrimaryInput
+          className={'admin-delete-view-id-input'}
+          placeholder={'id'}
           value={deleteViewId}
           onChange={e => setDeleteViewId(e.target.value)}
         />
-        <button type="button" onClick={e => deleteView(e)}>
-          Delete view
-        </button>
+        <PrimaryButton className={'admin-delete-view-btn'} type={'submit'}>
+          Delete
+        </PrimaryButton>
       </form>
     </div>
   );
