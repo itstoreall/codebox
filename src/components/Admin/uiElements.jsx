@@ -6,7 +6,10 @@ export const PrimaryInput = ({
   position,
   top = 0,
   right = 0,
-  padding = '8px 8px',
+  margin,
+  padding = '9px 9px',
+  width,
+  textAlign,
   color = refs.primaryBlackColor75,
   type = 'text',
   placeholder,
@@ -19,7 +22,10 @@ export const PrimaryInput = ({
     position={position}
     top={top}
     right={right}
+    margin={margin}
     padding={padding}
+    width={width}
+    textAlign={textAlign}
     color={color}
     type={type}
     placeholder={placeholder}
@@ -35,7 +41,10 @@ export const PrimaryButton = ({
   position,
   top = 0,
   right = 0,
+  display,
   padding = '10px 20px',
+  margin,
+  width,
   color = 'white',
   whiteSpace = 'nowrap',
   type = 'button',
@@ -47,7 +56,10 @@ export const PrimaryButton = ({
     position={position}
     top={top}
     right={right}
+    display={display}
     padding={padding}
+    margin={margin}
+    width={width}
     color={color}
     whiteSpace={whiteSpace}
     type={type}
