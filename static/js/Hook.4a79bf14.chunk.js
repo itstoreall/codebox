@@ -1,2 +1,0 @@
-(this.webpackJsonpcodebox=this.webpackJsonpcodebox||[]).push([[6],{147:function(e,t,c){"use strict";c.r(t);var s=c(106),i=c(5),j=c(104),a=c(102),b=c(105),n=c(107),o=c(3);t.default=Object(i.g)((function(){var e="Hooks",t=Object(a.a)();return Object(o.jsxs)(o.Fragment,{children:[Object(o.jsx)(j.a,{}),Object(o.jsxs)(b.a,{children:[Object(o.jsx)("h1",{className:t.viewTitle,children:e}),Object(o.jsx)(s.a,{viewTitle:e}),Object(o.jsx)(n.a,{viewTitle:e})]})]})}))}}]);
-//# sourceMappingURL=Hook.4a79bf14.chunk.js.map
