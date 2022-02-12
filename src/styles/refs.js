@@ -40,6 +40,10 @@ const refs = {
   // Borders
   primaryBorderColor: '#e8f1fb',
 
+  // Box-shadows
+  primaryShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
+  secondaryShadow: 'rgba(0, 0, 0, 0.45) 0px 25px 15px -20px',
+
   // Transition
   cubicBezier: 'cubic-bezier(0.4, 0, 0.2, 1)',
 };

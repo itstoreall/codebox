@@ -8,19 +8,23 @@ const createInputPading = padding =>
     .map(el => `${+el - 1}px`)
     .join(' ');
 
+// Inputs
 export const Input = styled.input`
   position: ${({ position }) => position};
   top: ${({ top }) => top};
   right: ${({ right }) => right};
+  margin: ${({ margin }) => margin};
   padding: ${({ padding }) => padding};
+  width: ${({ width }) => width};
+  text-align: ${({ textAlign }) => textAlign};
   color: ${({ color }) => color};
   background-color: ${refs.primaryWhiteColor};
-  border: 2px solid ${refs.primaryTextColor};
+  border: 1px solid ${refs.primaryTextColor};
   border-radius: 4px;
 
   :focus {
     padding: ${({ padding }) => createInputPading(padding)};
-    border: 3px solid ${refs.activeLinkColor};
+    border: 2px solid ${refs.activeLinkColor};
     outline: none;
   }
 
@@ -31,20 +35,27 @@ export const Input = styled.input`
   :-ms-input-placeholder {
     color: ${refs.primaryBlackColor25};
   }
+
+  :focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+  :focus::-moz-placeholder {
+    color: transparent;
+  }
+
+  :focus:-moz-placeholder {
+    color: transparent;
+  }
+
+  :focus:-ms-input-placeholder {
+    color: transparent;
+  }
 `;
 
-export const Button = styled.button`
-  position: ${({ position }) => position};
-  top: ${({ top }) => top};
-  right: ${({ right }) => right};
-  padding: ${({ padding }) => padding};
-  color: ${({ color }) => color};
-  white-space: ${({ whiteSpace }) => whiteSpace};
-  background-color: ${refs.primaryTextColor};
-  border-radius: 4px;
-
+// Buttons
+const InitialBtn = styled.button`
   &:hover {
-    background-color: ${refs.BG__GreyBlue};
     cursor: pointer;
   }
 
@@ -56,7 +67,25 @@ export const Button = styled.button`
   user-select: none;
 `;
 
-export const CustomButton = styled.button`
+export const Button = styled(InitialBtn)`
+  position: ${({ position }) => position};
+  top: ${({ top }) => top};
+  right: ${({ right }) => right};
+  display: ${({ display }) => display};
+  padding: ${({ padding }) => padding};
+  margin: ${({ margin }) => margin};
+  width: ${({ width }) => width};
+  color: ${({ color }) => color};
+  white-space: ${({ whiteSpace }) => whiteSpace};
+  background-color: ${refs.primaryTextColor};
+  border-radius: 4px;
+
+  &:hover {
+    background-color: ${refs.BG__GreyBlue};
+  }
+`;
+
+export const CustomButton = styled(InitialBtn)`
   position: ${({ position }) => position};
   top: ${({ top }) => top};
   right: ${({ right }) => right};
@@ -75,15 +104,7 @@ export const CustomButton = styled.button`
 
   &:hover {
     background-color: ${refs.BG__GreyBlue};
-    cursor: pointer;
   }
-
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 `;
 
 /*

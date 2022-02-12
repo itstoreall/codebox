@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { PrimaryButton, PrimaryInput } from './uiElements';
-import { LOGIN } from '../../graphql/mutation/view';
+import { LOGIN } from '../../graphql/mutation/user';
+import s from './Admin.module.scss';
 
 const Login = ({ setCodeboxToken }) => {
-  const [loginUsername, setLoginUsername] = useState('');
+  const [userRole, setUserRole] = useState('guest');
+  const [loginUsername, setLoginUsername] = useState('Guest');
   const [loginPassword, setLoginPassword] = useState('');
   const [loginError, setLoginError] = useState('');
 
@@ -26,7 +28,7 @@ const Login = ({ setCodeboxToken }) => {
         },
       });
 
-      console.log('login token:', data.login.token);
+      console.log('login token:', data.login);
 
       if (data) {
         localStorage.setItem('codeboxToken', data.login.token);
@@ -42,28 +44,94 @@ const Login = ({ setCodeboxToken }) => {
     }
   };
 
+  const toggleInputs = role => {
+    console.log('role:', role);
+    setUserRole(role);
+    setLoginUsername(role === 'admin' ? 'Admin' : role === 'guest' && 'Guest');
+  };
+
   return (
-    <div>
-      <h2>Login</h2>
-      <form onSubmit={e => login(e)}>
-        <PrimaryInput
-          className={'admin-login-username-input'}
-          placeholder={'Username'}
-          value={loginUsername}
-          onChange={e => setLoginUsername(e.target.value)}
-        />
-        <PrimaryInput
-          className={'admin-login-password-input'}
-          placeholder={'password'}
-          value={loginPassword}
-          onChange={e => setLoginPassword(e.target.value)}
-        />
+    <div className={s.Login}>
+      <form className={s.Login__form} onSubmit={e => login(e)}>
+        <h2 className={s.Login__title}>
+          {userRole === 'guest' ? 'Guest' : userRole === 'admin' && 'Admin'}
+        </h2>
 
-        <span>{loginError}</span>
+        {userRole === 'guest' ? (
+          <>
+            {/* <PrimaryInput
+              className={'admin-login-username-input'}
+              placeholder={'Username'}
+              value={loginUsername}
+              onChange={e => setLoginUsername(e.target.value)}
+            /> */}
+            <PrimaryInput
+              className={'admin-login-password-input'}
+              padding={'15px'}
+              margin={'0 0 30px'}
+              width={'100%'}
+              textAlign={'center'}
+              placeholder={'password'}
+              value={loginPassword}
+              onChange={e => {
+                setLoginPassword(e.target.value);
+                setLoginError('');
+              }}
+            />
+          </>
+        ) : (
+          userRole === 'admin' && (
+            <>
+              {/* <PrimaryInput
+              className={'admin-login-username-input'}
+              placeholder={'Username'}
+              value={loginUsername}
+              onChange={e => setLoginUsername(e.target.value)}
+            /> */}
+              <PrimaryInput
+                className={'admin-login-password-input'}
+                padding={'15px'}
+                margin={'0 0 30px'}
+                width={'100%'}
+                textAlign={'center'}
+                placeholder={'password'}
+                value={loginPassword}
+                onChange={e => setLoginPassword(e.target.value)}
+              />
+            </>
+          )
+        )}
 
-        <PrimaryButton className={'admin-login-btn'} type={'submit'}>
+        <span className={s.Login__error}>{loginError}</span>
+
+        <PrimaryButton
+          className={'admin-login-btn'}
+          display={'block'}
+          padding={'15px'}
+          margin={'0 0 30px'}
+          width={'100%'}
+          type={'submit'}
+        >
           Login
         </PrimaryButton>
+
+        {userRole === 'guest' ? (
+          <sapn
+            className={s.Login__toggleLink}
+            onClick={() => toggleInputs('admin')}
+          >
+            Administrator
+          </sapn>
+        ) : (
+          userRole === 'admin' && (
+            <sapn
+              className={s.Login__toggleLink}
+              onClick={() => toggleInputs('guest')}
+            >
+              Guest
+            </sapn>
+          )
+        )}
       </form>
     </div>
   );

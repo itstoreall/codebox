@@ -4,7 +4,49 @@
   position: relative;
   display: flex;
   padding: 20px;
-  background-color: pink;
+  min-height: 55vh;
+}
+
+.Login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  &__form {
+    position: relative;
+    padding: 50px;
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    border: 1px solid $primaryBorderColor;
+    border-radius: 4px;
+    box-shadow: $primaryShadow;
+  }
+
+  &__title {
+    margin: 0 0 30px;
+    color: $primaryBlackColor75;
+  }
+
+  &__error {
+    position: absolute;
+    top: 165px;
+    left: calc(50% - 100px);
+    width: 200px;
+    font-size: 12px;
+    color: red;
+  }
+
+  &__toggleLink {
+    font-size: 14px;
+    color: $primaryBlackColor35;
+
+    &:hover {
+      cursor: pointer;
+      color: $linkColor;
+    }
+  }
 }
 
 .Display {
