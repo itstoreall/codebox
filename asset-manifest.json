@@ -22,8 +22,8 @@
     "Layout.js": "/codebox/static/js/Layout.5af656c0.chunk.js",
     "Layout.js.map": "/codebox/static/js/Layout.5af656c0.chunk.js.map",
     "main.css": "/codebox/static/css/main.580c0082.chunk.css",
-    "main.js": "/codebox/static/js/main.359573c8.chunk.js",
-    "main.js.map": "/codebox/static/js/main.359573c8.chunk.js.map",
+    "main.js": "/codebox/static/js/main.4a78d11f.chunk.js",
+    "main.js.map": "/codebox/static/js/main.4a78d11f.chunk.js.map",
     "runtime-main.js": "/codebox/static/js/runtime-main.eabc4b42.js",
     "runtime-main.js.map": "/codebox/static/js/runtime-main.eabc4b42.js.map",
     "static/css/11.bc922b9c.chunk.css": "/codebox/static/css/11.bc922b9c.chunk.css",
@@ -50,6 +50,6 @@
     "static/css/11.bc922b9c.chunk.css",
     "static/js/11.efd2d950.chunk.js",
     "static/css/main.580c0082.chunk.css",
-    "static/js/main.359573c8.chunk.js"
+    "static/js/main.4a78d11f.chunk.js"
   ]
 }
