@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
+import s from './Admin.module.scss';
 import { PrimaryButton, PrimaryInput } from './uiElements';
 import { CREATE_VIEW } from '../../graphql/mutation/view';
 
@@ -35,7 +36,7 @@ const CreateView = ({ refetch }) => {
   return (
     <div>
       <h2>Create form</h2>
-      <form onSubmit={e => addView(e)}>
+      <form className={s.GetOneView__form} onSubmit={e => addView(e)}>
         <PrimaryInput
           className={'admin-create-view-title-input'}
           placeholder={'Title'}
