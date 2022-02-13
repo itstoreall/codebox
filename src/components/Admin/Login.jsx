@@ -58,13 +58,21 @@ const Login = ({ setCodeboxToken }) => {
         </h2>
 
         {userRole === 'guest' ? (
-          <>
-            {/* <PrimaryInput
-              className={'admin-login-username-input'}
-              placeholder={'Username'}
-              value={loginUsername}
-              onChange={e => setLoginUsername(e.target.value)}
-            /> */}
+          <PrimaryInput
+            className={'admin-login-password-input'}
+            padding={'15px'}
+            margin={'0 0 30px'}
+            width={'100%'}
+            textAlign={'center'}
+            placeholder={'password'}
+            value={loginPassword}
+            onChange={e => {
+              setLoginPassword(e.target.value);
+              setLoginError('');
+            }}
+          />
+        ) : (
+          userRole === 'admin' && (
             <PrimaryInput
               className={'admin-login-password-input'}
               padding={'15px'}
@@ -73,32 +81,8 @@ const Login = ({ setCodeboxToken }) => {
               textAlign={'center'}
               placeholder={'password'}
               value={loginPassword}
-              onChange={e => {
-                setLoginPassword(e.target.value);
-                setLoginError('');
-              }}
+              onChange={e => setLoginPassword(e.target.value)}
             />
-          </>
-        ) : (
-          userRole === 'admin' && (
-            <>
-              {/* <PrimaryInput
-              className={'admin-login-username-input'}
-              placeholder={'Username'}
-              value={loginUsername}
-              onChange={e => setLoginUsername(e.target.value)}
-            /> */}
-              <PrimaryInput
-                className={'admin-login-password-input'}
-                padding={'15px'}
-                margin={'0 0 30px'}
-                width={'100%'}
-                textAlign={'center'}
-                placeholder={'password'}
-                value={loginPassword}
-                onChange={e => setLoginPassword(e.target.value)}
-              />
-            </>
           )
         )}
 

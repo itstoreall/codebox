@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useQuery } from '@apollo/client';
+import s from './Admin.module.scss'
 import { PrimaryButton, PrimaryInput } from './uiElements';
 import { GET_ONE_VIEW } from '../../graphql/query/view';
 
@@ -32,7 +33,7 @@ const GetOneView = () => {
 
       {gqlView && <span>Get view: {gqlView}</span>}
 
-      <form onSubmit={e => getOneView(e)}>
+      <form className={s.GetOneView__form} onSubmit={e => getOneView(e)}>
         <PrimaryInput
           className={'admin-get-one-view-id-input'}
           placeholder={'id'}

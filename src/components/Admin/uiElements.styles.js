@@ -53,8 +53,28 @@ export const Input = styled.input`
   }
 `;
 
+export const CustomInput = styled.input`
+  position: ${({ position }) => position};
+  top: ${({ top }) => top};
+  right: ${({ right }) => right};
+  margin: ${({ margin }) => margin};
+  padding: ${({ padding }) => padding};
+  width: ${({ width }) => width};
+  height: ${({ height }) => height};
+  text-align: ${({ textAlign }) => textAlign};
+  color: ${({ color }) => color};
+  white-space: ${({ whiteSpace }) => whiteSpace};
+  overflow: ${({ overflow }) => overflow};
+  text-overflow: ${({ textOverflow }) => textOverflow};
+  background-color: ${({ backgroundColor }) => backgroundColor};
+  border: ${({ color }) => color};
+  outline: ${({ color }) => color};
+`;
+
 // Buttons
 const InitialBtn = styled.button`
+  background-color: ${refs.primaryTextColor};
+
   &:hover {
     cursor: pointer;
   }
@@ -77,7 +97,7 @@ export const Button = styled(InitialBtn)`
   width: ${({ width }) => width};
   color: ${({ color }) => color};
   white-space: ${({ whiteSpace }) => whiteSpace};
-  background-color: ${refs.primaryTextColor};
+  background-color: ${({ backgroundColor }) => backgroundColor};
   border-radius: 4px;
 
   &:hover {
@@ -95,11 +115,13 @@ export const CustomButton = styled(InitialBtn)`
   align-items: ${({ alignItems }) => alignItems};
   display: ${({ display }) => display};
   padding: ${({ padding }) => padding};
+  margin: ${({ margin }) => margin};
   width: ${({ width }) => width};
   height: ${({ height }) => height};
+  font-size: ${({ fontSize }) => fontSize};
   color: ${({ color }) => color};
   white-space: ${({ whiteSpace }) => whiteSpace};
-  background-color: ${refs.primaryTextColor};
+  background-color: ${({ backgroundColor }) => backgroundColor};
   border-radius: ${({ borderRadius }) => borderRadius};
 
   &:hover {

@@ -26,7 +26,7 @@ const AdminDashboard = () => {
           {!codeboxToken ? (
             <Login setCodeboxToken={setCodeboxToken} />
           ) : (
-            <>
+            <div className={s.AdminDashboard__contentWrap}>
               <Logout setCodeboxToken={setCodeboxToken} />
 
               <Display>
@@ -39,11 +39,13 @@ const AdminDashboard = () => {
                 <DeleteView refetch={refetch} />
                 <UpdateView refetch={refetch} />
               </Controls>
-            </>
+            </div>
           )}
         </>
       ) : (
-        <div>Loading Form......</div>
+        <div className={s.AdminDashboard__loadingWrap}>
+          <span>{`Heroku server: zzz.. ☆(◡.◔)★ ...`}</span>
+        </div>
       )}
     </div>
   );
