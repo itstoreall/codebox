@@ -10,7 +10,7 @@ const UpdateViewButton = ({ toggleModal }) => (
     borderRadius={'4px'}
     onClick={() => toggleModal(true)}
   >
-    <svg width="9" height="9" fill="white">
+    <svg width="10" height="10" fill="white">
       <use href={sprite + '#icon-edit'}></use>
     </svg>
   </CustomButton>

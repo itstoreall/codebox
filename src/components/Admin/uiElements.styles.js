@@ -9,7 +9,7 @@ const createInputPading = padding =>
     .map(el => `${+el - 1}px`)
     .join(' ');
 
-// Inputs
+// Input
 export const InitialInput = styled.input`
   position: ${({ position }) => position};
   top: ${({ top }) => top};
@@ -59,23 +59,8 @@ export const PrimaryInput = styled(InitialInput)`
 
 export const SecondaryInput = styled(InitialInput)``;
 
-// Buttons
-const Button = styled.button`
-  background-color: ${refs.primaryTextColor};
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-`;
-
-export const CustomBtn = styled(Button)`
+// Button
+const InitialButton = styled.button`
   position: ${({ position }) => position};
   top: ${({ top }) => top};
   right: ${({ right }) => right};
@@ -95,6 +80,19 @@ export const CustomBtn = styled(Button)`
   border-radius: ${({ borderRadius }) => borderRadius};
   transform: ${({ transform }) => transform};
 
+  &:hover {
+    cursor: pointer;
+  }
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+`;
+
+export const PrimaryButton = styled(InitialButton)`
   &:hover {
     background-color: ${refs.BG__GreyBlue};
   }

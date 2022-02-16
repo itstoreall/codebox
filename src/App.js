@@ -36,12 +36,12 @@ export default withRouter(function App({ location }) {
 
   // Reused modal ---------------------------------
   const [showAppModal, setShowAppModal] = useState(false);
-  const [modalAppContent, setModalAppContent] = useState(null);
+  const [modalAppConfig, setModalAppConfig] = useState(null);
 
-  const toggleAppModal = value => {
-    setModalAppContent(value);
-    value !== 'remove-modal' && setShowAppModal(!showAppModal);
-    value === 'remove-modal' && setShowAppModal(false);
+  const toggleAppModal = config => {
+    setModalAppConfig({ ...config, refetch });
+    config.content !== 'remove-modal' && setShowAppModal(!showAppModal);
+    config.content === 'remove-modal' && setShowAppModal(false);
   }; // -------------------------------------------
 
   // useMemo(() => logs.appState(localState), [localState]) // *
@@ -59,7 +59,7 @@ export default withRouter(function App({ location }) {
     loading,
     refetch,
     toggleAppModal,
-    modalAppContent,
+    modalAppConfig,
   };
 
   return (
@@ -71,7 +71,7 @@ export default withRouter(function App({ location }) {
         <Footer />
         {showAppModal && (
           <AppModal>
-            <AppModalContent content={modalAppContent} />
+            <AppModalContent config={modalAppConfig} />
           </AppModal>
         )}
       </div>
