@@ -2,7 +2,6 @@
 
 .AdminDashboard {
   position: relative;
-  // min-height: 55vh;
 
   &__loadingWrap {
     display: flex;
@@ -141,7 +140,7 @@
 .card {
   &__contentRow {
     display: block;
-    font-size: 13px;
+    font-size: 14px;
     color: $primaryBlackColor75;
 
     &:not(:last-child) {
@@ -172,7 +171,7 @@
 .cardModal {
   &__contentRow {
     display: block;
-    font-size: 13px;
+    font-size: 14px;
     color: $primaryWhiteColor50;
 
     &:not(:last-child) {

@@ -1,7 +1,4 @@
-// import { useContext } from 'react';
-
 import { CustomButton } from './uiElements';
-// import Context from '../../Context';
 import sprite from '../../svg/sprite.svg';
 
 const DeleteViewButton = ({ id, toggleAppModal }) => {
