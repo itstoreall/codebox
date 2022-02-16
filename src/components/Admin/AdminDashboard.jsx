@@ -2,9 +2,10 @@ import { useEffect, useState, useContext, useMemo } from 'react';
 import s from './Admin.module.scss';
 import Context from '../../Context';
 import Login from './Login';
-import Logout from './Logout';
-import ViewList from './ViewList';
-import CreateViewButton from './CreateViewButton';
+import AdminDashboardContent from './AdminDashboardContent';
+// import Logout from './Logout';
+// import ViewList from './ViewList';
+// import CreateViewButton from './CreateViewButton';
 
 const AdminDashboard = () => {
   const [codeboxToken, setCodeboxToken] = useState('');
@@ -22,14 +23,10 @@ const AdminDashboard = () => {
           {!codeboxToken ? (
             <Login setCodeboxToken={setCodeboxToken} />
           ) : (
-            <div className={s.AdminDashboard__contentWrap}>
-              <>
-                <CreateViewButton refetch={refetch} />
-                <Logout setCodeboxToken={setCodeboxToken} />
-              </>
-
-              <ViewList />
-            </div>
+            <AdminDashboardContent
+              setCodeboxToken={setCodeboxToken}
+              refetch={refetch}
+            />
           )}
         </>
       ) : (

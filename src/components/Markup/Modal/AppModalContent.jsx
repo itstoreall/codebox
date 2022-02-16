@@ -1,9 +1,11 @@
 import { ModalContent } from './AppModal.styles';
 import CreateView from '../../Admin/CreateView';
+import DeleteViewConfirm from '../../Admin/DeleteViewConfirm';
 
-const AppModalContent = ({ content }) => (
+const AppModalContent = ({ config }) => (
   <ModalContent className={'app-modal-content'}>
-    {content === 'create-view-btn' && <CreateView />}
+    {config.content === 'create-view-btn' && <CreateView />}
+    {config.content === 'delete-view-btn' && <DeleteViewConfirm />}
   </ModalContent>
 );
 

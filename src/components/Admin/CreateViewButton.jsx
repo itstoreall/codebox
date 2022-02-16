@@ -16,7 +16,7 @@ const CreateViewButton = () => {
       borderRadius={'50%'}
       transform={'rotate(45deg)'}
       type={'button'}
-      onClick={() => toggleAppModal('create-view-btn')}
+      onClick={() => toggleAppModal({ content: 'create-view-btn' })}
     >
       <svg width="9" height="9" fill="white">
         <use href={sprite + '#icon-close'}></use>

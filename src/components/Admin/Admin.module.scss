@@ -2,8 +2,6 @@
 
 .AdminDashboard {
   position: relative;
-  padding: 20px;
-  min-height: 55vh;
 
   &__loadingWrap {
     display: flex;
@@ -24,6 +22,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  min-height: 55vh;
 
   &__form {
     position: relative;
@@ -80,16 +79,19 @@
   &__wrap {
     margin-right: 20px;
     width: 100%;
-    height: 65vh;
-    overflow: scroll;
 
-    &::-webkit-scrollbar {
-      width: 0px; // vertical scroll
-      height: 0px; // horizontal scroll
-    }
+    @media screen and (min-width: $tablet) {
+      height: 60vh;
+      overflow: scroll;
 
-    &::-webkit-scrollbar-thumb {
-      width: 0px; // vertical scroll
+      &::-webkit-scrollbar {
+        width: 0px; // vertical scroll
+        height: 0px; // horizontal scroll
+      }
+
+      &::-webkit-scrollbar-thumb {
+        width: 0px; // vertical scroll
+      }
     }
   }
 
@@ -131,14 +133,14 @@
   }
 
   &__btnWrap {
-    padding: 0 15px;
+    padding: 0 12px;
   }
 }
 
 .card {
   &__contentRow {
     display: block;
-    font-size: 13px;
+    font-size: 14px;
     color: $primaryBlackColor75;
 
     &:not(:last-child) {
@@ -151,10 +153,25 @@
   }
 }
 
+.DeleteViewConfirm {
+  padding: 40px;
+  background-color: $primaryWhiteColor;
+  border-radius: 6px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__btnWrap {
+    display: flex;
+  }
+}
+
 .cardModal {
   &__contentRow {
     display: block;
-    font-size: 13px;
+    font-size: 14px;
     color: $primaryWhiteColor50;
 
     &:not(:last-child) {

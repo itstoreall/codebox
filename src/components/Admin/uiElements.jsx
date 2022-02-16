@@ -1,5 +1,9 @@
-import { PrimaryInput, SecondaryInput, CustomBtn } from './uiElements.styles';
-// import refs from '../../styles/refs';
+import {
+  PrimaryInput,
+  SecondaryInput,
+  PrimaryButton,
+} from './uiElements.styles';
+import refs from '../../styles/refs';
 
 export const CustomInput = ({
   className = 'admin-custom-modal-input',
@@ -119,13 +123,14 @@ export const CustomButton = ({
   fontSize,
   color = 'white',
   whiteSpace = 'nowrap',
+  backgroundColor = refs.primaryTextColor,
   borderRadius,
   transform,
   type = 'button',
   onClick,
   children,
 }) => (
-  <CustomBtn
+  <PrimaryButton
     className={className}
     position={position}
     top={top}
@@ -141,11 +146,12 @@ export const CustomButton = ({
     color={color}
     fontSize={fontSize}
     whiteSpace={whiteSpace}
+    backgroundColor={backgroundColor}
     borderRadius={borderRadius}
     transform={transform}
     type={type}
     onClick={onClick}
   >
     {children}
-  </CustomBtn>
+  </PrimaryButton>
 );

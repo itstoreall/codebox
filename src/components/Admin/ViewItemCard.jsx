@@ -7,7 +7,7 @@ import DeleteViewButton from './DeleteViewButton';
 import { UPDATE_VIEW } from '../../graphql/mutation/view';
 import refs from '../../styles/refs';
 
-const ViewItemCard = ({ view, refetch }) => {
+const ViewItemCard = ({ view, toggleAppModal, refetch }) => {
   const [showModal, setShowModal] = useState(false);
   const [updateGqlViewTitle, setUpdateGqlViewTitle] = useState('');
   const [updateGqlViewPath, setUpdateGqlViewPath] = useState('');
@@ -34,13 +34,13 @@ const ViewItemCard = ({ view, refetch }) => {
       console.log('updateView !!!', data.updateView);
 
       refetch();
-      toggleModal(false);
+      toggleCardModal(false);
     } catch (err) {
       console.log('ERROR in GqlFormAndList > updateView:', err.message);
     }
   };
 
-  const toggleModal = value => setShowModal(value);
+  const toggleCardModal = value => setShowModal(value);
 
   return (
     <>
@@ -53,8 +53,8 @@ const ViewItemCard = ({ view, refetch }) => {
           </div>
 
           <div className={s.ViewList__btnWrap}>
-            <UpdateViewButton toggleModal={toggleModal} />
-            <DeleteViewButton id={view?.id} refetch={refetch} />
+            <UpdateViewButton toggleModal={toggleCardModal} />
+            <DeleteViewButton id={view?.id} toggleAppModal={toggleAppModal} />
           </div>
         </>
       ) : (
@@ -115,7 +115,7 @@ const ViewItemCard = ({ view, refetch }) => {
                 borderRadius={'2px'}
                 fontSize={'12px'}
                 type={'submit'}
-                onClick={() => toggleModal(false)}
+                onClick={() => toggleCardModal(false)}
               >
                 Cancel
               </CustomButton>
