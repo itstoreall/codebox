@@ -15,6 +15,7 @@
 
   &__contentWrap {
     display: flex;
+    flex-direction: column;
   }
 }
 
@@ -60,63 +61,77 @@
   }
 }
 
-.Display {
-  margin-right: 20px;
-  width: 50%;
-  height: 65vh;
-  overflow: scroll;
-
-  &::-webkit-scrollbar {
-    width: 0px; // vertical scroll
-    height: 0px; // horizontal scroll
-  }
-
-  &::-webkit-scrollbar-thumb {
-    width: 0px; // vertical scroll
-  }
-}
-
-.Controls {
-  width: 50%;
-  height: 65vh;
-  background-color: skyblue;
-  overflow: scroll;
-}
-
-.ViewList__list {
-  // background-color: tomato;
-  overflow: scroll;
-}
-
-.ViewList__item {
-  position: relative;
-  display: flex;
-  align-items: center;
-  background-color: $primaryBlackColor10;
-
-  &:not(:last-child) {
-    margin-bottom: 10px;
-  }
-}
-
-.ViewList__card {
-  padding: 10px;
-  width: 90%;
-
-  &Modal {
-    padding: 10px;
-    width: 100%;
+.CreateView {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    padding: 45px 30px;
+    width: 400px;
     background-color: $primaryBlackColor;
+    border-radius: 6px;
+
+    & input {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.ViewList {
+  &__wrap {
+    margin-right: 20px;
+    width: 100%;
+    height: 65vh;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+      width: 0px; // vertical scroll
+      height: 0px; // horizontal scroll
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 0px; // vertical scroll
+    }
   }
 
-  &Row {
-    display: block;
-    font-size: 13px;
-    color: $primaryBlackColor75;
+  &__list {
+    overflow: scroll;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: $primaryBlackColor10;
+    border-radius: 4px;
 
     &:not(:last-child) {
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
+  }
+
+  &__card {
+    padding: 10px;
+    width: 100%;
+
+    &Modal {
+      padding: 10px;
+      width: 100%;
+      background-color: $primaryBlackColor;
+    }
+
+    &Row {
+      display: block;
+      font-size: 13px;
+      color: $primaryBlackColor75;
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__btnWrap {
+    padding: 0 15px;
   }
 }
 
@@ -146,9 +161,7 @@
       margin-bottom: 5px;
     }
   }
-}
 
-.cardModal {
   &__btnWrap {
     display: flex;
     padding-top: 5px;

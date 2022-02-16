@@ -1,43 +1,8 @@
-import { Button, Input, CustomInput, CustomButton } from './uiElements.styles';
-import refs from '../../styles/refs';
+import { PrimaryInput, SecondaryInput, CustomBtn } from './uiElements.styles';
+// import refs from '../../styles/refs';
 
-export const PrimaryInput = ({
-  className = 'admin-primary-input',
-  position,
-  top = 0,
-  right = 0,
-  margin,
-  padding = '9px 9px',
-  width,
-  textAlign,
-  color = refs.primaryBlackColor75,
-  type = 'text',
-  placeholder,
-  value,
-  onChange,
-  children,
-}) => (
-  <Input
-    className={className}
-    position={position}
-    top={top}
-    right={right}
-    margin={margin}
-    padding={padding}
-    width={width}
-    textAlign={textAlign}
-    color={color}
-    type={type}
-    placeholder={placeholder}
-    value={value}
-    onChange={onChange}
-  >
-    {children}
-  </Input>
-);
-
-export const ModalInput = ({
-  className = 'admin-modal-input',
+export const CustomInput = ({
+  className = 'admin-custom-modal-input',
   position,
   top = 0,
   right = 0,
@@ -52,6 +17,7 @@ export const ModalInput = ({
   textOverflow,
   backgroundColor,
   border,
+  borderRadius,
   outline,
   type = 'text',
   placeholder,
@@ -59,7 +25,7 @@ export const ModalInput = ({
   onChange,
   children,
 }) => (
-  <CustomInput
+  <PrimaryInput
     className={className}
     position={position}
     top={top}
@@ -75,6 +41,7 @@ export const ModalInput = ({
     textOverflow={textOverflow}
     backgroundColor={backgroundColor}
     border={border}
+    borderRadius={borderRadius}
     outline={outline}
     type={type}
     placeholder={placeholder}
@@ -82,44 +49,62 @@ export const ModalInput = ({
     onChange={onChange}
   >
     {children}
-  </CustomInput>
+  </PrimaryInput>
 );
 
-export const PrimaryButton = ({
-  className = 'admin-primary-btn',
+export const CardModalInput = ({
+  className = 'admin-card-modal-input',
   position,
   top = 0,
   right = 0,
-  display,
-  padding = '10px 20px',
   margin,
+  padding,
   width,
-  color = 'white',
-  whiteSpace = 'nowrap',
-  type = 'button',
-  onClick,
+  height,
+  textAlign,
+  color,
+  whiteSpace,
+  overflow,
+  textOverflow,
+  backgroundColor,
+  border,
+  borderRadius,
+  outline,
+  type = 'text',
+  placeholder,
+  value,
+  onChange,
   children,
 }) => (
-  <Button
+  <SecondaryInput
     className={className}
     position={position}
     top={top}
     right={right}
-    display={display}
-    padding={padding}
     margin={margin}
+    padding={padding}
     width={width}
+    height={height}
+    textAlign={textAlign}
     color={color}
     whiteSpace={whiteSpace}
+    overflow={overflow}
+    textOverflow={textOverflow}
+    backgroundColor={backgroundColor}
+    border={border}
+    borderRadius={borderRadius}
+    outline={outline}
     type={type}
-    onClick={onClick}
+    placeholder={placeholder}
+    value={value}
+    onChange={onChange}
   >
     {children}
-  </Button>
+  </SecondaryInput>
 );
 
-export const CardButton = ({
-  className = 'admin-round-btn',
+export const CustomButton = ({
+  className = 'admin-custom-btn',
   position,
   top = 0,
   right = 0,
@@ -129,60 +114,18 @@ export const CardButton = ({
   alignItems = 'center',
   padding,
   margin,
-  width = '20px',
-  height = '20px',
-  color = 'white',
-  whiteSpace = 'nowrap',
-  borderRadius = '50%',
-  type = 'button',
-  onClick,
-  children,
-}) => (
-  <CustomButton
-    className={className}
-    position={position}
-    top={top}
-    right={right}
-    display={display}
-    flexDirection={flexDirection}
-    justifyContent={justifyContent}
-    alignItems={alignItems}
-    padding={padding}
-    margin={margin}
-    width={width}
-    height={height}
-    color={color}
-    whiteSpace={whiteSpace}
-    borderRadius={borderRadius}
-    type={type}
-    onClick={onClick}
-  >
-    {children}
-  </CustomButton>
-);
-
-export const ModalButton = ({
-  className = 'admin-round-btn',
-  position,
-  top = 0,
-  right = 0,
-  display,
-  flexDirection,
-  justifyContent = 'center',
-  alignItems = 'center',
-  padding = 0,
-  margin,
   width,
   height,
   fontSize,
   color = 'white',
   whiteSpace = 'nowrap',
   borderRadius,
+  transform,
   type = 'button',
   onClick,
   children,
 }) => (
-  <CustomButton
+  <CustomBtn
     className={className}
     position={position}
     top={top}
@@ -195,13 +138,14 @@ export const ModalButton = ({
     margin={margin}
     width={width}
     height={height}
-    fontSize={fontSize}
     color={color}
+    fontSize={fontSize}
     whiteSpace={whiteSpace}
     borderRadius={borderRadius}
+    transform={transform}
     type={type}
     onClick={onClick}
   >
     {children}
-  </CustomButton>
+  </CustomBtn>
 );

@@ -1,21 +1,17 @@
-import { useEffect, useState } from 'react';
-import { useQuery } from '@apollo/client';
+import { useEffect, useState, useContext, useMemo } from 'react';
 import s from './Admin.module.scss';
-import { GET_ALL_VIEWS } from '../../graphql/query/view';
-import Display from './Display';
-import Controls from './Controls';
+import Context from '../../Context';
 import Login from './Login';
 import Logout from './Logout';
-import GetOneView from './GetOneView';
-import GetAllViews from './GetAllViews';
-import CreateView from './CreateView';
-import DeleteView from './DeleteView';
-import UpdateView from './UpdateView';
+import ViewList from './ViewList';
+import CreateViewButton from './CreateViewButton';
 
 const AdminDashboard = () => {
   const [codeboxToken, setCodeboxToken] = useState('');
 
-  const { data, loading, error, refetch } = useQuery(GET_ALL_VIEWS);
+  const { loading, allViews, refetch } = useContext(Context);
+
+  useMemo(() => allViews && console.log('allViews:', allViews), [allViews]); // *
 
   useEffect(() => setCodeboxToken(localStorage.getItem('codeboxToken')), []);
 
@@ -27,18 +23,12 @@ const AdminDashboard = () => {
             <Login setCodeboxToken={setCodeboxToken} />
           ) : (
             <div className={s.AdminDashboard__contentWrap}>
-              <Logout setCodeboxToken={setCodeboxToken} />
+              <>
+                <CreateViewButton refetch={refetch} />
+                <Logout setCodeboxToken={setCodeboxToken} />
+              </>
 
-              <Display>
-                <GetAllViews views={data} loading={loading} refetch={refetch} />
-              </Display>
-
-              <Controls>
-                <GetOneView />
-                <CreateView refetch={refetch} />
-                <DeleteView refetch={refetch} />
-                <UpdateView refetch={refetch} />
-              </Controls>
+              <ViewList />
             </div>
           )}
         </>

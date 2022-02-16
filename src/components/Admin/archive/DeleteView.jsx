@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import s from './Admin.module.scss';
-import { PrimaryButton, PrimaryInput } from './uiElements';
-import { DELETE_VIEW } from '../../graphql/mutation/view';
+import { CustomButton, PrimaryInput } from '../uiElements';
+import { DELETE_VIEW } from '../../../graphql/mutation/view';
 
 const DeleteView = ({ refetch }) => {
   const [deleteViewId, setDeleteViewId] = useState('');
@@ -36,9 +36,9 @@ const DeleteView = ({ refetch }) => {
           value={deleteViewId}
           onChange={e => setDeleteViewId(e.target.value)}
         />
-        <PrimaryButton className={'admin-delete-view-btn'} type={'submit'}>
+        <CustomButton className={'admin-delete-view-btn'} type={'submit'}>
           Delete
-        </PrimaryButton>
+        </CustomButton>
       </form>
     </div>
   );
