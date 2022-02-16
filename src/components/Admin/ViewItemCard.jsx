@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useMutation } from '@apollo/client';
 import s from './Admin.module.scss';
-import { ModalInput, ModalButton } from './uiElements';
+import { CardModalInput, CustomButton } from './uiElements';
 import UpdateViewButton from './UpdateViewButton';
 import DeleteViewButton from './DeleteViewButton';
 import { UPDATE_VIEW } from '../../graphql/mutation/view';
@@ -16,8 +16,6 @@ const ViewItemCard = ({ view, refetch }) => {
     setUpdateGqlViewTitle(view.title);
     setUpdateGqlViewPath(view.path);
   }, []);
-
-  console.log('showModal -->', showModal);
 
   const [updateGqlView] = useMutation(UPDATE_VIEW, {
     variables: {
@@ -42,10 +40,7 @@ const ViewItemCard = ({ view, refetch }) => {
     }
   };
 
-  const toggleModal = value => {
-    console.log('value', value);
-    setShowModal(value);
-  };
+  const toggleModal = value => setShowModal(value);
 
   return (
     <>
@@ -57,7 +52,7 @@ const ViewItemCard = ({ view, refetch }) => {
             <div className={s.card__contentRow}>path: {view?.path}</div>
           </div>
 
-          <div>
+          <div className={s.ViewList__btnWrap}>
             <UpdateViewButton toggleModal={toggleModal} />
             <DeleteViewButton id={view?.id} refetch={refetch} />
           </div>
@@ -69,12 +64,13 @@ const ViewItemCard = ({ view, refetch }) => {
             <div className={s.cardModal__contentRow}>
               {`title: `}
               {
-                <ModalInput
+                <CardModalInput
                   className={'admin-update-view-title-btn'}
                   padding={0}
                   width={'250px'}
                   color={refs.activeLinkColor}
                   backgroundColor={'transparent'}
+                  border={'none'}
                   outline={'none'}
                   placeholder={'Title'}
                   value={updateGqlViewTitle}
@@ -85,12 +81,13 @@ const ViewItemCard = ({ view, refetch }) => {
             <div className={s.cardModal__contentRow}>
               {`path: `}
               {
-                <ModalInput
+                <CardModalInput
                   className={'admin-update-view-path-btn'}
                   padding={0}
                   width={'250px'}
                   color={refs.activeLinkColor}
                   border={'none'}
+                  outline={'none'}
                   backgroundColor={'transparent'}
                   placeholder={'path'}
                   value={updateGqlViewPath}
@@ -100,7 +97,7 @@ const ViewItemCard = ({ view, refetch }) => {
             </div>
 
             <div className={s.cardModal__btnWrap}>
-              <ModalButton
+              <CustomButton
                 className={'admin-update-view-btn'}
                 display={'block'}
                 padding={'3px 30px'}
@@ -111,8 +108,8 @@ const ViewItemCard = ({ view, refetch }) => {
                 onClick={e => updateView(e)}
               >
                 Update
-              </ModalButton>
-              <ModalButton
+              </CustomButton>
+              <CustomButton
                 className={'admin-update-view-close-btn'}
                 padding={'3px 30px'}
                 borderRadius={'2px'}
@@ -121,7 +118,7 @@ const ViewItemCard = ({ view, refetch }) => {
                 onClick={() => toggleModal(false)}
               >
                 Cancel
-              </ModalButton>
+              </CustomButton>
             </div>
           </form>
         </div>

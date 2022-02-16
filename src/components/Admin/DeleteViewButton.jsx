@@ -1,5 +1,5 @@
 import { useMutation } from '@apollo/client';
-import { CardButton } from './uiElements';
+import { CustomButton } from './uiElements';
 import { DELETE_VIEW } from '../../graphql/mutation/view';
 import sprite from '../../svg/sprite.svg';
 
@@ -10,8 +10,6 @@ const DeleteViewButton = ({ id, refetch }) => {
 
   const deleteView = async e => {
     e.preventDefault();
-
-    console.log('id:', id);
 
     try {
       const { data } = await deleteGqlView();
@@ -25,15 +23,17 @@ const DeleteViewButton = ({ id, refetch }) => {
   };
 
   return (
-    <CardButton
+    <CustomButton
       className={'admin-delete-view-button-btn'}
+      width={'20px'}
+      height={'20px'}
       borderRadius={'4px'}
       onClick={e => deleteView(e)}
     >
       <svg width="9" height="9" fill="white">
         <use href={sprite + '#icon-close'}></use>
       </svg>
-    </CardButton>
+    </CustomButton>
   );
 };
 

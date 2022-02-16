@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import s from './Admin.module.scss';
-import { PrimaryButton, PrimaryInput } from './uiElements';
-import { UPDATE_VIEW } from '../../graphql/mutation/view';
+import { CustomButton, PrimaryInput } from '../uiElements';
+import { UPDATE_VIEW } from '../../../graphql/mutation/view';
 
 const UpdateView = ({ refetch }) => {
   const [updateViewId, setUpdateViewId] = useState('');
@@ -55,9 +55,9 @@ const UpdateView = ({ refetch }) => {
           value={updateGqlViewPath}
           onChange={e => setUpdateGqlViewPath(e.target.value)}
         />
-        <PrimaryButton className={'admin-update-view-btn'} type={'submit'}>
+        <CustomButton className={'admin-update-view-btn'} type={'submit'}>
           Update
-        </PrimaryButton>
+        </CustomButton>
       </form>
     </div>
   );

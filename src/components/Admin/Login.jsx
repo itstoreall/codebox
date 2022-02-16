@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { PrimaryButton, PrimaryInput } from './uiElements';
+import { CustomButton, CustomInput } from './uiElements';
 import { LOGIN } from '../../graphql/mutation/user';
 import s from './Admin.module.scss';
+import refs from '../../styles/refs';
 
 const Login = ({ setCodeboxToken }) => {
   const [userRole, setUserRole] = useState('guest');
@@ -58,12 +59,14 @@ const Login = ({ setCodeboxToken }) => {
         </h2>
 
         {userRole === 'guest' ? (
-          <PrimaryInput
+          <CustomInput
             className={'admin-login-password-input'}
             padding={'15px'}
             margin={'0 0 30px'}
             width={'100%'}
             textAlign={'center'}
+            border={`1px solid ${refs.primaryTextColor}`}
+            borderRadius={'4px'}
             placeholder={'password'}
             value={loginPassword}
             onChange={e => {
@@ -73,12 +76,14 @@ const Login = ({ setCodeboxToken }) => {
           />
         ) : (
           userRole === 'admin' && (
-            <PrimaryInput
+            <CustomInput
               className={'admin-login-password-input'}
               padding={'15px'}
               margin={'0 0 30px'}
               width={'100%'}
               textAlign={'center'}
+              border={`1px solid ${refs.primaryTextColor}`}
+              borderRadius={'4px'}
               placeholder={'password'}
               value={loginPassword}
               onChange={e => setLoginPassword(e.target.value)}
@@ -88,16 +93,17 @@ const Login = ({ setCodeboxToken }) => {
 
         <span className={s.Login__error}>{loginError}</span>
 
-        <PrimaryButton
+        <CustomButton
           className={'admin-login-btn'}
           display={'block'}
           padding={'15px'}
           margin={'0 0 30px'}
           width={'100%'}
+          borderRadius={'4px'}
           type={'submit'}
         >
           Login
-        </PrimaryButton>
+        </CustomButton>
 
         {userRole === 'guest' ? (
           <sapn

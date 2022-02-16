@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useQuery } from '@apollo/client';
-import s from './Admin.module.scss'
-import { PrimaryButton, PrimaryInput } from './uiElements';
-import { GET_ONE_VIEW } from '../../graphql/query/view';
+import s from './Admin.module.scss';
+import { CustomButton, PrimaryInput } from '../uiElements';
+import { GET_ONE_VIEW } from '../../../graphql/query/view';
 
 const GetOneView = () => {
   const [gqlViewId, setGqlViewId] = useState('');
@@ -40,9 +40,9 @@ const GetOneView = () => {
           value={gqlViewId}
           onChange={e => setGqlViewId(e.target.value)}
         />
-        <PrimaryButton className={'admin-get-one-view-btn'} type={'submit'}>
+        <CustomButton className={'admin-get-one-view-btn'} type={'submit'}>
           Get one
-        </PrimaryButton>
+        </CustomButton>
       </form>
     </div>
   );
