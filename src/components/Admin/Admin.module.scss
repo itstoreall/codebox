@@ -40,6 +40,13 @@
     color: $primaryBlackColor75;
   }
 
+  &__passwordEye {
+    position: absolute;
+    top: 123px;
+    right: 68px;
+    cursor: pointer;
+  }
+
   &__error {
     position: absolute;
     top: 165px;
