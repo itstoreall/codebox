@@ -1,15 +1,22 @@
-import { useContext } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import s from './Admin.module.scss';
 import Context from '../../Context';
 import ViewItemCard from './ViewItemCard';
 
-const ViewList = () => {
-  const { allViews: views, toggleAppModal, refetch } = useContext(Context);
+const ViewList = ({ searchResult }) => {
+  const [data, setData] = useState(null);
+
+  const { allViews, toggleAppModal, refetch } = useContext(Context);
+
+  useEffect(
+    () => (!searchResult ? setData(allViews) : setData(searchResult)),
+    [allViews, searchResult],
+  );
 
   return (
     <div className={s.ViewList__wrap}>
       <ul className={s.ViewList__list}>
-        {views?.map(view => (
+        {data?.map(view => (
           <li className={s.ViewList__item} key={view.path}>
             <ViewItemCard
               view={view}
