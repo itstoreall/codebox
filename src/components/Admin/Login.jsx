@@ -3,6 +3,7 @@ import { useMutation } from '@apollo/client';
 import { CustomButton, CustomInput } from './uiElements';
 import { LOGIN } from '../../graphql/mutation/user';
 import s from './Admin.module.scss';
+import sprite from '../../svg/sprite.svg';
 import refs from '../../styles/refs';
 
 const Login = ({ setCodeboxToken }) => {
@@ -10,6 +11,7 @@ const Login = ({ setCodeboxToken }) => {
   const [loginUsername, setLoginUsername] = useState('Guest');
   const [loginPassword, setLoginPassword] = useState('');
   const [loginError, setLoginError] = useState('');
+  const [hidePassword, setHidePassword] = useState(true);
 
   const [gqlLogin] = useMutation(LOGIN, {
     variables: {
@@ -51,6 +53,10 @@ const Login = ({ setCodeboxToken }) => {
     setLoginUsername(role === 'admin' ? 'Admin' : role === 'guest' && 'Guest');
   };
 
+  const togglePasswordDisplay = () => setHidePassword(!hidePassword);
+
+  console.log('hidePassword', hidePassword);
+
   return (
     <div className={s.Login}>
       <form className={s.Login__form} onSubmit={e => login(e)}>
@@ -64,9 +70,9 @@ const Login = ({ setCodeboxToken }) => {
             padding={'15px'}
             margin={'0 0 30px'}
             width={'100%'}
-            textAlign={'center'}
             border={`1px solid ${refs.primaryTextColor}`}
             borderRadius={'4px'}
+            type={hidePassword ? 'password' : 'text'}
             placeholder={'password'}
             value={loginPassword}
             onChange={e => {
@@ -81,15 +87,28 @@ const Login = ({ setCodeboxToken }) => {
               padding={'15px'}
               margin={'0 0 30px'}
               width={'100%'}
-              textAlign={'center'}
               border={`1px solid ${refs.primaryTextColor}`}
               borderRadius={'4px'}
+              type={hidePassword ? 'password' : 'text'}
               placeholder={'password'}
               value={loginPassword}
               onChange={e => setLoginPassword(e.target.value)}
             />
           )
         )}
+
+        <div
+          className={s.Login__passwordEye}
+          onClick={() => togglePasswordDisplay()}
+        >
+          <svg width="20" height="20" fill={refs.primaryTextColor}>
+            {hidePassword ? (
+              <use href={sprite + '#icon-eye-blocked'}></use>
+            ) : (
+              <use href={sprite + '#icon-eye'}></use>
+            )}
+          </svg>
+        </div>
 
         <span className={s.Login__error}>{loginError}</span>
 
