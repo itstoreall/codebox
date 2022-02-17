@@ -24,6 +24,7 @@ const AdminDashboard = () => {
             <Login setCodeboxToken={setCodeboxToken} />
           ) : (
             <AdminDashboardContent
+              allViews={allViews}
               setCodeboxToken={setCodeboxToken}
               refetch={refetch}
             />
