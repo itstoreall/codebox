@@ -9,10 +9,11 @@ const CreateViewButton = () => {
   return (
     <CustomButton
       className={'admin-create-view-btn'}
-      position={'absolute'}
-      top={'-62px'}
-      right={'100px'}
-      padding={'10px'}
+      // position={'absolute'}
+      // top={'-62px'}
+      // right={'100px'}
+      padding={'14px'}
+      margin={'0 20px 0 0'}
       borderRadius={'50%'}
       transform={'rotate(45deg)'}
       type={'button'}
