@@ -10,8 +10,10 @@ const AdminDashboardContent = ({ allViews, setCodeboxToken, refetch }) => {
 
   return (
     <div className={s.AdminDashboard__contentWrap}>
-      <CreateViewButton refetch={refetch} />
-      <Logout setCodeboxToken={setCodeboxToken} />
+      <div className={s.content__btnWrap}>
+        <CreateViewButton refetch={refetch} />
+        <Logout setCodeboxToken={setCodeboxToken} />
+      </div>
       <Search allViews={allViews} setSearchResult={setSearchResult} />
       <ViewList searchResult={searchResult} />
     </div>

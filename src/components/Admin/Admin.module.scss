@@ -14,6 +14,20 @@
   &__contentWrap {
     display: flex;
     flex-direction: column;
+
+    .content__btnWrap {
+      position: absolute;
+      top: -60px;
+      right: 0px;
+      display: flex;
+      align-items: center;
+
+      @media screen and (min-width: $tablet) {
+        top: 0;
+        right: 0;
+        height: 40px;
+      }
+    }
   }
 }
 
@@ -67,6 +81,20 @@
   }
 }
 
+.Search {
+  &__wrap {
+    position: relative;
+    margin-bottom: 20px;
+    max-width: 400px;
+  }
+
+  &__iconWrap {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+  }
+}
+
 .CreateView {
   &__form {
     display: flex;
@@ -88,7 +116,7 @@
     width: 100%;
 
     @media screen and (min-width: $tablet) {
-      height: 60vh;
+      height: 55vh;
       overflow: scroll;
 
       &::-webkit-scrollbar {
