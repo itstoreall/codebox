@@ -125,20 +125,20 @@ const Login = ({ setCodeboxToken }) => {
         </CustomButton>
 
         {userRole === 'guest' ? (
-          <sapn
+          <span
             className={s.Login__toggleLink}
             onClick={() => toggleInputs('admin')}
           >
             Administrator
-          </sapn>
+          </span>
         ) : (
           userRole === 'admin' && (
-            <sapn
+            <span
               className={s.Login__toggleLink}
               onClick={() => toggleInputs('guest')}
             >
               Guest
-            </sapn>
+            </span>
           )
         )}
       </form>
