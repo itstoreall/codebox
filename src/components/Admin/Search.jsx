@@ -25,7 +25,7 @@ const Search = ({ allViews, setSearchResult }) => {
         width={'100%'}
         border={`1px solid ${refs.primaryTextColor}`}
         borderRadius={'4px'}
-        placeholder={'enter the id'}
+        placeholder={'enter view id'}
         value={searchValue}
         onChange={e => searchValueHandler(e)}
       />
