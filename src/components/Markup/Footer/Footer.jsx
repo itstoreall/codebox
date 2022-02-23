@@ -12,7 +12,7 @@ const Footer = () => {
           </svg>
 
           <span className={s.Footer__cotyright}>
-            codebox &copy;{' '}
+            <a href="/">codebox</a> &copy;{' '}
             <time className={s.Footer__cotyrightYear}>
               {new Date().getFullYear()}
             </time>

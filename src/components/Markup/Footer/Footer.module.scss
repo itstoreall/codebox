@@ -39,5 +39,13 @@
   }
   &__cotyright {
     color: $primaryBlackColor35;
+
+    & a {
+      color: $primaryBlackColor35;
+
+      &:hover {
+        color: $activeLinkColor;
+      }
+    }
   }
 }

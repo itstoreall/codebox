@@ -140,14 +140,14 @@
     align-items: center;
     background-color: $primaryBlackColor10;
     border-radius: 4px;
-    transition: 500ms;
+    transition: 350ms;
 
     &:not(:last-child) {
       margin-bottom: 10px;
     }
 
     &:hover {
-      background-color: $primaryBlackColor25;
+      background-color: $primaryBlackColor15;
     }
   }
 
