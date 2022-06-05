@@ -1,10 +1,10 @@
 import { withRouter } from 'react-router-dom';
 import s from './Feature.module.scss';
 import App from '../../../Markup/FeatureTemplate';
-import BaseInputFeature from './BaseInputFeature';
+import BaseSelectFeature from './BaseSelectFeature';
 
 const Feature = ({ viewTitle, featureTitle, location }) => {
-  const description = `Just base input, use Styled Components`;
+  const description = `Custom drop down Select, use Styled Components`;
 
   return (
     <App
@@ -13,7 +13,7 @@ const Feature = ({ viewTitle, featureTitle, location }) => {
       description={description}
     >
       <div className={s.Feature}>
-        <BaseInputFeature />
+        <BaseSelectFeature />
       </div>
     </App>
   );

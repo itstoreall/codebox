@@ -6,6 +6,7 @@ import Dropdown from '../components/Categories/Components/Dropdown';
 import Pagination from '../components/Categories/Components/Pagination';
 import ReusedModal from '../components/Categories/Components/ReusedModal';
 import BaseInput from '../components/Categories/Components/BaseInput';
+import BaseSelect from '../components/Categories/Components/BaseSelect';
 import Inputs from '../components/Categories/Components/Inputs';
 import Feature from '../components/Categories/Components/Feature';
 import Closures from '../components/Categories/Functions/Closures';
@@ -99,6 +100,16 @@ const FeatureRoutes = ({ viewTitle }) => {
               {...props}
               viewTitle={viewTitle}
               featureTitle={'Base input'}
+            />
+          )}
+        />
+        <Route
+          path="/components/base-select"
+          render={props => (
+            <BaseSelect
+              {...props}
+              viewTitle={viewTitle}
+              featureTitle={'Base select'}
             />
           )}
         />
