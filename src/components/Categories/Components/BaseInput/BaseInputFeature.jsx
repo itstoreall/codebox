@@ -4,7 +4,9 @@ import Input from './Input';
 
 const BaseInputFeature = () => {
   const [inputValue, setInputValue] = useState('');
+  const [inputTwoValue, setInputTwoValue] = useState('');
   const [inputStatus, setInputStatus] = useState('input is empty');
+  const [inputTwoStatus, setInputTwoStatus] = useState('input two is empty');
 
   return (
     <>
@@ -12,8 +14,12 @@ const BaseInputFeature = () => {
         value={{
           inputValue,
           setInputValue,
+          inputTwoValue,
+          setInputTwoValue,
           inputStatus,
           setInputStatus,
+          inputTwoStatus,
+          setInputTwoStatus,
         }}
       >
         <Input
@@ -24,12 +30,27 @@ const BaseInputFeature = () => {
           description={'Description'}
           disable={false}
         />
+
+        <Input
+          type={'number'}
+          subtitle={'Subtitle two *'}
+          name={'input_two_name'}
+          placeholder={'Placeholder two'}
+          description={'Description two'}
+          disable={false}
+        />
       </InputContext.Provider>
 
-      <div>
+      <div style={{ marginBottom: 20 }}>
         {inputStatus === 'input is empty'
           ? 'Status: input is empty'
           : `Status: string length is ${inputStatus.length}`}
+      </div>
+
+      <div>
+        {inputTwoStatus === 'input two is empty'
+          ? `Status: ${inputTwoStatus}`
+          : `Status: string length is ${inputTwoStatus.length}`}
       </div>
     </>
   );

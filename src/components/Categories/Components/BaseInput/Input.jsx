@@ -8,19 +8,31 @@ import {
 } from './Input.styles.js';
 
 const Input = ({ subtitle, type, name, placeholder, disable, description }) => {
-  const { inputValue, setInputValue, inputStatus, setInputStatus } =
-    useContext(InputContext);
+  const {
+    inputValue,
+    setInputValue,
+    inputTwoValue,
+    setInputTwoValue,
+    inputStatus,
+    setInputStatus,
+    // inputTwoStatus,
+    setInputTwoStatus,
+  } = useContext(InputContext);
 
   console.log(`Input render (${inputStatus})`);
 
   const max = 30;
 
   const inputHandler = value => {
+    // value:
     value.length <= max && name === 'input_name'
       ? setInputValue(value)
-      : setInputValue(value);
+      : name === 'input_two_name' && setInputTwoValue(value);
 
-    setInputStatus(value);
+    // status:
+    name === 'input_name'
+      ? setInputStatus(value)
+      : name === 'input_two_name' && setInputTwoStatus(value);
   };
 
   return (
@@ -32,7 +44,11 @@ const Input = ({ subtitle, type, name, placeholder, disable, description }) => {
         placeholder={placeholder}
         disabled={disable}
         autoComplete="off"
-        value={name === 'input_name' ? inputValue : inputValue}
+        value={
+          name === 'input_name'
+            ? inputValue
+            : name === 'input_two_name' && inputTwoValue
+        }
         onChange={e => {
           inputHandler(e.target.value);
         }}
