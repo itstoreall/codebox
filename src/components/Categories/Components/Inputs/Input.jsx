@@ -29,6 +29,8 @@ const Input = () => {
     statusHandler(value);
   };
 
+  console.log(s.Input__status);
+
   return (
     <>
       <p className={s.inputTitle}>
@@ -45,14 +47,16 @@ const Input = () => {
         }}
       />
 
-      <div className={s.Input__status} error>
+      <div className={s.Input__status}>
         <span
           className={
             inputStatus === 'numbers only'
               ? s.Input__error
               : inputStatus === 'successful'
               ? s.Input__successful
-              : inputStatus === 'it is done' && s.Input__done
+              : inputStatus === 'it is done'
+              ? s.Input__done
+              : undefined
           }
         >
           {inputStatus}
