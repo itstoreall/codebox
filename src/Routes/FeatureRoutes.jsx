@@ -7,6 +7,7 @@ import Pagination from '../components/Categories/Components/Pagination';
 import ReusedModal from '../components/Categories/Components/ReusedModal';
 import BaseInput from '../components/Categories/Components/BaseInput';
 import BaseSelect from '../components/Categories/Components/BaseSelect';
+import BaseSwitch from '../components/Categories/Components/BaseSwitch';
 import Inputs from '../components/Categories/Components/Inputs';
 import Feature from '../components/Categories/Components/Feature';
 import Closures from '../components/Categories/Functions/Closures';
@@ -110,6 +111,16 @@ const FeatureRoutes = ({ viewTitle }) => {
               {...props}
               viewTitle={viewTitle}
               featureTitle={'Base select'}
+            />
+          )}
+        />
+        <Route
+          path="/components/base-switch"
+          render={props => (
+            <BaseSwitch
+              {...props}
+              viewTitle={viewTitle}
+              featureTitle={'Base switch'}
             />
           )}
         />
