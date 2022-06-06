@@ -47,7 +47,7 @@ export const List = s.ul`
   left: 0;
   padding: 5px;
   margin: 0;
-  width: calc(100% - 10px);
+  width: calc(100%);
   color: #fff;
   list-style: none;
   border-radius: 3px;

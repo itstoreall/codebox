@@ -7,7 +7,7 @@ export const BaseInputWrap = s.div`
 export const BaseInput = s.input`
   padding: 12px 15px;
   margin-bottom: 7px;
-  width: calc(100% - 34px);
+  width: calc(100%);
   font-size: 18px;
   background-color: ${({ disabled }) => disabled && '#e9ecef'};
   border: 1px solid #ced4da;
