@@ -4,7 +4,7 @@ import App from '../../../Markup/FeatureTemplate';
 import BaseInputFeature from './BaseInputFeature';
 
 const Feature = ({ viewTitle, featureTitle, location }) => {
-  const description = `Just base input, use Styled Components`;
+  const description = `Just base input, use Styled Components, &:checked, &::after`;
 
   return (
     <App
