@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect } from 'react';
 import FeatureContext from './FeatureContext';
 import { v4 as uuid } from 'uuid';

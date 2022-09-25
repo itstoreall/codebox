@@ -12,6 +12,8 @@ import Inputs from '../components/Categories/Components/Inputs';
 import Feature from '../components/Categories/Components/Feature';
 import Closures from '../components/Categories/Functions/Closures';
 import Recursion from '../components/Categories/Functions/Recursion';
+import LocalDate from '../components/Categories/Functions/LocalDate';
+import SortData from '../components/Categories/Functions/SortData';
 import UseContext from '../components/Categories/Hooks/UseContext';
 
 const FeatureRoutes = ({ viewTitle }) => {
@@ -141,6 +143,26 @@ const FeatureRoutes = ({ viewTitle }) => {
               {...props}
               viewTitle={viewTitle}
               featureTitle={'Recursion'}
+            />
+          )}
+        />
+        <Route
+          path="/functions/local-date"
+          render={props => (
+            <LocalDate
+              {...props}
+              viewTitle={viewTitle}
+              featureTitle={'Current local date'}
+            />
+          )}
+        />
+        <Route
+          path="/functions/sort-data"
+          render={props => (
+            <SortData
+              {...props}
+              viewTitle={viewTitle}
+              featureTitle={'Sort data'}
             />
           )}
         />

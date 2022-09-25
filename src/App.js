@@ -1,4 +1,6 @@
-import { useState, useEffect, useMemo } from 'react';
+/* eslint-disable no-unused-vars */
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import MediaQuery from './services/MediaQuery';
@@ -30,6 +32,7 @@ export default withRouter(function App({ location }) {
 
   useEffect(() => setBodyOverflow(showNavModal), [showNavModal]);
   useEffect(() => setLocalState({ ...informationData }), []);
+
   useEffect(() => !loading && setAllViews(data.getAllViews), [data]);
 
   const toggleNavMenu = () => setShowNavModal(!showNavModal);

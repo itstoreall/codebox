@@ -84,6 +84,18 @@
     "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Functions/Recursion"
   },
   {
+    "l_id": "v4-l3",
+    "href": "/functions/local-date",
+    "anchor": "Current local date",
+    "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Functions/LocalDate"
+  },
+  {
+    "l_id": "v4-l4",
+    "href": "/functions/sort-data",
+    "anchor": "Sort data",
+    "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Functions/SortData"
+  },
+  {
     "l_id": "v5-l1",
     "href": "/hooks/usecontext",
     "anchor": "useContext",
