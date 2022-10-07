@@ -96,6 +96,12 @@
     "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Functions/SortData"
   },
   {
+    "l_id": "v4-l5",
+    "href": "/functions/crypt",
+    "anchor": "Crypt and decrypt",
+    "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Functions/Crypt"
+  },
+  {
     "l_id": "v5-l1",
     "href": "/hooks/usecontext",
     "anchor": "useContext",
