@@ -130,9 +130,9 @@
         },
         {
           "l_id": "v4-l5",
-          "href": "/functions/crypt",
-          "anchor": "Crypt and decrypt",
-          "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Functions/Crypt"
+          "href": "/functions/encryption",
+          "anchor": "Encryption and decryption",
+          "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Functions/Encryption"
         }
       ]
     },

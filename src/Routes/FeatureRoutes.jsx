@@ -14,7 +14,7 @@ import Closures from '../components/Categories/Functions/Closures';
 import Recursion from '../components/Categories/Functions/Recursion';
 import LocalDate from '../components/Categories/Functions/LocalDate';
 import SortData from '../components/Categories/Functions/SortData';
-import Crypt from '../components/Categories/Functions/Crypt';
+import Encryption from '../components/Categories/Functions/Encryption';
 import UseContext from '../components/Categories/Hooks/UseContext';
 
 const FeatureRoutes = ({ viewTitle }) => {
@@ -168,12 +168,12 @@ const FeatureRoutes = ({ viewTitle }) => {
           )}
         />
         <Route
-          path="/functions/crypt"
+          path="/functions/encryption"
           render={props => (
-            <Crypt
+            <Encryption
               {...props}
               viewTitle={viewTitle}
-              featureTitle={'Crypt and decrypt'}
+              featureTitle={'Encryption and decryption'}
             />
           )}
         />

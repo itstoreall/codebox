@@ -1,10 +1,10 @@
 import { withRouter } from 'react-router-dom';
 import s from './Feature.module.scss';
 import App from '../../../Markup/FeatureTemplate';
-import Handler from './Handler';
+import Main from './Main';
 
 const Feature = ({ viewTitle, featureTitle, location }) => {
-  const description = `Encrypt and decrypt url parameters (useMemo)`;
+  const description = `Encrypt and decrypt url parameters (useMemo, useState, only numbers uuid)`;
 
   return (
     <App
@@ -13,7 +13,7 @@ const Feature = ({ viewTitle, featureTitle, location }) => {
       description={description}
     >
       <div className={s.Feature}>
-        <Handler />
+        <Main />
       </div>
     </App>
   );

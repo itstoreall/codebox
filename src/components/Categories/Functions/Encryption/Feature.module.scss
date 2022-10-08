@@ -1,0 +1,27 @@
+@import '../../../../styles/refs.scss';
+
+.Feature {
+  min-height: 200px;
+  padding: 20px;
+
+  &__text {
+    color: $primaryBlackColor75;
+  }
+}
+
+.Button {
+  width: 150px;
+  height: 40px;
+  color: $primaryWhiteColor;
+  background-color: $BG__GreyBlue;
+  border-radius: 4px;
+
+  &:first-child {
+    margin-right: 10px;
+  }
+
+  &:hover {
+    background-color: $activeLinkColor;
+    cursor: pointer;
+  }
+}
