@@ -13,7 +13,7 @@ const Main = () => {
     setStr(result.encryptedLink);
   };
 
-  useMemo(() => console.log('encrypted url:', url), [url]);
+  useMemo(() => url !== '' && console.log('encrypted url:', url), [url]);
 
   const decryptParams = string => {
     if (string === '') return console.log('no encrypted string');
