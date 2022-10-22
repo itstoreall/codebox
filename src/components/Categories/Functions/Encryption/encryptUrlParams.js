@@ -1,5 +1,6 @@
 import { v4 as uuid } from 'uuid';
 import encrypt from './encrypt';
+import * as cl from '../../../../helpers/logMargins';
 
 const encryptUrlParams = () => {
   const id = uuid().split(['']).filter(Number).join('').slice(0, 10);
@@ -16,7 +17,7 @@ const encryptUrlParams = () => {
 
   const url = `https://example.com/${encryptedLink}&addition`;
 
-  console.log(' -- params encryption:', Boolean(encryptedLink));
+  cl.mt(' -- params encryption:', Boolean(encryptedLink));
 
   return { url, encryptedLink };
 };

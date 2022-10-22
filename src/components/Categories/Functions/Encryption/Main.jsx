@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react';
 import s from './Feature.module.scss';
 import getUrl from './encryptUrlParams';
 import decryptUrlParamsHandler from './decryptUrlParams';
+import * as cl from '../../../../helpers/logMargins';
 
 const Main = () => {
   const [url, setUrl] = useState('');
@@ -13,12 +14,12 @@ const Main = () => {
     setStr(result.encryptedLink);
   };
 
-  useMemo(() => url !== '' && console.log('encrypted url:', url), [url]);
+  useMemo(() => url !== '' && console.log('encrypted url 2:', url), [url]);
 
   const decryptParams = string => {
-    if (string === '') return console.log('no encrypted string');
+    if (string === '') return cl.o('no encrypted string');
     const result = decryptUrlParamsHandler({ params: string });
-    console.log('decrypted result:', result);
+    cl.o('decrypted result:', result);
   };
 
   return (

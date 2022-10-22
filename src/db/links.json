@@ -60,16 +60,22 @@
     "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/BaseInput"
   },
   {
+    "l_id": "v3-l8",
+    "href": "/components/base-select",
+    "anchor": "Base select",
+    "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/BaseSelect"
+  },
+  {
     "l_id": "v3-l9",
     "href": "/components/base-switch",
     "anchor": "Base switch",
     "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/BaseSwitch"
   },
   {
-    "l_id": "v3-l8",
-    "href": "/components/base-select",
-    "anchor": "Base select",
-    "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/BaseSelect"
+    "l_id": "v3-l10",
+    "href": "/components/back-to-top",
+    "anchor": "Back to top button",
+    "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/BackToTop"
   },
   {
     "l_id": "v4-l1",

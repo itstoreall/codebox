@@ -1,4 +1,5 @@
 import decrypt from './decrypt';
+import * as cl from '../../../../helpers/logMargins';
 
 const decryptUrlParams = data => {
   const cryptedLinkPart = decrypt('supersecretword', data.params);
@@ -19,7 +20,7 @@ const decryptUrlParams = data => {
     }
   });
 
-  console.log(' -- params decryption:', Boolean(obj));
+  cl.mt(' -- params decryption:', Boolean(obj));
 
   return obj;
 };

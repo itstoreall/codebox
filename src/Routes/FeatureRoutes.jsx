@@ -10,6 +10,7 @@ import BaseSelect from '../components/Categories/Components/BaseSelect';
 import BaseSwitch from '../components/Categories/Components/BaseSwitch';
 import Inputs from '../components/Categories/Components/Inputs';
 import Feature from '../components/Categories/Components/Feature';
+import BackToTopButton from '../components/Categories/Components/BackToTopButton';
 import Closures from '../components/Categories/Functions/Closures';
 import Recursion from '../components/Categories/Functions/Recursion';
 import LocalDate from '../components/Categories/Functions/LocalDate';
@@ -124,6 +125,16 @@ const FeatureRoutes = ({ viewTitle }) => {
               {...props}
               viewTitle={viewTitle}
               featureTitle={'Base switch'}
+            />
+          )}
+        />
+        <Route
+          path="/components/back-to-top"
+          render={props => (
+            <BackToTopButton
+              {...props}
+              viewTitle={viewTitle}
+              featureTitle={'Back to top button'}
             />
           )}
         />
