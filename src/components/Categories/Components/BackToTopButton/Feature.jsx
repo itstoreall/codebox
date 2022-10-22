@@ -4,7 +4,7 @@ import App from '../../../Markup/FeatureTemplate';
 import BackToTopButton from './BackToTopButton';
 
 const Feature = ({ viewTitle, featureTitle, location }) => {
-  const description = `Using: window.scroll, behavior: 'smooth'`;
+  const description = `Using: window.scroll, behavior: 'smooth', styled-components`;
 
   return (
     <App
