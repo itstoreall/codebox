@@ -13,6 +13,9 @@ export const BackToTopBtn = s.div`
   bottom: 40px;
   right: 35px;
   display: flex;
+  visibility: ${props => (props.out ? 'visible' : 'hidden')};
+  animation: ${props => (props.out ? 'fadeIn' : 'fadeOut')} 250ms linear;
+  transition: visibility 250ms linear;
   justify-content: center;
   align-items: center;
   width: 60px;
@@ -22,7 +25,7 @@ export const BackToTopBtn = s.div`
   cursor: pointer;
   z-index: 10;
 
-  &:hover {
-    background-color: ${refs.activeLinkColor};
-  }
+  // &:hover {
+  //   background-color: ${refs.activeLinkColor};
+  // }
 `;
