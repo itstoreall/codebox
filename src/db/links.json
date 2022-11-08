@@ -78,6 +78,12 @@
     "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/BackToTop"
   },
   {
+    "l_id": "v3-l11",
+    "href": "/components/skeleton",
+    "anchor": "Skeleton",
+    "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/Skeleton"
+  },
+  {
     "l_id": "v4-l1",
     "href": "/functions/closures",
     "anchor": "Closures",

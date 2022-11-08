@@ -1,6 +1,7 @@
 import { Switch, Route } from 'react-router-dom';
 import StyledComponents from '../components/Categories/Layout/StyledComponents';
 import MovingSquare from '../components/Categories/Layout/MovingSquare';
+
 import DragAndDrop from '../components/Categories/Components/DragAndDrop';
 import Dropdown from '../components/Categories/Components/Dropdown';
 import Pagination from '../components/Categories/Components/Pagination';
@@ -11,11 +12,14 @@ import BaseSwitch from '../components/Categories/Components/BaseSwitch';
 import Inputs from '../components/Categories/Components/Inputs';
 import Feature from '../components/Categories/Components/Feature';
 import BackToTopButton from '../components/Categories/Components/BackToTopButton';
+import Skeleton from '../components/Categories/Components/Skeleton';
+
 import Closures from '../components/Categories/Functions/Closures';
 import Recursion from '../components/Categories/Functions/Recursion';
 import LocalDate from '../components/Categories/Functions/LocalDate';
 import SortData from '../components/Categories/Functions/SortData';
 import Encryption from '../components/Categories/Functions/Encryption';
+
 import UseContext from '../components/Categories/Hooks/UseContext';
 
 const FeatureRoutes = ({ viewTitle }) => {
@@ -135,6 +139,16 @@ const FeatureRoutes = ({ viewTitle }) => {
               {...props}
               viewTitle={viewTitle}
               featureTitle={'Back to top button'}
+            />
+          )}
+        />
+        <Route
+          path="/components/skeleton"
+          render={props => (
+            <Skeleton
+              {...props}
+              viewTitle={viewTitle}
+              featureTitle={'Skeleton'}
             />
           )}
         />
