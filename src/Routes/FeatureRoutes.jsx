@@ -19,6 +19,7 @@ import Recursion from '../components/Categories/Functions/Recursion';
 import LocalDate from '../components/Categories/Functions/LocalDate';
 import SortData from '../components/Categories/Functions/SortData';
 import Encryption from '../components/Categories/Functions/Encryption';
+import UuidGenerator from '../components/Categories/Functions/UuidGenerator';
 
 import UseContext from '../components/Categories/Hooks/UseContext';
 
@@ -199,6 +200,16 @@ const FeatureRoutes = ({ viewTitle }) => {
               {...props}
               viewTitle={viewTitle}
               featureTitle={'Encryption and decryption'}
+            />
+          )}
+        />
+        <Route
+          path="/functions/uuid-generator"
+          render={props => (
+            <UuidGenerator
+              {...props}
+              viewTitle={viewTitle}
+              featureTitle={'uuid generator'}
             />
           )}
         />

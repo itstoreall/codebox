@@ -145,6 +145,12 @@
           "href": "/functions/encryption",
           "anchor": "Encryption and decryption",
           "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Functions/Encryption"
+        },
+        {
+          "l_id": "v4-l6",
+          "href": "/functions/uuid-generator",
+          "anchor": "uuid generator",
+          "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Functions/UuidGenerator"
         }
       ]
     },
