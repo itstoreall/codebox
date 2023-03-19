@@ -84,6 +84,12 @@
     "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/Skeleton"
   },
   {
+    "l_id": "v3-l12",
+    "href": "/components/compound-components",
+    "anchor": "Compound Components",
+    "source": "https://github.com/itstoreall/codebox/tree/main/src/components/Categories/Components/CompoundComponents"
+  },
+  {
     "l_id": "v4-l1",
     "href": "/functions/closures",
     "anchor": "Closures",

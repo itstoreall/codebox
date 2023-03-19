@@ -13,6 +13,7 @@ import Inputs from '../components/Categories/Components/Inputs';
 import Feature from '../components/Categories/Components/Feature';
 import BackToTopButton from '../components/Categories/Components/BackToTopButton';
 import Skeleton from '../components/Categories/Components/Skeleton';
+import CompoundComponents from '../components/Categories/Components/CompoundComponents';
 
 import Closures from '../components/Categories/Functions/Closures';
 import Recursion from '../components/Categories/Functions/Recursion';
@@ -150,6 +151,16 @@ const FeatureRoutes = ({ viewTitle }) => {
               {...props}
               viewTitle={viewTitle}
               featureTitle={'Skeleton'}
+            />
+          )}
+        />
+        <Route
+          path="/components/compound-components"
+          render={props => (
+            <CompoundComponents
+              {...props}
+              viewTitle={viewTitle}
+              featureTitle={'Compound Components'}
             />
           )}
         />
