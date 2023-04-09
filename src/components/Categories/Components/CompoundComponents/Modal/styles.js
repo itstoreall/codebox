@@ -1,44 +1,50 @@
 import styled from 'styled-components/macro';
-import {
-  FlexColumn,
-  FlexRow,
-  SolidButton,
-  OutlineButton,
-  DisabledButton,
-} from './themeComponents';
 
 export const mediaWidths = {
-  desktop: 1920,
-  desktopSm: 1680,
-  laptop: 1440,
-  laptopSm: 1200,
-  tablet: 1024,
-  tabletSm: 800,
-  mobile: 560,
-  mobileM: 420,
-  mobileSm: 360,
+  mobile: 580,
 };
+
+export const Backdrop = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 11;
+  animation:fadein .3s;
+  background-color: rgba(0, 0, 0, 0.85);;
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+`;
 
 export const Wrapper = styled.div`
   background-color: #f8f8f8;
   border-radius: 5px;
 `;
 
-export const Content = styled(FlexColumn)`
-  position: static;
-
-  @media screen and (min-width: ${mediaWidths.mobile}px) {
-    position: relative;
-    padding: 30px 80px;
-  }
+export const FlexColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
-export const CloseIcon = styled.img`
-  position: absolute;
-  top: 16px;
-  right: 20px;
-  width: 20px;
-  cursor: pointer;
+export const FlexRow = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const Content = styled(FlexColumn)`
+  position: relative;
+  padding: 20px 30px 30px;
 `;
 
 export const ModalTitle = styled.h2`
@@ -66,11 +72,6 @@ export const ModalInput = styled.input`
   ::placeholder {
     color: ${({ color }) => color && color};
   }
-
-  &:focus {
-    outline: 1px solid
-      ${({ color, theme }) => (color ? color : theme?.solidBtnBack)};
-  }
 `;
 
 export const ModalField = styled(FlexRow)`
@@ -86,19 +87,4 @@ export const ButtonWrap = styled.div`
   > button {
     min-width: 150px;
   }
-`;
-
-export const ModalSolidButton = styled(SolidButton)`
-  flex: 1;
-  padding: 12px;
-`;
-
-export const ModalOutlineButton = styled(OutlineButton)`
-  flex: 1;
-  padding: 12px;
-`;
-
-export const ModalDisableButton = styled(DisabledButton)`
-  flex: 1;
-  padding: 12px;
 `;

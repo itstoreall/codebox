@@ -7,16 +7,16 @@ import { useState } from 'react';
 const ManePage = () => {
   const [isModal, setIsModal] = useState(false);
   const [modalContent, setModalContent] = useState(null);
-  const [coreFunctionValue, setCoreFunctionValue] = useState('');
 
   const state = {
     amount: 100,
   };
 
-  const modalHandler = args => {
+  const coreFunction = value => console.log('Result:', value);
+
+  const modalHandler = content => {
     setIsModal(true);
-    setCoreFunctionValue(args.value);
-    setModalContent(args.content);
+    setModalContent(content);
   };
 
   return (
@@ -26,25 +26,22 @@ const ManePage = () => {
           content={modalContent}
           state={state}
           setIsModal={setIsModal}
-          coreFunction={() => console.log(coreFunctionValue)}
+          coreFunction={value => coreFunction(value)}
         />
       )}
 
       <div>
         <button
+          style={{ margin: '0 10px 10px 0' }}
           className={s.Button}
-          onClick={() =>
-            modalHandler({ value: 'Buy !!!', content: MODAL_CONTENT[0] })
-          }
+          onClick={() => modalHandler(MODAL_CONTENT[0])}
         >
           Buy
         </button>
 
         <button
           className={s.Button}
-          onClick={() =>
-            modalHandler({ value: 'Sell !!!', content: MODAL_CONTENT[1] })
-          }
+          onClick={() => modalHandler(MODAL_CONTENT[1])}
         >
           Sell
         </button>

@@ -7,19 +7,10 @@ const inputConfigHandler = args => {
 
   switch (content) {
     case MODAL_CONTENT[0]:
-      configs.text = 'Not approved';
-      configs.color = 'red';
-      configs.disable = false;
+      configs.text = 'Enter the amount';
       break;
     case MODAL_CONTENT[1]:
-      configs.text = 'Not approved';
-      configs.color = 'red';
-      configs.disable = false;
-      break;
-    case MODAL_CONTENT[2]:
-      configs.text = '0x';
-      configs.color = '';
-      configs.disable = false;
+      configs.text = 'Enter price';
       break;
 
     default:

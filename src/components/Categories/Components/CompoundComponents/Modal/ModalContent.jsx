@@ -50,10 +50,7 @@ const ModalContent = ({ content, setIsModal, state, coreFunction }) => {
       <Modal.Input />
       {fieldHandler()}
       <ButtonWrap>
-        <Modal.SolidInputButton>
-          {contentHandler('Buy', 'Sell')}
-        </Modal.SolidInputButton>
-        <Modal.OutlineButton>Cancel</Modal.OutlineButton>
+        <Modal.Button>{contentHandler('Buy', 'Sell')}</Modal.Button>
       </ButtonWrap>
     </Modal>
   );

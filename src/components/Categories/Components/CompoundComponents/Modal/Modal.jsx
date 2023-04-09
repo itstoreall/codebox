@@ -1,11 +1,10 @@
 import React, { useContext, useEffect } from 'react';
 import { Wrapper, Content } from './styles';
-import ModalBackdrop from './ModalBackdrop/ModalBackdrop';
+import ModalBackdrop from './ModalBackdrop';
 import {
   Field,
   Input,
-  SolidInputButton,
-  OutlineButton,
+  Button,
   Title,
   Text,
 } from './ModalComponents/ModalComponents';
@@ -21,16 +20,14 @@ export const useModalContext = () => {
   const context = useContext(ModalContext);
 
   if (!context) {
-    throw new Error(
-      `Modal.< Component /> components cannot be rendered outside the Modal component`,
-    );
+    throw new Error(` in useModalContext`);
   }
   return context;
 };
 
 const Modal = ({
   content,
-  state,
+  // state,
   contentHandler,
   setIsModal,
   inputValue,
@@ -87,7 +84,6 @@ Modal.Title = Title;
 Modal.Input = Input;
 Modal.Field = Field;
 Modal.Text = Text;
-Modal.SolidInputButton = SolidInputButton;
-Modal.OutlineButton = OutlineButton;
+Modal.Button = Button;
 
 export default Modal;
