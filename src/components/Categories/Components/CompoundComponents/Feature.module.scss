@@ -10,18 +10,28 @@
 }
 
 .Button {
-  width: 150px;
+  width: 100%;
+  max-width: 200px;
   height: 40px;
   color: $primaryWhiteColor;
   background-color: $BG__GreyBlue;
   border-radius: 4px;
 
-  &:first-child {
-    margin-right: 10px;
-  }
-
   &:hover {
     background-color: $activeLinkColor;
+    cursor: pointer;
+  }
+}
+
+.DisableButton {
+  width: 100%;
+  height: 40px;
+  color: $primaryWhiteColor;
+  background-color: $activeLinkColor;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $BG__GreyBlue;
     cursor: pointer;
   }
 }
